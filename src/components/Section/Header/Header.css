@@ -1,0 +1,152 @@
+.header {
+  color: var(--primary-color);
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  position: relative;
+  overflow: hidden;
+}
+
+.header__text {
+  width: 90%;
+  position: relative;
+  z-index: 2;
+  margin-bottom: 0rem;
+  padding: 0 2rem;
+  max-width: 117rem;
+}
+
+@media (min-width: 1170px) {
+  .header__text {
+    padding: 0 6rem;
+  }
+}
+
+.header__text h1 {
+  font-size: 4.5rem;
+  color: var(--primary-color);
+}
+
+.header__text h2 {
+  font-size: 1.3rem;
+  color: var(--sub-color);
+  font-weight: 400;
+  margin-top: 2rem;
+  display: flex;
+}
+
+.header__text .header__name {
+  font-weight: 600;
+  color: var(--highlight-color);
+  margin-left: 14px;
+}
+
+.header__tag-wrapper {
+  width: 90px;
+  position: relative;
+}
+
+.header__text .header__tag {
+  font-weight: 600;
+  color: var(--primary-color);
+  font-style: italic;
+  margin: 0 8px;
+  position: absolute;
+  left: 0px;
+}
+
+.header__text button {
+  margin-top: 6rem;
+  border: none;
+  outline: none;
+  color: #fffffe;
+  background-color: var(--highlight-color);
+  border-radius: 5rem;
+  padding: 1.2rem 2.5rem;
+  font-size: 1.2rem;
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 350ms ease-out;
+}
+
+.header__text button:hover {
+  transform: translateY(-4px);
+}
+
+@media (min-width: 370px) {
+  .header__text {
+    margin-bottom: 10rem;
+  }
+
+  .header__text h1 {
+    font-size: 5.5rem;
+  }
+
+  .header__text h2 {
+    font-size: 1.7rem;
+  }
+
+  .header__tag-wrapper {
+    width: 110px;
+  }
+}
+
+@media (min-width: 600px) {
+  .header {
+    align-items: center
+  }
+
+  .header__text {
+    margin-bottom: 0;
+  }
+  .header__text h1 {
+    font-size: 7rem;
+  }
+
+  .header__text h2 {
+    font-size: 1.8rem;
+  }
+
+  .header__text button {
+    font-size: 1.4rem;
+  }
+}
+
+.header__image {
+  position: absolute;
+  z-index: 1;
+  transform: rotate(-30deg);
+  top: 0;
+  right: -40px;
+}
+
+.header__image img {
+  max-width: 220px;
+}
+
+@media (min-width: 600px) {
+  .header__image img {
+    max-width: 350px;
+  }
+}
+
+@media (min-width: 800px) {
+  .header__image img {
+    max-width: 500px;
+  }
+}
+
+@media (min-width: 1025px) {
+  .header__image {
+    top: -11%;
+    right: -6%;
+  }
+  .header__image img {
+    max-width: inherit;
+  }
+}

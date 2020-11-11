@@ -1,0 +1,105 @@
+.Nav__sidedraw {
+  position: fixed;
+  top: 0;
+  left: 0;
+  box-shadow: 0 2px 10px rgba(0,0,0,.3);
+  width: 100%;
+  background-color: var(--primary-bg);
+  z-index: 1000;
+  transition: 350ms;
+}
+
+.Nav__sidedraw--active {
+  box-shadow: 0 2px 10px rgba(0,0,0,0);
+}
+
+.Nav__sidedraw-list {
+  display: flex;
+  align-items: center;
+  padding: 1.2rem;
+}
+
+.Nav__sidedraw-item.Nav__sidedraw--logo {
+  flex: 1;
+  margin: 0;
+}
+
+.Nav__sidedraw-item.Nav__sidedraw--logo img {
+  width: 100px;
+  height: auto;
+}
+
+@media (min-width: 600px) {
+  .Nav__sidedraw {
+    display: none;
+  }
+}
+
+.Nav__side {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--primary-bg);
+  z-index: 999;
+  transform: translateX(100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Nav__side--active {
+  transform: translateX(0);
+}
+
+.Nav__side--item {
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  text-align: center;
+  font-weight: 600;
+  transform: translateY(10px);
+  opacity: 0;
+  transition-duration: 350ms;
+  transition-property: transform;
+  cursor: pointer;
+  color: var(--primary-color);
+}
+
+.Nav__side--item:hover {
+  color: var(--color-hover);
+}
+
+.Nav__side--item:nth-child(2) {
+  margin: 1.3rem 0;
+}
+
+.Nav__side--active .Nav__side--item{
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.Nav__side--active .Nav__side--item:nth-child(1) {
+  transition-delay: 100ms;
+}
+
+.Nav__side--active .Nav__side--item:nth-child(2) {
+  transition-delay: 200ms;
+}
+
+.Nav__side--active .Nav__side--item:nth-child(3) {
+  transition-delay: 300ms;
+}
+.Nav__side--active .btn__toggle {
+  transition-delay: 300ms;
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.btn__toggle {
+  position: absolute;
+  bottom: 40px;
+  transform: translateY(10px);
+  transition: all 350ms;
+  opacity: 0;
+}

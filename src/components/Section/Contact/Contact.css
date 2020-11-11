@@ -1,0 +1,81 @@
+.Contact__title {
+  color: var(--highlight-color);
+  font-size: 2rem;
+  margin: 0px 0px 1rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  transition: color 0.2s ease-out 0s;
+  text-align: center;
+}
+
+
+
+.Contact__mail {
+  color: var(--primary-color);
+    font-size: 1.6rem;
+    position: relative;
+    font-weight: 600;
+    margin-top: 5.5rem;
+    margin-bottom: 3rem;
+    transition: color 0.2s ease-out 0s;
+    text-align: center;
+}
+
+.Contact__socials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Contact__socials li {
+  margin: 0 0.6rem;
+}
+
+.Contact__socials li a {
+  padding: 0.8rem;
+  border: 2px solid var(--highlight-color);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  transition: 350ms;
+}
+
+.Contact__socials li a svg {
+  width: 16px;
+  height: 16px;
+}
+
+.Contact__socials li a:hover {
+  background-color: var(--color-hover);
+}
+
+@media (min-width: 600) {
+  .Contact__title {
+    font-size: 2.5rem;
+  }
+  .Contact__mail {
+      font-size: 2rem;
+  }
+
+  .Contact__socials li {
+    margin: 0 1.5rem;
+  }
+
+  .Contact__socials li a svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .Contact__socials li {
+    margin: 0 1rem;
+  }
+
+
+.Contact__socials li a {
+  padding: 1rem;
+}
+}
+
+.Contact-dark path {
+  fill: #fff !important;
+}

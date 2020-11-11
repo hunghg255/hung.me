@@ -1,0 +1,15 @@
+.About__title {
+  color: var(--highlight-color);
+  font-size: 2rem;
+  margin: 0px 0px 1rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  transition: color 0.2s ease-out 0s;
+  text-align: center;
+}
+
+@media (min-width: 600) {
+  .About__title {
+    font-size: 2.5rem;
+  }
+}
