@@ -1,3 +1,7 @@
+.About__heading {
+  margin-bottom: 4.5rem;
+}
+
 .About__title {
   color: var(--highlight-color);
   font-size: 2rem;
@@ -8,8 +12,30 @@
   text-align: center;
 }
 
-@media (min-width: 600) {
+.About__subtitle {
+  text-align: center;
+  color: var(--primary-color);
+  font-size: 1.6rem;
+  font-weight: 300;
+}
+
+.About__subtitle span {
+  font-weight: 600;
+  font-style: italic;
+}
+
+.About__me p {
+  font-size: 1.8rem;
+  color: var(--primary-color);
+  text-align: center;
+  font-weight: 400;
+}
+
+@media (min-width: 600px) {
   .About__title {
-    font-size: 2.5rem;
+    font-size: 2.6rem;
+  }
+  .About__subtitle {
+    font-size: 2rem;
   }
 }

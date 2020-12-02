@@ -73,4 +73,4 @@ function Navbar(props: IProps) {
   );
 }
 
-export default Navbar;
+export default React.memo(Navbar);

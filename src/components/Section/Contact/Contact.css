@@ -1,6 +1,6 @@
 .Contact__title {
   color: var(--highlight-color);
-  font-size: 2rem;
+  font-size: 2rem;;
   margin: 0px 0px 1rem;
   text-transform: uppercase;
   font-weight: 700;
@@ -49,9 +49,9 @@
   background-color: var(--color-hover);
 }
 
-@media (min-width: 600) {
+@media (min-width: 600px) {
   .Contact__title {
-    font-size: 2.5rem;
+    font-size: 2.6rem;
   }
   .Contact__mail {
       font-size: 2rem;

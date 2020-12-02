@@ -19,22 +19,22 @@ function App() {
   const RefPortfolio = useRef<HTMLElement>(null);
   const RefContact = useRef<HTMLElement>(null);
 
-  const [isToggle, setIsToggle] = useState<boolean>(localStorage.getItem('data-theme') === 'true');
+  const [isToggle, setIsToggle] = useState<boolean>(localStorage.getItem('data-theme') === 'dark');
 
   const handleToggle = () => {
     if (isToggle === false) {
-      localStorage.setItem('data-theme', 'true');
+      localStorage.setItem('data-theme', 'dark');
       document.documentElement.setAttribute('data-theme', 'dark');
       setIsToggle(true);
     } else {
-      localStorage.setItem('data-theme', 'false');
+      localStorage.setItem('data-theme', 'light');
       document.documentElement.removeAttribute('data-theme');
       setIsToggle(false);
     }
   };
 
   React.useEffect(() => {
-    const localTheme = localStorage.getItem('data-theme') === 'true';
+    const localTheme = localStorage.getItem('data-theme') === 'dark';
     if (localTheme) {
       document.documentElement.setAttribute('data-theme', 'dark');
     }
