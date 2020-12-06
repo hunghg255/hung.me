@@ -91,6 +91,8 @@
  color: #fff !important;
  font-weight: 500;
  font-style: italic;
+ display: inline-block;
+ margin: 2px 0;
 }
 
 .hight-light::after {
