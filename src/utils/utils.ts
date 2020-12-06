@@ -1,5 +1,5 @@
 const scrollToElement = (element: HTMLElement) => {
-  const elementPosition = element.getBoundingClientRect().top;
+  const elementPosition = element.getBoundingClientRect().top - 40;
   const startPosition = window.pageYOffset;
   let startTime = 0;
   const duration = 500;

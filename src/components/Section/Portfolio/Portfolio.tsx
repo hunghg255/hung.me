@@ -56,7 +56,7 @@ export default function Portfolio(props: IProps) {
         <ul>
           {
             data.map((item, idx) => (
-              <li className='Project__item'>
+              <li key={idx.toString()} className='Project__item'>
                 <h3><span>{item.name}</span></h3>
                 <div className={`Project__item__wrapper ${idx % 2 !== 0 ? 'Project__item__wrapper--reverse' : ''}`}>
                   <div className='Project__item__image'>
