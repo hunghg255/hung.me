@@ -8,8 +8,152 @@
   text-align: center;
 }
 
+.Project__item h3 {
+  color: #fff !important;
+  text-align: center;
+  font-size: 1.6rem;
+  position: relative;
+  line-height: 1.8;
+  font-weight: 600;
+  margin-bottom: 3rem;
+  font-style: italic;
+}
+.Project__item span {
+  position: relative;
+  padding: 4px 6px;
+}
+
+.Project__item span:after {
+  content: '';
+  background-color: var(--highlight-color);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  transform: rotate(-2deg);
+}
+
+.item__info {
+  font-size: 1.6rem;
+  font-weight: 300;
+  margin-bottom: 2rem;
+}
+
+.Project__item__image {
+  margin-bottom: 3rem;
+}
+
+.Project__item__info {
+  text-align: center;
+}
+
+.item__stack {
+  font-weight: bold;
+  font-size: 1.35rem;
+  margin-bottom: 2.6rem;
+  text-transform: uppercase;
+}
+
+
+.item__view a {
+  width: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 10px;
+  margin-right: 2rem;
+  font-weight: bold;
+  border-radius: 50px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 1rem;
+  transition: 300ms;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.item__view svg {
+  width: 10px;
+  margin-right: 4px;
+}
+
+.item__view a:hover {
+  transform: translateY(-1px);
+}
+
+.item__view a:nth-child(1) {
+  background: var(--highlight-color);
+  color: #fff !important;
+}
+.item__view a:nth-child(2) {
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+}
+
+.item__view {
+  display: flex;
+  justify-content: center;
+}
+
+.item__info, .item__stack {
+  color: var(--primary-color);
+}
+
+.item__info a {
+  display: inline;
+  color: var(--primary-color);
+  font-weight: 500;
+  font-style: italic;
+  text-decoration: underline;
+}
+
+.Project__item {
+  margin-bottom: 6rem;
+}
+
 @media (min-width: 600px) {
   .Portfolio__title {
     font-size: 2.6rem;
   }
+
+  .Project__item {
+    margin-bottom: 14rem;
+    margin-top: 1.8rem;
+  }
+
+  .Project__item h3 {
+    font-size: 2rem;
+  }
+
+  .Project__item__wrapper {
+    display: flex;
+    margin: 0 -30px;
+  }
+
+  .Project__item__image, .Project__item__info {
+    width: calc(50% - 60px);
+    margin: 0 30px;
+  }
+
+  .Project__item__image {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+  }
+
+  .item__view {
+    justify-content: flex-start;
+  }
+  .Project__item__image {
+    margin-bottom: 0;
+  }
+
+  .Project__item__info {
+    text-align: left;
+  }
+
+  .Project__item__wrapper--reverse {
+    flex-direction: row-reverse;
+  }
 }
+
+
