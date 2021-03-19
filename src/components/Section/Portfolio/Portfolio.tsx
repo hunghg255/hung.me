@@ -13,11 +13,11 @@ interface IProps {
   refPortfolio: React.RefObject<HTMLElement>;
 }
 
-const data = [
+const DATA = [
   {
     name: 'Todoapp MERN',
     description: 'Build todoapp MERN stack',
-    stack: 'Reactjs - Typescript - mongodb - nodejs',
+    stack: 'Reactjs - redux - Typescript - mongodb - nodejs',
     linkDemo: '',
     source: 'https://github.com/hunghg255/Todo-mern',
     image: IMGTodoMERN,
@@ -51,11 +51,11 @@ const data = [
 export default function Portfolio(props: IProps) {
   return (
     <section className='Portfolio container' ref={props.refPortfolio}>
-      <h2 className='Portfolio__title'>Portfolio</h2>
+      <h2 className='Portfolio__title'>My Project</h2>
       <div className='Project'>
         <ul>
           {
-            data.map((item, idx) => (
+            DATA.map((item, idx) => (
               <li key={idx.toString()} className='Project__item'>
                 <h3><span>{item.name}</span></h3>
                 <div className={`Project__item__wrapper ${idx % 2 !== 0 ? 'Project__item__wrapper--reverse' : ''}`}>
