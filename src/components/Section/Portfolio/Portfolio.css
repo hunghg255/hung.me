@@ -1,7 +1,7 @@
 .Portfolio__title {
   color: var(--highlight-color);
   font-size: 2rem;
-  margin: 0px 0px 1rem;
+  margin: 0px 0px 4rem;
   text-transform: uppercase;
   font-weight: 700;
   transition: color 0.2s ease-out 0s;
@@ -43,10 +43,20 @@
 
 .Project__item__image {
   margin-bottom: 3rem;
+  overflow: hidden;
+}
+
+.Project__item__image img {
+  width: 100%;
 }
 
 .Project__item__info {
   text-align: center;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  transition: all 350ms;
 }
 
 .item__stack {
@@ -56,6 +66,9 @@
   text-transform: uppercase;
 }
 
+.item__view {
+  margin-top: auto;
+}
 
 .item__view a {
   width: 10rem;
@@ -71,6 +84,7 @@
   font-size: 1rem;
   transition: 300ms;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
 }
 
 .item__view svg {
@@ -96,7 +110,11 @@
   justify-content: center;
 }
 
-.item__info, .item__stack {
+.item__info {
+}
+
+.item__info,
+.item__stack {
   color: var(--primary-color);
 }
 
@@ -109,51 +127,53 @@
 }
 
 .Project__item {
-  margin-bottom: 6rem;
+  margin-bottom: 2.5rem;
+  border-radius: 8px;
+  /* background-color: #fff; */
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2),
+    0 4px 6px -4px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  overflow: hidden;
+  transition: all 350ms;
+}
+
+.Project__item:hover {
+  transform: translateY(-4px);
+}
+
+.Project__item:hover .Project__item__info {
+  background-color: rgba(0, 195, 255, 0.167);
+}
+
+.Project__item__wrapper {
+  text-align: center;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 @media (min-width: 600px) {
+  .Project ul {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+  }
+  .Project__item {
+    width: calc(33.33% - 30px);
+    margin: 0 15px 25px;
+  }
   .Portfolio__title {
     font-size: 2.6rem;
-  }
-
-  .Project__item {
-    margin-bottom: 14rem;
-    margin-top: 1.8rem;
   }
 
   .Project__item h3 {
     font-size: 2rem;
   }
 
-  .Project__item__wrapper {
-    display: flex;
-    margin: 0 -30px;
-  }
-
-  .Project__item__image, .Project__item__info {
-    width: calc(50% - 60px);
-    margin: 0 30px;
-  }
-
-  .Project__item__image {
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
-  }
-
-  .item__view {
-    justify-content: flex-start;
-  }
   .Project__item__image {
     margin-bottom: 0;
-  }
-
-  .Project__item__info {
-    text-align: left;
-  }
-
-  .Project__item__wrapper--reverse {
-    flex-direction: row-reverse;
+    max-height: 200px;
   }
 }
-
-

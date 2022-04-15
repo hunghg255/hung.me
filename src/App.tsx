@@ -19,7 +19,9 @@ function App() {
   const RefPortfolio = useRef<HTMLElement>(null);
   const RefContact = useRef<HTMLElement>(null);
 
-  const [isToggle, setIsToggle] = useState<boolean>(localStorage.getItem('data-theme') === 'dark');
+  const [isToggle, setIsToggle] = useState<boolean>(
+    localStorage.getItem('data-theme') === 'dark',
+  );
 
   const handleToggle = () => {
     if (isToggle === false) {
