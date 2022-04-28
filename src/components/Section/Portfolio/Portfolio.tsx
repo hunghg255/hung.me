@@ -9,6 +9,7 @@ import IMGMovies from '../../../Image/projects/movies.png';
 import IMGAuthFirebase from '../../../Image/projects/authFirebase.png';
 import IMGTodoMERN from '../../../Image/projects/todoMERN.png';
 import shuffleImage from '../../../Image/projects/shuffleImage.png';
+import fbCloneImage from '../../../Image/projects/fbclone.png';
 
 interface IProps {
   refPortfolio: React.RefObject<HTMLElement>;
@@ -39,6 +40,14 @@ const DATA = [
     linkDemo: 'https://movies-api-cabb4.web.app/',
     source: 'https://github.com/hunghg255/movies_api_reactjs',
     image: IMGMovies,
+  },
+  {
+    name: 'Facebook clone',
+    description: 'A facebook clone made with nextjs',
+    stack: 'Nextjs, Firebase, Tailwindcss',
+    linkDemo: '',
+    source: 'https://github.com/hunghg255/fb-clone',
+    image: fbCloneImage,
   },
   {
     name: 'Madies clone',
