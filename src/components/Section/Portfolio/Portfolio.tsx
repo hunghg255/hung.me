@@ -53,7 +53,7 @@ const DATA = [
   {
     name: 'Codepen clone',
     description: 'A Codepen clone made with reactjs',
-    stack: 'Nextjs, Firebase, Tailwindcss',
+    stack: 'Reactjs',
     linkDemo: 'codepenclone.vercel.app',
     source: 'https://github.com/hunghg255/reactjs-codepen',
     image: codepenCloneImage,
