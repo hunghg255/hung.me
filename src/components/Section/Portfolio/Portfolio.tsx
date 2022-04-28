@@ -11,6 +11,7 @@ import IMGTodoMERN from '../../../Image/projects/todoMERN.png';
 import shuffleImage from '../../../Image/projects/shuffleImage.png';
 import fbCloneImage from '../../../Image/projects/fbclone.png';
 import codepenCloneImage from '../../../Image/projects/codepenclone.png';
+import weatherAppImage from '../../../Image/projects/weatherApp.png';
 
 interface IProps {
   refPortfolio: React.RefObject<HTMLElement>;
@@ -54,9 +55,17 @@ const DATA = [
     name: 'Codepen clone',
     description: 'A Codepen clone made with reactjs',
     stack: 'Reactjs',
-    linkDemo: 'codepenclone.vercel.app',
+    linkDemo: 'https://codepenclone.vercel.app',
     source: 'https://github.com/hunghg255/reactjs-codepen',
     image: codepenCloneImage,
+  },
+  {
+    name: 'Weather App',
+    description: 'Build a weather App with reactjs',
+    stack: 'Reactjs, Redux, Tailwindcss',
+    linkDemo: 'https://react-weather-ts-omega.vercel.app/',
+    source: 'https://github.com/hunghg255/react-weather-ts',
+    image: weatherAppImage,
   },
   {
     name: 'Madies clone',
