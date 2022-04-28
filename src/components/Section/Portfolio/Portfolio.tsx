@@ -10,6 +10,7 @@ import IMGAuthFirebase from '../../../Image/projects/authFirebase.png';
 import IMGTodoMERN from '../../../Image/projects/todoMERN.png';
 import shuffleImage from '../../../Image/projects/shuffleImage.png';
 import fbCloneImage from '../../../Image/projects/fbclone.png';
+import codepenCloneImage from '../../../Image/projects/codepenclone.png';
 
 interface IProps {
   refPortfolio: React.RefObject<HTMLElement>;
@@ -48,6 +49,14 @@ const DATA = [
     linkDemo: '',
     source: 'https://github.com/hunghg255/fb-clone',
     image: fbCloneImage,
+  },
+  {
+    name: 'Codepen clone',
+    description: 'A Codepen clone made with reactjs',
+    stack: 'Nextjs, Firebase, Tailwindcss',
+    linkDemo: 'codepenclone.vercel.app',
+    source: 'https://github.com/hunghg255/reactjs-codepen',
+    image: codepenCloneImage,
   },
   {
     name: 'Madies clone',
