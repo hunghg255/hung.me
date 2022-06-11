@@ -1,4 +1,4 @@
-.Portfolio__title {
+.portfolioTitle {
   color: var(--highlight-color);
   font-size: 2rem;
   margin: 0px 0px 4rem;
@@ -8,7 +8,7 @@
   text-align: center;
 }
 
-.Project__item h3 {
+.projectItem h3 {
   color: #fff !important;
   text-align: center;
   font-size: 1.6rem;
@@ -18,12 +18,12 @@
   margin-bottom: 3rem;
   font-style: italic;
 }
-.Project__item span {
+.projectItem span {
   position: relative;
   padding: 4px 6px;
 }
 
-.Project__item span:after {
+.projectItem span:after {
   content: '';
   background-color: var(--highlight-color);
   position: absolute;
@@ -35,22 +35,22 @@
   transform: rotate(-2deg);
 }
 
-.item__info {
+.itemInfo {
   font-size: 1.6rem;
   font-weight: 300;
   margin-bottom: 2rem;
 }
 
-.Project__item__image {
+.projectItemImage {
   margin-bottom: 3rem;
   overflow: hidden;
 }
 
-.Project__item__image img {
+.projectItemImage img {
   width: 100%;
 }
 
-.Project__item__info {
+.projectItemInfo {
   text-align: center;
   padding: 15px;
   display: flex;
@@ -59,18 +59,18 @@
   transition: all 350ms;
 }
 
-.item__stack {
+.itemStack {
   font-weight: bold;
   font-size: 1.35rem;
   margin-bottom: 2.6rem;
   text-transform: uppercase;
 }
 
-.item__view {
+.itemView {
   margin-top: auto;
 }
 
-.item__view a {
+.itemView a {
   width: 10rem;
   display: flex;
   justify-content: center;
@@ -87,38 +87,38 @@
 
 }
 
-.item__view svg {
+.itemView svg {
   width: 10px;
   margin-right: 4px;
 }
 
-.item__view a:hover {
+.itemView a:hover {
   transform: translateY(-1px);
 }
 
-.item__view a:nth-child(1) {
+.itemView a:nth-child(1) {
   background: var(--highlight-color);
   color: #fff !important;
 }
-.item__view a:nth-child(2) {
+.itemView a:nth-child(2) {
   color: var(--primary-color);
   border: 1px solid var(--primary-color);
 }
 
-.item__view {
+.itemView {
   display: flex;
   justify-content: center;
 }
 
-.item__info {
+.itemInfo {
 }
 
-.item__info,
-.item__stack {
+.itemInfo,
+.itemStack {
   color: var(--primary-color);
 }
 
-.item__info a {
+.itemInfo a {
   display: inline;
   color: var(--primary-color);
   font-weight: 500;
@@ -126,7 +126,7 @@
   text-decoration: underline;
 }
 
-.Project__item {
+.projectItem {
   margin-bottom: 2.5rem;
   border-radius: 8px;
   /* background-color: #fff; */
@@ -137,15 +137,15 @@
   transition: all 350ms;
 }
 
-.Project__item:hover {
+.projectItem:hover {
   transform: translateY(-4px);
 }
 
-.Project__item:hover .Project__item__info {
+.projectItem:hover .Project__itemInfo {
   background-color: rgba(0, 195, 255, 0.167);
 }
 
-.Project__item__wrapper {
+.projectItem__wrapper {
   text-align: center;
   height: 100%;
   display: flex;
@@ -154,25 +154,25 @@
 }
 
 @media (min-width: 600px) {
-  .Project ul {
+  .project ul {
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
     margin: 0 -15px;
   }
-  .Project__item {
+  .projectItem {
     width: calc(33.33% - 30px);
     margin: 0 15px 25px;
   }
-  .Portfolio__title {
+  .portfolioTitle {
     font-size: 2.6rem;
   }
 
-  .Project__item h3 {
+  .projectItem h3 {
     font-size: 2rem;
   }
 
-  .Project__item__image {
+  .projectItemImage {
     margin-bottom: 0;
     max-height: 200px;
   }

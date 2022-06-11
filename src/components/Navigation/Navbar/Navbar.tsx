@@ -1,14 +1,10 @@
-/* eslint-disable react/jsx-curly-newline */
-/* eslint-disable implicit-arrow-linebreak */
-/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 import React from 'react';
 
-import './Navbar.css';
+import styles from './index.module.css';
 
-import CheckboxIos from '../../UI/CheckboxIos/CheckboxIos';
-import ImgLogo from '../../../Image/logo.png';
-import ImgLogoDark from '../../../Image/logo-dark-theme.png';
-import { scrollToElement } from '../../../utils/utils';
+import { scrollToElement } from 'src/utils';
+import CheckboxIos from 'src/components/UI/CheckboxIos';
+import Image from 'next/image';
 
 interface IProps {
   refSection: {
@@ -25,19 +21,24 @@ function Navbar(props: IProps) {
   const { refSection, handleToggleDarkTheme, toggle } = props;
 
   return (
-    <nav className='Nav__bar'>
+    <nav className={styles.navBar}>
       <div className='container'>
-        <ul className='Nav__list'>
+        <ul className={styles.navList}>
           <li
-            className='Nav__item Nav__item--logo'
+            className={`${styles.navItem} ${styles.navItemLogo}`}
             onClick={() =>
               scrollToElement(refSection.refHeader.current as HTMLElement)
             }
           >
-            <img src={toggle ? ImgLogoDark : ImgLogo} alt='Logo' />
+            <Image
+              src={toggle ? '/images/logo-dark-theme.png' : '/images/logo.png'}
+              alt='Logo'
+              width={100}
+              height={32}
+            />
           </li>
           <li
-            className='Nav__item'
+            className={styles.navItem}
             onClick={() =>
               scrollToElement(refSection.refAbout.current as HTMLElement)
             }
@@ -45,7 +46,7 @@ function Navbar(props: IProps) {
             About me
           </li>
           <li
-            className='Nav__item'
+            className={styles.navItem}
             onClick={() =>
               scrollToElement(refSection.refPortfolio.current as HTMLElement)
             }
@@ -53,14 +54,14 @@ function Navbar(props: IProps) {
             Portfolio
           </li>
           <li
-            className='Nav__item'
+            className={styles.navItem}
             onClick={() =>
               scrollToElement(refSection.refContact.current as HTMLElement)
             }
           >
             Contact
           </li>
-          <li className='Nav__item'>
+          <li className={styles.navItem}>
             <CheckboxIos
               id={2}
               isChecked={toggle}
