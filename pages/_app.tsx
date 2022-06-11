@@ -12,7 +12,7 @@ function MyApp({ Component, pageProps }) {
 
         <link
           rel='icon'
-          href='https://raw.githubusercontent.com/hunghg255/my-portfolio/main/src/Image/favicon.png'
+          href='https://res.cloudinary.com/hunghg255/image/upload/v1654956188/favicon_gplhkh.png'
         />
 
         <meta name='title' content='Hunghg | Front-end Developer' />
@@ -22,7 +22,7 @@ function MyApp({ Component, pageProps }) {
         />
 
         <meta property='og:type' content='website' />
-        <meta property='og:url' content='https://portfolio-c0129.web.app/' />
+        <meta property='og:url' content='https://hunghg.vercel.app/' />
         <meta property='og:title' content='Hunghg | Front-end Developer' />
         <meta
           property='og:description'
@@ -30,14 +30,11 @@ function MyApp({ Component, pageProps }) {
         />
         <meta
           property='og:image'
-          content='https://raw.githubusercontent.com/hunghg255/my-portfolio/main/src/Image/me.JPG'
+          content='https://res.cloudinary.com/hunghg255/image/upload/v1654956015/Screen_Shot_2022-06-07_at_11.25.34_bpnymt.png'
         />
 
         <meta property='twitter:card' content='summary_large_image' />
-        <meta
-          property='twitter:url'
-          content='https://portfolio-c0129.web.app/'
-        />
+        <meta property='twitter:url' content='https://hunghg.vercel.app/' />
         <meta property='twitter:title' content='Hunghg | Front-end Developer' />
         <meta
           property='twitter:description'
@@ -45,7 +42,7 @@ function MyApp({ Component, pageProps }) {
         />
         <meta
           property='twitter:image'
-          content='https://raw.githubusercontent.com/hunghg255/my-portfolio/main/src/Image/me.JPG'
+          content='https://res.cloudinary.com/hunghg255/image/upload/v1654956015/Screen_Shot_2022-06-07_at_11.25.34_bpnymt.png'
         />
 
         <meta property='og:image:type' content='image/jpeg' />

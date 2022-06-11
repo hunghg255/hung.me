@@ -39,7 +39,7 @@ const DATA = [
     stack: 'Nextjs, Firebase, Tailwindcss',
     linkDemo: '',
     source: 'https://github.com/hunghg255/fb-clone',
-    image: '/images/projects/fbClone.png',
+    image: '/images/projects/fbclone.png',
   },
   {
     name: 'Codepen clone',
@@ -47,7 +47,7 @@ const DATA = [
     stack: 'Reactjs',
     linkDemo: 'https://codepenclone.vercel.app',
     source: 'https://github.com/hunghg255/reactjs-codepen',
-    image: '/images/projects/codepenClone.png',
+    image: '/images/projects/codepenclone.png',
   },
   {
     name: 'Weather App',
