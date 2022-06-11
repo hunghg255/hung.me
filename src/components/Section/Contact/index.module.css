@@ -1,4 +1,4 @@
-.Contact__title {
+.contactTitle {
   color: var(--highlight-color);
   font-size: 2rem;;
   margin: 0px 0px 1rem;
@@ -10,7 +10,7 @@
 
 
 
-.Contact__mail {
+.contactMail {
   color: var(--primary-color);
     font-size: 1.6rem;
     position: relative;
@@ -21,17 +21,17 @@
     text-align: center;
 }
 
-.Contact__socials {
+.contactSocials {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.Contact__socials li {
+.contactSocials li {
   margin: 0 0.6rem;
 }
 
-.Contact__socials li a {
+.contactSocials li a {
   padding: 0.8rem;
   border: 2px solid var(--highlight-color);
   border-radius: 50%;
@@ -40,42 +40,42 @@
   transition: 350ms;
 }
 
-.Contact__socials li a svg {
+.contactSocials li a svg {
   width: 16px;
   height: 16px;
 }
 
-.Contact__socials li a:hover {
+.contactSocials li a:hover {
   background-color: var(--color-hover);
 }
 
 @media (min-width: 600px) {
-  .Contact__title {
+  .contactTitle {
     font-size: 2.6rem;
   }
-  .Contact__mail {
+  .contactMail {
       font-size: 2rem;
   }
 
-  .Contact__socials li {
+  .contactSocials li {
     margin: 0 1.5rem;
   }
 
-  .Contact__socials li a svg {
+  .contactSocials li a svg {
     width: 20px;
     height: 20px;
   }
 
-  .Contact__socials li {
+  .contactSocials li {
     margin: 0 1rem;
   }
 
 
-.Contact__socials li a {
+.contactSocials li a {
   padding: 1rem;
 }
 }
 
-.Contact-dark path {
-  fill: #fff !important;
+.contact path {
+  fill: var(--primary-color) !important;
 }

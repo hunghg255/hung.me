@@ -1,9 +1,9 @@
-.btn__burger {
+.btnBurger {
   width: 26px;
   cursor: pointer;
 }
 
-.btn__burger--line {
+.btnBurgerLine {
   height: 3px;
   width: 100%;
   background-color: var(--highlight-color);
@@ -11,19 +11,19 @@
   transition: 350ms;
 }
 
-.btn__burger--line:nth-child(2) {
+.btnBurgerLine:nth-child(2) {
   margin: 5px 0;
 }
 
-.btn__burger--active .btn__burger--line:nth-child(2) {
+.btnBurgerActive .btnBurgerLine:nth-child(2) {
   transform: translateX(-20px);
   opacity: 0;
 }
 
-.btn__burger--active .btn__burger--line:nth-child(1) {
+.btnBurgerActive .btnBurgerLine:nth-child(1) {
   transform: rotate(45deg) translate(5px, 6px);
 }
 
-.btn__burger--active .btn__burger--line:nth-child(3) {
+.btnBurgerActive .btnBurgerLine:nth-child(3) {
   transform: rotate(-46deg) translate(6px, -6px);
 }

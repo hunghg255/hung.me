@@ -1,4 +1,4 @@
-.btn__scrollTop {
+.btnScrollTop {
   position: fixed;
   right: 3rem;
   bottom: 4rem;
@@ -8,11 +8,11 @@
   transition: 300ms;
 }
 
-.btn__scrollTop.btn__scrollTop--active {
+.btnScrollTopActive {
   opacity: 1;
 }
 
-.btn__scrollTop button {
+.btnScrollTop button {
   border: none;
   outline: none;
   width: 100%;
@@ -24,14 +24,14 @@
   box-shadow: 0 0 10px rgba(0,0,0, 0.3);
 }
 
-.btn__scrollTop button:hover {
+.btnScrollTop button:hover {
   transform: translateY(-5px);
 }
 
-.btn__scrollTop button svg {
+.btnScrollTop button svg {
   width: 100%;
 }
 
-.btn__scrollTop button path {
+.btnScrollTop button path {
   fill: #fff;
 }

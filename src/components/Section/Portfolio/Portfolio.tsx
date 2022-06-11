@@ -1,17 +1,7 @@
-/* eslint-disable react/no-unescaped-entities */
-/* eslint-disable react/jsx-one-expression-per-line */
+import Image from 'next/image';
 import React from 'react';
 
-import './Portfolio.css';
-
-import IMGMadies from '../../../Image/projects/madies.png';
-import IMGMovies from '../../../Image/projects/movies.png';
-import IMGAuthFirebase from '../../../Image/projects/authFirebase.png';
-import IMGTodoMERN from '../../../Image/projects/todoMERN.png';
-import shuffleImage from '../../../Image/projects/shuffleImage.png';
-import fbCloneImage from '../../../Image/projects/fbclone.png';
-import codepenCloneImage from '../../../Image/projects/codepenclone.png';
-import weatherAppImage from '../../../Image/projects/weatherApp.png';
+import styles from './index.module.css';
 
 interface IProps {
   refPortfolio: React.RefObject<HTMLElement>;
@@ -24,7 +14,7 @@ const DATA = [
     stack: 'Reactjs - redux - Typescript - mongodb - nodejs',
     linkDemo: '',
     source: 'https://github.com/hunghg255/Todo-mern',
-    image: IMGTodoMERN,
+    image: '/images/projects/todoMERN.png',
   },
   {
     name: 'Auth firebase',
@@ -32,7 +22,7 @@ const DATA = [
     stack: 'Reactjs - ReactBootstrap - Firebase ',
     linkDemo: 'https://auth-react-firebase-cf412.web.app/',
     source: 'https://github.com/hunghg255/react-auth-firebase',
-    image: IMGAuthFirebase,
+    image: '/images/projects/authFirebase.png',
   },
   {
     name: 'Movies trailer',
@@ -41,7 +31,7 @@ const DATA = [
     stack: 'Reactjs',
     linkDemo: 'https://movies-api-cabb4.web.app/',
     source: 'https://github.com/hunghg255/movies_api_reactjs',
-    image: IMGMovies,
+    image: '/images/projects/movies.png',
   },
   {
     name: 'Facebook clone',
@@ -49,7 +39,7 @@ const DATA = [
     stack: 'Nextjs, Firebase, Tailwindcss',
     linkDemo: '',
     source: 'https://github.com/hunghg255/fb-clone',
-    image: fbCloneImage,
+    image: '/images/projects/fbClone.png',
   },
   {
     name: 'Codepen clone',
@@ -57,7 +47,7 @@ const DATA = [
     stack: 'Reactjs',
     linkDemo: 'https://codepenclone.vercel.app',
     source: 'https://github.com/hunghg255/reactjs-codepen',
-    image: codepenCloneImage,
+    image: '/images/projects/codepenClone.png',
   },
   {
     name: 'Weather App',
@@ -65,7 +55,7 @@ const DATA = [
     stack: 'Reactjs, Redux, Tailwindcss',
     linkDemo: 'https://react-weather-ts-omega.vercel.app/',
     source: 'https://github.com/hunghg255/react-weather-ts',
-    image: weatherAppImage,
+    image: '/images/projects/weatherApp.png',
   },
   {
     name: 'Madies clone',
@@ -74,7 +64,7 @@ const DATA = [
     stack: 'HTML - CSS - JAVASCRIPT',
     linkDemo: 'https://hunghg255.github.io/madies-clone/',
     source: 'https://github.com/hunghg255/madies-clone',
-    image: IMGMadies,
+    image: '/images/projects/madies.png',
   },
   {
     name: 'Vanilla Shuffle Image',
@@ -82,32 +72,37 @@ const DATA = [
     stack: 'HTML - CSS - JAVASCRIPT',
     linkDemo: 'https://hoainam12k.github.io/vanilla-shuffe-images/dist/',
     source: 'https://github.com/hunghg255/vanilla-shuffe-images',
-    image: shuffleImage,
+    image: '/images/projects/shuffleImage.png',
   },
 ];
 
 export default function Portfolio(props: IProps) {
   return (
     <section className='Portfolio container' ref={props.refPortfolio}>
-      <h2 className='Portfolio__title'>My Project</h2>
-      <div className='Project'>
+      <h2 className={styles.portfolioTitle}>My Project</h2>
+      <div className={styles.project}>
         <ul>
           {DATA.map((item, idx) => (
-            <li key={idx.toString()} className='Project__item'>
+            <li key={idx.toString()} className={styles.projectItem}>
               <div className='Project__item__wrapper'>
-                <div className='Project__item__image'>
-                  <img src={item.image} alt={item.name} />
+                <div className={styles.projectItemImage}>
+                  <Image
+                    src={item.image}
+                    alt={item.name}
+                    width={357}
+                    height={202}
+                  />
                 </div>
-                <div className='Project__item__info'>
+                <div className={styles.projectItemInfo}>
                   <h3>
                     <span>{item.name}</span>
                   </h3>
                   <p
-                    className='item__info'
+                    className={styles.itemInfo}
                     dangerouslySetInnerHTML={{ __html: item.description }}
                   />
-                  <p className='item__stack'>{item.stack}</p>
-                  <p className='item__view'>
+                  <p className={styles.itemStack}>{item.stack}</p>
+                  <p className={styles.itemView}>
                     <a href={item.linkDemo} target='_blank' rel='noreferrer'>
                       <svg
                         aria-hidden='true'

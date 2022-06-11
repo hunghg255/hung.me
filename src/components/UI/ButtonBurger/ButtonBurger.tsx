@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './ButtonBurger.css';
+import styles from './index.module.css';
 
 interface IPropsButtonBurger {
   isToggle: boolean;
@@ -10,12 +10,14 @@ interface IPropsButtonBurger {
 export default function ButtonBurger(props: IPropsButtonBurger) {
   return (
     <div
-      className={`btn__burger ${props.isToggle ? 'btn__burger--active' : ''}`}
+      className={`${styles.btnBurger} ${
+        props.isToggle ? styles.btnBurgerActive : ''
+      }`}
       onClick={props.toggle}
     >
-      <div className='btn__burger--line'></div>
-      <div className='btn__burger--line'></div>
-      <div className='btn__burger--line'></div>
+      <div className={styles.btnBurgerLine}></div>
+      <div className={styles.btnBurgerLine}></div>
+      <div className={styles.btnBurgerLine}></div>
     </div>
   );
 }

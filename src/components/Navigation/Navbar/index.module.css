@@ -1,4 +1,4 @@
-.Nav__bar {
+.navBar {
   position: fixed;
   top: 0;
   left: 0;
@@ -11,23 +11,23 @@
   opacity: 0.85;
 }
 
-.Nav__list {
+.navList {
   display: flex;
   align-items: center;
   padding: 1.2rem;
 }
 
-.Nav__item.Nav__item--logo {
+.navItemLogo {
   flex: 1;
   margin: 0;
 }
 
-.Nav__item--logo img {
+.navItemLogo img {
   width: 100px;
   height: auto;
 }
 
-.Nav__item {
+.navItem {
   text-transform: uppercase;
   font-size: 1.4rem;
   font-weight: 600;
@@ -38,12 +38,12 @@
   font-family: var(--primary-font);
 }
 
-.Nav__item:hover {
+.navItem:hover {
   color: var(--color-hover);
 }
 
 @media (min-width: 600px) {
-  .Nav__bar {
+  .navBar {
     display: block;
   }
 }

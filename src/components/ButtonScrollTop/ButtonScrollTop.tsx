@@ -1,32 +1,36 @@
 import React, { useEffect, useState } from 'react';
-import { scrollToElement } from '../../utils/utils';
+import { scrollToElement } from 'src/utils';
 
-import './ButtonScrollTop.css';
+import styles from './index.module.css';
 
 interface Iprops {
   refHeader: React.RefObject<HTMLElement>;
 }
 
 export default function ButtonScrollTop(props: Iprops) {
-  const [active, setactive] = useState(false);
+  const [active, setActive] = useState(false);
 
   useEffect(() => {
     window.addEventListener('scroll', () => {
       if (window.scrollY > 0) {
-        setactive(true);
+        setActive(true);
       } else {
-        setactive(false);
+        setActive(false);
       }
     });
   }, [active]);
 
   const scrollTop = () => {
-    setactive(false);
+    setActive(false);
     scrollToElement(props.refHeader.current as HTMLElement);
   };
 
   return (
-    <div className={`btn__scrollTop ${active ? 'btn__scrollTop--active' : ''}`}>
+    <div
+      className={`${styles.btnScrollTop} ${
+        active ? styles.btnScrollTopActive : ''
+      }`}
+    >
       <button type='button' onClick={scrollTop}>
         <svg
           xmlns='http://www.w3.org/2000/svg'

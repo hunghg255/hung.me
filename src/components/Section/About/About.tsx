@@ -1,9 +1,6 @@
-/* eslint-disable max-len */
-/* eslint-disable react/no-unescaped-entities */
-/* eslint-disable react/jsx-one-expression-per-line */
 import React from 'react';
 
-import './About.css';
+import styles from './index.module.css';
 
 interface IProps {
   refAbout: React.RefObject<HTMLElement>;
@@ -11,35 +8,38 @@ interface IProps {
 
 const STACK = [
   'HTML',
-  'CSS',
-  'JAVASCRIPT',
-  'TYPESCRIPT',
-  'SASS',
+  'Css',
+  'Javascript',
+  'Typescript',
+  'Sass',
   'LESS',
-  'WEBPACK',
-  'REACTJS',
-  'NEXTJS',
-  'GATSBYJ',
-  'FIREBASE',
+  'Webpack',
+  'Reactjs',
+  'Nextjs',
+  'Gatsbyjs',
+  'Vuejs',
+  'Nodejs',
+  'Firebase',
+  'Docker',
 ];
 
 export default function About(props: IProps) {
   return (
     <section className='About container' ref={props.refAbout}>
-      <div className='About__heading'>
-        <h2 className='About__title'>About me</h2>
-        <h3 className='About__subtitle'>
-          if you're <span>wondering</span> who <span>I am...</span>
+      <div className={styles.aboutHeading}>
+        <h2 className={styles.aboutTitle}>About me</h2>
+        <h3 className={styles.aboutSubtitle}>
+          if you&apos;re <span>wondering</span> who <span>I am...</span>
         </h3>
       </div>
-      <div className='About__me'>
+      <div className={styles.aboutMe}>
         <p>
-          Hi, my name is <span className='hight-light'>Hung</span>, i'm 24 years
-          old. I got a bachelor of Electronics Telecommunication Engineering at
-          Ha Noi University of Science and Technology (2015, "2020). Besides, i
-          am really passionate about{' '}
-          <span className='hight-light'>Javascript</span> and{' '}
-          <span className='hight-light'>Web Development.</span>
+          Hi, my name is <span className={styles.hightLight}>Hung</span>,
+          i&apos;m 24 years old. I got a bachelor of Electronics
+          Telecommunication Engineering at Ha Noi University of Science and
+          Technology (2015 - 2020). Besides, i am really passionate about{' '}
+          <span className={styles.hightLight}>Javascript</span> and{' '}
+          <span className={styles.hightLight}>Web Development.</span>
         </p>
 
         <p>
@@ -54,7 +54,7 @@ export default function About(props: IProps) {
           ,{' '}
           <span>
             <a href='https://github.com/getify/You-Dont-Know-JS'>
-              You Don't Know JS
+              You Don&apos;t Know JS
             </a>
           </span>
           .... I also took some online courses like{' '}
@@ -76,10 +76,10 @@ export default function About(props: IProps) {
           a lot, worked hard.
         </p>
       </div>
-      <div className='About__me About__me__Stack'>
+      <div className={styles.aboutMeStack}>
         <h3>
-          My current <span className='hight-light'>stack</span> of{' '}
-          <span className='hight-light'>languages/technologies</span> is:
+          My current <span className={styles.hightLight}>stack</span> of{' '}
+          <span className={styles.hightLight}>languages/technologies</span> is:
         </h3>
         <p>{STACK.join(' - ')}</p>
       </div>

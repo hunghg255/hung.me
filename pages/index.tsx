@@ -1,50 +1,48 @@
 import React, { useRef, useState } from 'react';
+import ButtonScrollTop from 'src/components/ButtonScrollTop';
+import Layout from 'src/components/Layout';
+import Navbar from 'src/components/Navigation/Navbar';
+import SideDraw from 'src/components/Navigation/SideDraw';
+import About from 'src/components/Section/About';
+import Contact from 'src/components/Section/Contact';
+import Footer from 'src/components/Section/Footer';
+import Header from 'src/components/Section/Header';
+import Portfolio from 'src/components/Section/Portfolio';
 
-import Layout from './components/Layout/Layout';
-import Header from './components/Section/Header/Header';
-import About from './components/Section/About/About';
-import Portfolio from './components/Section/Portfolio/Portfolio';
-import Contact from './components/Section/Contact/Contact';
-
-import Navbar from './components/Navigation/Navbar/Navbar';
-import SideDraw from './components/Navigation/SideDraw/SideDraw';
-
-import Seo from './components/SEO/Seo';
-import ButtonScrollTop from './components/ButtonScrollTop/ButtonScrollTop';
-import Footer from './components/Section/Footer/Footer';
-
-function App() {
+function Home() {
   const RefHeader = useRef<HTMLElement>(null);
   const RefAbout = useRef<HTMLElement>(null);
   const RefPortfolio = useRef<HTMLElement>(null);
   const RefContact = useRef<HTMLElement>(null);
 
-  const [isToggle, setIsToggle] = useState<boolean>(
-    localStorage.getItem('data-theme') === 'dark',
-  );
+  const [isToggle, setIsToggle] = useState<boolean>(() => {
+    if (typeof window !== 'undefined') {
+      return localStorage?.getItem('data-theme') === 'dark';
+    }
+  });
 
   const handleToggle = () => {
     if (isToggle === false) {
-      localStorage.setItem('data-theme', 'dark');
+      localStorage?.setItem('data-theme', 'dark');
       document.documentElement.setAttribute('data-theme', 'dark');
       setIsToggle(true);
     } else {
-      localStorage.setItem('data-theme', 'light');
+      localStorage?.setItem('data-theme', 'light');
       document.documentElement.removeAttribute('data-theme');
       setIsToggle(false);
     }
   };
 
   React.useEffect(() => {
-    const localTheme = localStorage.getItem('data-theme') === 'dark';
+    const localTheme = localStorage?.getItem('data-theme') === 'dark';
     if (localTheme) {
       document.documentElement.setAttribute('data-theme', 'dark');
+      // setIsToggle(true);
     }
   }, []);
 
   return (
     <Layout>
-      <Seo />
       <Navbar
         refSection={{
           refHeader: RefHeader,
@@ -78,4 +76,4 @@ function App() {
   );
 }
 
-export default App;
+export default Home;

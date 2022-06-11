@@ -1,11 +1,9 @@
-/* eslint-disable react/no-unescaped-entities */
-/* eslint-disable jsx-a11y/accessible-emoji */
 import React, { useState } from 'react';
 
-import './Header.css';
+import styles from './index.module.css';
 
-import LogoLarge from '../../../Image/logo-large.png';
-import { scrollToElement } from '../../../utils/utils';
+import { scrollToElement } from 'src/utils';
+import Image from 'next/image';
 
 interface IProps {
   refHeader: React.RefObject<HTMLElement>;
@@ -26,21 +24,21 @@ function Header(props: IProps) {
         setIdxTag(idxTag + 1);
       }
     }, 1000);
-  }, [idxTag]);
+  }, [idxTag, tags.length]);
 
   return (
-    <header className='header' ref={refHeader}>
-      <div className='header__text'>
+    <header className={styles.header} ref={refHeader}>
+      <div className={styles.headerText}>
         <h1>
           Hello ✌🏼,
           <br />
-          I'm
-          <span className='header__name'>Hung</span>
+          I&apos;m
+          <span className={styles.headerName}>Hung</span>
         </h1>
         <h2>
           A
-          <div className='header__tag-wrapper'>
-            <span className='header__tag'>{tags[idxTag]}</span>
+          <div className={styles.headerTagWrapper}>
+            <span className={styles.headerTag}>{tags[idxTag]}</span>
           </div>
           Front-end developer
         </h2>
@@ -51,9 +49,27 @@ function Header(props: IProps) {
           About me
         </button>
       </div>
-      <div className='header__image'>
-        <img src={LogoLarge} alt='' />
+      <div className={styles.headerImage}>
+        <Image
+          src={'/images/logo-large.png'}
+          alt=''
+          width={1120}
+          height={1178}
+        />
       </div>
+
+      <svg
+        strokeWidth={0}
+        viewBox='0 0 24 24'
+        className={styles.headerSvg}
+        height={56}
+        width={56}
+        xmlns='http://www.w3.org/2000/svg'
+        onClick={() => scrollToElement(refAbout.current as HTMLElement)}
+      >
+        <path d='m12 15.586-4.293-4.293-1.414 1.414L12 18.414l5.707-5.707-1.414-1.414z' />
+        <path d='m17.707 7.707-1.414-1.414L12 10.586 7.707 6.293 6.293 7.707 12 13.414z' />
+      </svg>
     </header>
   );
 }

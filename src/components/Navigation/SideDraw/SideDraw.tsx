@@ -1,15 +1,11 @@
-/* eslint-disable implicit-arrow-linebreak */
-/* eslint-disable react/jsx-curly-newline */
-/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 import React, { useState } from 'react';
 
-import ButtonBurger from '../../UI/ButtonBurger/ButtonBurger';
+import styles from './index.module.css';
 
-import './SideDraw.css';
-import ImgLogo from '../../../Image/logo.png';
-import ImgLogoDark from '../../../Image/logo-dark-theme.png';
-import CheckboxIos from '../../UI/CheckboxIos/CheckboxIos';
-import { scrollToElement } from '../../../utils/utils';
+import { scrollToElement } from 'src/utils';
+import ButtonBurger from 'src/components/UI/ButtonBurger';
+import Image from 'next/image';
+import CheckboxIos from 'src/components/UI/CheckboxIos';
 
 interface IProps {
   refSection: {
@@ -25,50 +21,61 @@ interface IProps {
 function SideDraw(props: IProps) {
   const { refSection, toggle, handleToggleDarkTheme } = props;
 
-  const [isToggle, setisToggle] = useState(false);
+  const [isToggle, setIsToggle] = useState(false);
 
   const handleToggleNav = () => {
-    setisToggle(!isToggle);
+    setIsToggle(!isToggle);
   };
 
   React.useEffect(() => {
     window.addEventListener('resize', () => {
       if (window.innerHeight > 600) {
-        setisToggle(false);
+        setIsToggle(false);
       }
     });
   }, []);
 
   const goToElement = (element: HTMLElement) => {
     scrollToElement(element);
-    setisToggle(false);
+    setIsToggle(false);
   };
 
   return (
     <>
       <nav
-        className={`Nav__sidedraw ${isToggle ? 'Nav__sidedraw--active' : ''}`}
+        className={`${styles.navSideDraw} ${
+          isToggle ? styles.navSideDrawActive : ''
+        }`}
       >
         <div className='container'>
-          <ul className='Nav__sidedraw-list'>
+          <ul className={styles.navSideDrawList}>
             <li
-              className='Nav__sidedraw-item Nav__sidedraw--logo'
+              className={`${styles.navSideDrawItem} ${styles.navSideDrawLogo}`}
               onClick={() =>
                 goToElement(refSection.refHeader.current as HTMLElement)
               }
             >
-              <img src={toggle ? ImgLogoDark : ImgLogo} alt='Logo' />
+              <Image
+                src={
+                  toggle ? '/images/logo-dark-theme.png' : '/images/logo.png'
+                }
+                alt='Logo'
+                width={100}
+                height={32}
+              />
             </li>
-            <li className='Nav__sidedraw-item'>
+            <li className={styles.navSideDrawItem}>
               <ButtonBurger isToggle={isToggle} toggle={handleToggleNav} />
             </li>
           </ul>
         </div>
       </nav>
-      <div className={`Nav__side ${isToggle ? 'Nav__side--active' : ''}`}>
+      <div
+        className={`${styles.navSide} ${isToggle ? styles.navSideActive : ''}`}
+      >
         <ul className='Nav__side--list'>
           <li
-            className='Nav__side--item'
+            className={styles.navSideItem}
             onClick={() =>
               goToElement(refSection.refAbout.current as HTMLElement)
             }
@@ -76,7 +83,7 @@ function SideDraw(props: IProps) {
             About me
           </li>
           <li
-            className='Nav__side--item'
+            className={styles.navSideItem}
             onClick={() =>
               goToElement(refSection.refPortfolio.current as HTMLElement)
             }
@@ -84,7 +91,7 @@ function SideDraw(props: IProps) {
             Portfolio
           </li>
           <li
-            className='Nav__side--item'
+            className={styles.navSideItem}
             onClick={() =>
               goToElement(refSection.refContact.current as HTMLElement)
             }
@@ -92,7 +99,7 @@ function SideDraw(props: IProps) {
             Contact
           </li>
         </ul>
-        <div className='btn__toggle'>
+        <div className={styles.btnToggle}>
           <CheckboxIos
             id={1}
             isChecked={toggle}

@@ -1,8 +1,8 @@
-.About__heading {
+.aboutHeading {
   margin-bottom: 4.5rem;
 }
 
-.About__title {
+.aboutTitle {
   color: var(--highlight-color);
   font-size: 2rem;
   margin: 0px 0px 1rem;
@@ -12,24 +12,24 @@
   text-align: center;
 }
 
-.About__subtitle {
+.aboutSubtitle {
   text-align: center;
   color: var(--primary-color);
   font-size: 1.6rem;
   font-weight: 300;
 }
 
-.About__subtitle span {
+.aboutSubtitle span {
   font-weight: 600;
   font-style: italic;
 }
 
-.About__me {
+.aboutMe {
   max-width: 860px;
   margin: 0 auto;
 }
 
-.About__me p {
+.aboutMe p {
   font-size: 1.5rem;
   color: var(--primary-color);
   text-align: center;
@@ -38,7 +38,7 @@
   margin-bottom: 1.4rem;
 }
 
-.About__me a {
+.aboutMe a {
   display: inline;
   text-decoration: underline;
   font-style: italic;
@@ -48,7 +48,7 @@
 }
 
 
-.About__me__Stack h3 {
+.aboutMeStack h3 {
   text-align: center;
   font-size: 1.6rem;
   font-weight: 600;
@@ -57,45 +57,50 @@
   color: var(--primary-color);
 }
 
-.About__me__Stack p {
+.aboutMeStack p {
   max-width: 600px;
   font-weight: 600;
   font-size: 1.4rem;
   color: var(--highlight-color);
   margin: 0 auto;
   margin-top: 1.4rem;
+  text-align: center;
 }
 
 @media (min-width: 600px) {
-  .About__title {
+  .aboutTitle {
     font-size: 2.6rem;
   }
-  .About__subtitle {
+
+  .aboutSubtitle {
     font-size: 2rem;
   }
-  .About__me p {
+
+  .aboutMe p {
     font-size: 1.8rem;
   }
-  .About__me__Stack h3 {
+
+  .aboutMeStack h3 {
     text-align: center;
     font-size: 2rem;
   }
-  .About__me__Stack p {
+
+  .aboutMeStack p {
     font-size: 1.7rem;
   }
 }
 
-.hight-light {
- position: relative;
- padding: 2px 8px;
- color: #fff !important;
- font-weight: 500;
- font-style: italic;
- display: inline-block;
- margin: 2px 0;
+.hightLight {
+  position: relative;
+  padding: 2px 8px;
+  color: #fff !important;
+  font-weight: 500;
+  font-style: italic;
+  display: inline-block;
+  margin: 2px 0;
 }
 
-.hight-light::after {
+.hightLight::after {
   content: '';
   position: absolute;
   top: 0;

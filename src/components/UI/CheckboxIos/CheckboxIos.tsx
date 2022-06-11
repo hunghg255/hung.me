@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './CheckboxIos.css';
+import styles from './index.module.css';
 
 interface IProps {
   handleToggle: () => void;
@@ -25,26 +25,26 @@ export default function CheckboxIos(props: IProps) {
   }, [isChecked]);
 
   return (
-    <div className='CheckboxIos'>
+    <div className={styles.checkboxIos}>
       <input
         type='checkbox'
         ref={refCb}
         id={`cbios-${id}`}
-        className='cbios'
+        className={styles.cbios}
         onChange={handleToggle}
       />
-      <label htmlFor={`cbios-${id}`} className='cbios__label'>
-        <span className='btn__toggle-circle'>
-          <span className='btn__circle circle1'></span>
-          <span className='btn__circle circle2'></span>
-          <span className='btn__circle circle3'></span>
+      <label htmlFor={`cbios-${id}`} className={styles.cbiosLabel}>
+        <span className={styles.btnToggleCircle}>
+          <span className={`${styles.btnCircle} ${styles.circle1}`}></span>
+          <span className={`${styles.btnCircle} ${styles.circle2}`}></span>
+          <span className={`${styles.btnCircle} ${styles.circle3}`}></span>
         </span>
 
-        <span className='btn__toggle-star star1'></span>
-        <span className='btn__toggle-star star2'></span>
-        <span className='btn__toggle-star star3'></span>
-        <span className='btn__toggle-star star4'></span>
-        <span className='btn__toggle-star star5'></span>
+        <span className={`${styles.btnToggleStar} ${styles.star1}`}></span>
+        <span className={`${styles.btnToggleStar} ${styles.star2}`}></span>
+        <span className={`${styles.btnToggleStar} ${styles.star3}`}></span>
+        <span className={`${styles.btnToggleStar} ${styles.star4}`}></span>
+        <span className={`${styles.btnToggleStar} ${styles.star5}`}></span>
       </label>
     </div>
   );
