@@ -1,6 +1,26 @@
 @import './reset.css';
 @import './settings.css';
 
+*,
+html,
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 14px;
+  line-height: normal;
+  text-rendering: optimizeSpeed;
+}
+
+body {
+  overflow-y: overlay;
+  overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+  width: 0;
+}
+
 section {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
