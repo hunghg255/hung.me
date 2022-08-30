@@ -12,7 +12,7 @@ const DATA = [
     name: 'Warehouse',
     description: 'Build UI',
     stack: 'Reactjs - Taiwindcss',
-    linkDemo: '',
+    linkDemo: 'https://warehouse-blue.vercel.app/',
     source: 'https://github.com/hunghg255/warehouse/tree/main',
     image: '/images/projects/warehouse.png',
   },
