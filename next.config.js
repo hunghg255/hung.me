@@ -9,7 +9,7 @@ const nextConfig = {
     if (process.env.NODE_ENV === 'development') return [];
     return [
       {
-        source: '/:all*(svg|jpg|jpeg|png|webp|avif|otf)',
+        source: '/:all*(svg|jpg|jpeg|png|webp|avif|otf|woff2|woff)',
         locale: false,
         headers: [
           {
