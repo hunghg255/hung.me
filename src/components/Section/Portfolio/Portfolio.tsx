@@ -9,6 +9,14 @@ interface IProps {
 
 const DATA = [
   {
+    name: 'Warehouse',
+    description: 'Build UI',
+    stack: 'Reactjs - Taiwindcss',
+    linkDemo: '',
+    source: 'https://github.com/hunghg255/warehouse/tree/main',
+    image: '/images/projects/warehouse.png',
+  },
+  {
     name: 'Todoapp MERN',
     description: 'Build todoapp MERN stack',
     stack: 'Reactjs - redux - Typescript - mongodb - nodejs',
