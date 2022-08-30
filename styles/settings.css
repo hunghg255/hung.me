@@ -36,7 +36,7 @@ textarea::placeholder {
 }
 
 html {
-  font-size: 62.5%;
+  font-size: 62.5% !important;
 }
 
 body {
@@ -57,7 +57,7 @@ a {
   text-decoration: none;
 }
 
-.wrapper {
+.Wrapper {
   max-width: var(--wrapper);
   margin-left: auto;
   margin-right: auto;
