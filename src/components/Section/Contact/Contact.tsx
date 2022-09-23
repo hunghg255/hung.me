@@ -50,6 +50,9 @@ function Contact(props: IProps) {
             <a
               href={item.link}
               dangerouslySetInnerHTML={{ __html: item.icon }}
+              aria-label='Link Social'
+              target='_blank'
+              rel='noreferrer'
             />
           </li>
         ))}

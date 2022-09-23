@@ -99,6 +99,8 @@ export default function Portfolio(props: IProps) {
                     alt={item.name}
                     width={357}
                     height={202}
+                    objectFit='cover'
+                    priority={true}
                   />
                 </div>
                 <div className={styles.projectItemInfo}>
@@ -111,7 +113,11 @@ export default function Portfolio(props: IProps) {
                   />
                   <p className={styles.itemStack}>{item.stack}</p>
                   <p className={styles.itemView}>
-                    <a href={item.linkDemo} target='_blank' rel='noreferrer'>
+                    <a
+                      href={item.linkDemo || '/'}
+                      target='_blank'
+                      rel='noreferrer'
+                    >
                       <svg
                         aria-hidden='true'
                         focusable='false'
@@ -129,7 +135,11 @@ export default function Portfolio(props: IProps) {
                       </svg>
                       Visit
                     </a>
-                    <a href={item.source} target='_blank' rel='noreferrer'>
+                    <a
+                      href={item.source || '/'}
+                      target='_blank'
+                      rel='noreferrer'
+                    >
                       <svg
                         aria-hidden='true'
                         focusable='false'

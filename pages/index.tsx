@@ -1,13 +1,15 @@
+import dynamic from 'next/dynamic';
 import React, { useRef, useState } from 'react';
 import ButtonScrollTop from 'src/components/ButtonScrollTop';
 import Layout from 'src/components/Layout';
-import Navbar from 'src/components/Navigation/Navbar';
-import SideDraw from 'src/components/Navigation/SideDraw';
-import About from 'src/components/Section/About';
-import Contact from 'src/components/Section/Contact';
-import Footer from 'src/components/Section/Footer';
-import Header from 'src/components/Section/Header';
-import Portfolio from 'src/components/Section/Portfolio';
+
+const Navbar = dynamic(() => import('src/components/Navigation/Navbar'));
+const SideDraw = dynamic(() => import('src/components/Navigation/SideDraw'));
+const About = dynamic(() => import('src/components/Section/About'));
+const Contact = dynamic(() => import('src/components/Section/Contact'));
+const Footer = dynamic(() => import('src/components/Section/Footer'));
+const Header = dynamic(() => import('src/components/Section/Header'));
+const Portfolio = dynamic(() => import('src/components/Section/Portfolio'));
 
 function Home() {
   const RefHeader = useRef<HTMLElement>(null);

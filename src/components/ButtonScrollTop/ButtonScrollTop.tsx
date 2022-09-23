@@ -31,7 +31,7 @@ export default function ButtonScrollTop(props: Iprops) {
         active ? styles.btnScrollTopActive : ''
       }`}
     >
-      <button type='button' onClick={scrollTop}>
+      <button type='button' onClick={scrollTop} aria-label='Button Scroll Top'>
         <svg
           xmlns='http://www.w3.org/2000/svg'
           width={24}

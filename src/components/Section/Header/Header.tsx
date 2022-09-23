@@ -55,6 +55,8 @@ function Header(props: IProps) {
           alt=''
           width={1120}
           height={1178}
+          objectFit='contain'
+          priority={true}
         />
       </div>
 
