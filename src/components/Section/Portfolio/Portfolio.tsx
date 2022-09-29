@@ -5,6 +5,7 @@ import styles from './index.module.css';
 
 interface IProps {
   refPortfolio: React.RefObject<HTMLElement>;
+  portfolioImg: any;
 }
 
 const DATA = [
@@ -85,6 +86,8 @@ const DATA = [
 ];
 
 export default function Portfolio(props: IProps) {
+  const { portfolioImg } = props;
+
   return (
     <section className='Portfolio container' ref={props.refPortfolio}>
       <h2 className={styles.portfolioTitle}>My Project</h2>
@@ -100,6 +103,8 @@ export default function Portfolio(props: IProps) {
                     width={357}
                     height={202}
                     objectFit='cover'
+                    // placeholder='blur'
+                    // blurDataURL={portfolioImg[idx]?.base64}
                     priority={true}
                   />
                 </div>

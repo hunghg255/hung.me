@@ -4,7 +4,6 @@ const nextConfig = {
   images: {
     minimumCacheTTL: 99999999,
     formats: ['image/avif', 'image/webp'],
-    domains: ['mabyusbucket.s3.ap-southeast-1.amazonaws.com'],
   },
   httpAgentOptions: {
     keepAlive: false,
