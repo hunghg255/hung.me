@@ -73,7 +73,7 @@ a {
   overflow: hidden;
 }
 
-::selection {
+/* ::selection {
   background: #fff5b8;
   display: block;
-}
+} */
