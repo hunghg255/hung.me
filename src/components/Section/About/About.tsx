@@ -8,11 +8,11 @@ interface IProps {
 
 const STACK = [
   'HTML',
-  'Css',
-  'Javascript',
-  'Typescript',
+  'CSS',
   'Sass',
   'LESS',
+  'Javascript',
+  'Typescript',
   'Webpack',
   'Reactjs',
   'Nextjs',
@@ -21,6 +21,7 @@ const STACK = [
   'Nodejs',
   'Firebase',
   'Docker',
+  'Nginx',
 ];
 
 export default function About(props: IProps) {
