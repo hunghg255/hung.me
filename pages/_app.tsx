@@ -17,7 +17,8 @@ function MyApp({ Component, pageProps }) {
       infinite: false,
     });
 
-    function raf(time) {
+    function raf(time: any) {
+      if (!time) return;
       lenis.raf(time);
       requestAnimationFrame(raf);
     }
@@ -25,7 +26,7 @@ function MyApp({ Component, pageProps }) {
     requestAnimationFrame(raf);
 
     return () => {
-      window.cancelAnimationFrame(raf);
+      window.cancelAnimationFrame(raf as any);
     };
   }, []);
 
