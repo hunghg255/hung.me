@@ -1,10 +1,9 @@
 import dynamic from 'next/dynamic';
-import Script from 'next/script';
 import React, { useRef, useState } from 'react';
 
-const QuillC = dynamic(() => import('src/components/Quill/Quill'), {
-  ssr: false,
-});
+// const QuillC = dynamic(() => import('src/components/Quill/Quill'), {
+//   ssr: false,
+// });
 
 export const toBase64 = (file: any) =>
   new Promise((resolve, reject) => {
@@ -44,7 +43,7 @@ const BlurHash = () => {
         )}
       </div>
 
-      <QuillC />
+      {/* <QuillC /> */}
     </>
   );
 };
