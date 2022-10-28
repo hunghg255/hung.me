@@ -42,21 +42,6 @@ const Canvas: FC = () => {
 
     let ctx = canvas.getContext('2d') as CanvasRenderingContext2D;
 
-    const mouse = {
-      x: -1000,
-      y: -1000,
-    };
-
-    canvas.addEventListener('mousemove', (e) => {
-      mouse.x = e.clientX;
-      mouse.y = e.clientY + Math.abs(canvas.getBoundingClientRect().top);
-    });
-
-    canvas.addEventListener('mouseleave', () => {
-      mouse.x = -1000;
-      mouse.y = -1000;
-    });
-
     class Particle {
       x: number;
       y: number;
