@@ -1,5 +1,10 @@
+import dynamic from 'next/dynamic';
+import Script from 'next/script';
 import React, { useRef, useState } from 'react';
-import { getPlaiceholder } from 'plaiceholder';
+
+const QuillC = dynamic(() => import('src/components/Quill/Quill'), {
+  ssr: false,
+});
 
 export const toBase64 = (file: any) =>
   new Promise((resolve, reject) => {
@@ -19,13 +24,10 @@ const BlurHash = () => {
       formData.append('file', refInput.current?.files?.[0]);
       const base64 = await toBase64(refInput.current?.files?.[0]);
 
-      const r = await fetch(
-        'https://hunghg-portfolio.vercel.app/api/blurhash',
-        {
-          body: JSON.stringify(base64),
-          method: 'post',
-        },
-      ).then((r) => r.json());
+      const r = await fetch('http://localhost:3000/api/blurhash', {
+        body: JSON.stringify(base64),
+        method: 'post',
+      }).then((r) => r.json());
       setBlurhash(r);
     } catch (error) {}
   };
@@ -41,6 +43,8 @@ const BlurHash = () => {
           <textarea value={blurhash?.blurhash?.base64} />
         )}
       </div>
+
+      <QuillC />
     </>
   );
 };
