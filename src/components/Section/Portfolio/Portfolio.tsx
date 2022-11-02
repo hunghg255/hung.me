@@ -51,6 +51,14 @@ const DATA = [
     image: '/images/projects/fbclone.png',
   },
   {
+    name: 'Youtube UI clone',
+    description: 'A youtube UI clone made with reactjs',
+    stack: 'Reactjs',
+    linkDemo: 'https://youtube-ui-clone-gamma.vercel.app/',
+    source: 'https://github.com/hunghg255/youtube-ui-clone',
+    image: '/images/projects/ytClone.png',
+  },
+  {
     name: 'Codepen clone',
     description: 'A Codepen clone made with reactjs',
     stack: 'Reactjs',
