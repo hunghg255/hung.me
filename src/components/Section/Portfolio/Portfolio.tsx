@@ -91,6 +91,14 @@ const DATA = [
     source: 'https://github.com/hunghg255/vanilla-shuffe-images',
     image: '/images/projects/shuffleImage.png',
   },
+  {
+    name: 'Ripple animate for button',
+    description: 'A basic ripple animate for button',
+    stack: 'HTML - CSS - JAVASCRIPT',
+    linkDemo: 'https://hunghg255.github.io/btn-ripple/',
+    source: 'https://github.com/hunghg255/btn-ripple',
+    image: '/images/projects/btnRipple.png',
+  },
 ];
 
 export default function Portfolio(props: IProps) {
