@@ -42,6 +42,7 @@ function Header(props: IProps) {
             <span className={styles.headerTag}>{tags[idxTag]}</span>
           </div>
           Front-end developer
+          <span className={styles.block}>|</span>
         </h2>
         <button
           onClick={() => scrollToElement(refAbout.current as HTMLElement)}

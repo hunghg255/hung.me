@@ -175,6 +175,22 @@
   }
 }
 
+.block {
+  margin-left: 4px;
+  color: var(--sub-color);
+  animation: fade 1s infinite;
+  font-weight: bold;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .canvas {
   position: absolute;
   z-index: 0;
