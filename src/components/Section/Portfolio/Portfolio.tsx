@@ -10,6 +10,14 @@ interface IProps {
 
 const DATA = [
   {
+    name: 'Javascript question',
+    description: 'Build a js question',
+    stack: 'Nextjs, markdown',
+    linkDemo: 'https://js-qna.vercel.app/vi',
+    source: 'https://github.com/hunghg255/js-qna',
+    image: '/images/projects/js-qna.png',
+  },
+  {
     name: 'Warehouse',
     description: 'Build UI',
     stack: 'Reactjs - Taiwindcss',
