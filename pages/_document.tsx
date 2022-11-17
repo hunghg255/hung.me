@@ -10,7 +10,7 @@ class MyDocument extends Document {
             href='https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap'
             rel='stylesheet'
           />
-          <Script
+          {/* <Script
             id='gtag-base'
             strategy='afterInteractive'
             dangerouslySetInnerHTML={{
@@ -31,7 +31,21 @@ class MyDocument extends Document {
               width='0'
               style={{ display: 'none', visibility: 'hidden' }}
             ></iframe>
-          </noscript>
+          </noscript> */}
+
+          <Script
+            strategy='lazyOnload'
+            async
+            src={`https://www.googletagmanager.com/gtag/js?id=GTM-KGLG29S`}
+          ></Script>
+          <Script id='google-analytics' strategy='lazyOnload'>
+            {`
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'GTM-KGLG29S');
+            `}
+          </Script>
         </Head>
         <body>
           <Main />
