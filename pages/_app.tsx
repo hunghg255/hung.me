@@ -1,9 +1,13 @@
 import Lenis from '@studio-freight/lenis';
 import Head from 'next/head';
+import { useRouter } from 'next/router';
 import { useEffect } from 'react';
+import { pageview } from 'src/utils/gtm';
 import '../styles/globals.css';
 
 function MyApp({ Component, pageProps }) {
+  const router = useRouter();
+
   useEffect(() => {
     const lenis = new Lenis({
       duration: 1.2,
@@ -29,6 +33,13 @@ function MyApp({ Component, pageProps }) {
       window.cancelAnimationFrame(raf as any);
     };
   }, []);
+
+  useEffect(() => {
+    router.events.on('routeChangeComplete', pageview);
+    return () => {
+      router.events.off('routeChangeComplete', pageview);
+    };
+  }, [router.events]);
 
   return (
     <>
