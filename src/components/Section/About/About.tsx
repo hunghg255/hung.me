@@ -36,7 +36,7 @@ export default function About(props: IProps) {
       <div className={styles.aboutMe}>
         <p>
           Hi, my name is <span className={styles.hightLight}>Hung</span>,
-          i&apos;m 24 years old. I got a bachelor of Electronics
+          i&apos;m {new Date().getFullYear() - 1997} years old. I got a bachelor of Electronics
           Telecommunication Engineering at Ha Noi University of Science and
           Technology (2015 - 2020). Besides, i am really passionate about{' '}
           <span className={styles.hightLight}>Javascript</span> and{' '}

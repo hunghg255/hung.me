@@ -84,23 +84,23 @@
   font-size: 1rem;
   transition: 300ms;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-
 }
 
 .itemView svg {
-  width: 10px;
+  width: 14px;
   margin-right: 4px;
+  max-height: 10px;
 }
 
 .itemView a:hover {
   transform: translateY(-1px);
 }
 
-.itemView a:nth-child(1) {
+.linkHighlight {
   background: var(--highlight-color);
   color: #fff !important;
 }
-.itemView a:nth-child(2) {
+.linkBorder {
   color: var(--primary-color);
   border: 1px solid var(--primary-color);
 }
@@ -177,3 +177,29 @@
     max-height: 200px;
   }
 }
+
+
+.packages .itemView {
+  justify-content: flex-start;
+}
+
+.packages li {
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid var(--sub-color);
+  box-shadow: 0 0 30px 20px rgba(0, 0, 0, 0.02);
+  margin: 0 0 12px;
+}
+
+.packageName {
+  color: var(--primary-color);
+  font-weight: 500;
+  font-size: 1.8rem;
+}
+
+.packageDesc {
+  color: var(--primary-color);
+  font-size: 1.4rem;
+  margin: 4px 0 12px;
+}
+
