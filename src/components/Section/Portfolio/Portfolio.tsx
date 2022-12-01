@@ -142,6 +142,14 @@ const PACKAGES = [
     githubUrl: 'https://github.com/hunghg255/number-2-text-vietnamese',
     demoUrl: 'https://hunghg255.github.io/number-2-text-vietnamese/demo/index.html',
   },
+  {
+    id: 5,
+    name: 'Effect ripple',
+    description: `A script to do the effect ripple`,
+    npmUrl: 'https://github.com/hunghg255/btn-ripple',
+    githubUrl: 'https://github.com/hunghg255/btn-ripple',
+    demoUrl: 'https://hunghg255.github.io/btn-ripple/',
+  },
 ];
 
 export default function Portfolio(props: IProps) {
