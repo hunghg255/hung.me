@@ -1,7 +1,7 @@
 .contactTitle {
   color: var(--highlight-color);
   font-size: 2rem;;
-  margin: 0px 0px 1rem;
+  margin: 0px 0px 1.6rem;
   text-transform: uppercase;
   font-weight: 700;
   transition: color 0.2s ease-out 0s;

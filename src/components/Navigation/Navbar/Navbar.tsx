@@ -5,6 +5,7 @@ import styles from './index.module.css';
 import { scrollToElement } from 'src/utils';
 import CheckboxIos from 'src/components/UI/CheckboxIos';
 import Image from 'next/image';
+import Logo from 'src/components/UI/Icon/logo';
 
 interface IProps {
   refSection: {
@@ -30,12 +31,13 @@ function Navbar(props: IProps) {
               scrollToElement(refSection.refHeader.current as HTMLElement)
             }
           >
-            <Image
+            {/* <Image
               src={toggle ? '/images/logo-dark-theme.png' : '/images/logo.png'}
               alt='Logo'
               width={100}
               height={32}
-            />
+            /> */}
+            <Logo />
           </li>
           <li
             className={styles.navItem}

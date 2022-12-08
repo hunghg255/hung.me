@@ -32,3 +32,26 @@ section {
     padding-bottom: 2.5rem;
   }
 }
+
+.icon-logo {
+  stroke: var(--highlight-color);
+  transition: stroke 350ms;
+}
+
+
+.icon-logo path {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: logoDraw 1.25s ease-in-out forwards;
+}
+
+
+@keyframes logoDraw {
+  0% {
+    stroke-dashoffset: 1000;
+  }
+
+  100% {
+    stroke-dashoffset: 0
+  }
+}

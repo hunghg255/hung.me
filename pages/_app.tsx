@@ -38,10 +38,7 @@ function MyApp({ Component, pageProps }) {
 
         <meta property='og:type' content='website' />
 
-        <link
-          rel='icon'
-          href='https://res.cloudinary.com/hunghg255/image/upload/v1654956188/favicon_gplhkh.png'
-        />
+        <link rel='shortcut icon' href='/favicon.ico' />
 
         <meta name='title' content='Hunghg | Front-end Developer' />
         <meta

@@ -22,9 +22,8 @@
   margin: 0;
 }
 
-.navItemLogo img {
-  width: 100px;
-  height: auto;
+.navItemLogo svg {
+  max-width: 42px;
 }
 
 .navItem {

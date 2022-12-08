@@ -41,9 +41,9 @@ function Contact(props: IProps) {
       ref={props.refContact}
     >
       <h2 className={styles.contactTitle}>Contact Me</h2>
-      <a className={styles.contactMail} href='mailto:giahung197bg@gmail.com'>
+      {/* <a className={styles.contactMail} href='mailto:giahung197bg@gmail.com'>
         giahung197bg@gmail.com
-      </a>
+      </a> */}
       <ul className={styles.contactSocials}>
         {data.map((item, idx) => (
           <li key={idx.toString()}>
