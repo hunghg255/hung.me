@@ -99,14 +99,6 @@ const PROJECTS = [
     source: 'https://github.com/hunghg255/vanilla-shuffe-images',
     image: '/images/projects/shuffleImage.png',
   },
-  {
-    name: 'Ripple animate for button',
-    description: 'A basic ripple animate for button',
-    stack: 'HTML - CSS - JAVASCRIPT',
-    linkDemo: 'https://hunghg255.github.io/btn-ripple/',
-    source: 'https://github.com/hunghg255/btn-ripple',
-    image: '/images/projects/btnRipple.png',
-  },
 ];
 
 const PACKAGES = [
@@ -140,7 +132,8 @@ const PACKAGES = [
     description: `A library convert text to Vietnamese`,
     npmUrl: 'https://www.npmjs.com/package/number-2-text-vietnamese',
     githubUrl: 'https://github.com/hunghg255/number-2-text-vietnamese',
-    demoUrl: 'https://hunghg255.github.io/number-2-text-vietnamese/demo/index.html',
+    demoUrl:
+      'https://hunghg255.github.io/number-2-text-vietnamese/demo/index.html',
   },
   {
     id: 5,
@@ -167,21 +160,31 @@ export default function Portfolio(props: IProps) {
                   <p className={styles.packageName}>{it.name}</p>
                   <p className={styles.packageDesc}>{it.description}</p>
                   <p className={styles.itemView}>
-                  <a
+                    <a
                       href={it.npmUrl || '/'}
                       target='_blank'
                       rel='noreferrer'
                       className={styles.linkBorder}
-
                     >
-                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48px" height="48px"><path fill="#d50000" d="M0,15h48v17H24v3H13v-3H0V15z" /><path fill="#fff" d="M3 29L8 29 8 21 11 21 11 29 13 29 13 18 3 18zM16 18v14h5v-3h5V18H16zM24 26h-3v-5h3V26zM29 18L29 29 34 29 34 21 37 21 37 29 40 29 40 21 43 21 43 29 45 29 45 18z" /></svg>
+                      <svg
+                        xmlns='http://www.w3.org/2000/svg'
+                        viewBox='0 0 48 48'
+                        width='48px'
+                        height='48px'
+                      >
+                        <path fill='#d50000' d='M0,15h48v17H24v3H13v-3H0V15z' />
+                        <path
+                          fill='#fff'
+                          d='M3 29L8 29 8 21 11 21 11 29 13 29 13 18 3 18zM16 18v14h5v-3h5V18H16zM24 26h-3v-5h3V26zM29 18L29 29 34 29 34 21 37 21 37 29 40 29 40 21 43 21 43 29 45 29 45 18z'
+                        />
+                      </svg>
                       Npm
                     </a>
                     <a
                       href={it.githubUrl || '/'}
                       target='_blank'
                       rel='noreferrer'
-                        className={styles.linkBorder}
+                      className={styles.linkBorder}
                     >
                       <svg
                         aria-hidden='true'
@@ -204,7 +207,7 @@ export default function Portfolio(props: IProps) {
                       href={it.demoUrl || '/'}
                       target='_blank'
                       rel='noreferrer'
-                        className={styles.linkBorder}
+                      className={styles.linkBorder}
                     >
                       <svg
                         aria-hidden='true'
@@ -223,7 +226,6 @@ export default function Portfolio(props: IProps) {
                       </svg>
                       Visit
                     </a>
-
                   </p>
                 </li>
               );

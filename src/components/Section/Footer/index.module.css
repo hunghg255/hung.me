@@ -9,8 +9,8 @@
 
 .footer p {
   font-weight: 700;
-  margin: 0px;
-  font-size: 1rem;
+  margin: 6px 0 0;
+  font-size: 1.4rem;
   color: var(--primary-color);
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 }

@@ -30,6 +30,7 @@
 
 .btnScrollTop button svg {
   width: 100%;
+  transform: scale(0.7);
 }
 
 .btnScrollTop button path {
