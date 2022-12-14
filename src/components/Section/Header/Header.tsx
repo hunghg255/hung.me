@@ -5,6 +5,7 @@ import styles from './index.module.css';
 import { scrollToElement } from 'src/utils';
 import Image from 'next/image';
 import Canvas from './Canvas';
+import Sparkles from 'src/components/UI/Sparkles/Sparkles';
 
 interface IProps {
   refHeader: React.RefObject<HTMLElement>;
@@ -34,13 +35,17 @@ function Header(props: IProps) {
           Hello ✌🏼,
           <br />
           I&apos;m
-          <span className={styles.headerName}>Hung</span>
+          <Sparkles>
+            <span className={styles.headerName}>Hung</span>
+          </Sparkles>
         </h1>
         <h2>
           A
-          <div className={styles.headerTagWrapper}>
-            <span className={styles.headerTag}>{tags[idxTag]}</span>
-          </div>
+          <Sparkles>
+            <div className={styles.headerTagWrapper}>
+              <span className={styles.headerTag}>{tags[idxTag]}</span>
+            </div>
+          </Sparkles>
           Front-end developer
           <span className={styles.block}>|</span>
         </h2>

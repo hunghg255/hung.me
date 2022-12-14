@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import React from 'react';
+import Sparkles from 'src/components/UI/Sparkles/Sparkles';
 
 import styles from './index.module.css';
 
@@ -151,7 +152,9 @@ export default function Portfolio(props: IProps) {
   return (
     <>
       <section className='Portfolio container' ref={props.refPortfolio}>
-        <h2 className={styles.portfolioTitle}>My Packages</h2>
+        <h2 className={styles.portfolioTitle}>
+          <Sparkles>My Packages</Sparkles>
+        </h2>
         <div className={styles.packages}>
           <ul>
             {PACKAGES.map((it: any) => {
@@ -235,7 +238,9 @@ export default function Portfolio(props: IProps) {
       </section>
 
       <section className='Portfolio container' ref={props.refPortfolio}>
-        <h2 className={styles.portfolioTitle}>My Projects</h2>
+        <h2 className={styles.portfolioTitle}>
+          <Sparkles>My Projects</Sparkles>
+        </h2>
         <div className={styles.project}>
           <ul>
             {PROJECTS.map((item, idx) => (

@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import React from 'react';
+import Sparkles from 'src/components/UI/Sparkles/Sparkles';
 
 import styles from './index.module.css';
 
@@ -11,19 +12,31 @@ export default function About(props: IProps) {
   return (
     <section className='About container' ref={props.refAbout}>
       <div className={styles.aboutHeading}>
-        <h2 className={styles.aboutTitle}>About me</h2>
+        <h2 className={styles.aboutTitle}>
+          <Sparkles>About me </Sparkles>
+        </h2>
+
         <h3 className={styles.aboutSubtitle}>
           if you&apos;re <span>wondering</span> who <span>I am...</span>
         </h3>
       </div>
       <div className={styles.aboutMe}>
         <p>
-          Hi, my name is <span className={styles.hightLight}>Hung</span>,
-          i&apos;m {new Date().getFullYear() - 1997} years old. I got a bachelor
-          of Electronics Telecommunication Engineering at Ha Noi University of
-          Science and Technology (2015 - 2020). Besides, i am really passionate
-          about <span className={styles.hightLight}>Javascript</span> and{' '}
-          <span className={styles.hightLight}>Web Development.</span>
+          Hi, my name is{' '}
+          <Sparkles>
+            <span className={styles.hightLight}>Hung</span>
+          </Sparkles>
+          , i&apos;m {new Date().getFullYear() - 1997} years old. I got a
+          bachelor of Electronics Telecommunication Engineering at Ha Noi
+          University of Science and Technology (2015 - 2020). Besides, i am
+          really passionate about{' '}
+          <Sparkles>
+            <span className={styles.hightLight}>Javascript</span>
+          </Sparkles>{' '}
+          and{' '}
+          <Sparkles>
+            <span className={styles.hightLight}>Web Development.</span>
+          </Sparkles>
         </p>
 
         <p>
@@ -62,8 +75,15 @@ export default function About(props: IProps) {
       </div>
       <div className={styles.aboutMeStack}>
         <h3>
-          My current <span className={styles.hightLight}>stack</span> of{' '}
-          <span className={styles.hightLight}>languages/technologies</span> is:
+          My current{' '}
+          <Sparkles>
+            <span className={styles.hightLight}>stack</span>
+          </Sparkles>{' '}
+          of{' '}
+          <Sparkles>
+            <span className={styles.hightLight}>languages/technologies</span>
+          </Sparkles>{' '}
+          is:
         </h3>
         <div>
           <img

@@ -1,4 +1,5 @@
 import React from 'react';
+import Sparkles from 'src/components/UI/Sparkles/Sparkles';
 import styles from './index.module.css';
 
 interface IProps {
@@ -40,7 +41,9 @@ function Contact(props: IProps) {
       className={`Contact container ${styles.contact}`}
       ref={props.refContact}
     >
-      <h2 className={styles.contactTitle}>Contact Me</h2>
+      <h2 className={styles.contactTitle}>
+        <Sparkles>Contact Me</Sparkles>
+      </h2>
       {/* <a className={styles.contactMail} href='mailto:giahung197bg@gmail.com'>
         giahung197bg@gmail.com
       </a> */}

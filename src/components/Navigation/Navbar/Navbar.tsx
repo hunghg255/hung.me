@@ -6,6 +6,7 @@ import { scrollToElement } from 'src/utils';
 import CheckboxIos from 'src/components/UI/CheckboxIos';
 import Image from 'next/image';
 import Logo from 'src/components/UI/Icon/logo';
+import Sparkles from 'src/components/UI/Sparkles/Sparkles';
 
 interface IProps {
   refSection: {
@@ -37,7 +38,9 @@ function Navbar(props: IProps) {
               width={100}
               height={32}
             /> */}
-            <Logo />
+            <Sparkles>
+              <Logo />
+            </Sparkles>
           </li>
           <li
             className={styles.navItem}
