@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { scrollToElement } from 'src/utils';
+import Sparkles from '../UI/Sparkles/Sparkles';
 
 import styles from './index.module.css';
 

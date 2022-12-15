@@ -7,6 +7,7 @@ import ButtonBurger from 'src/components/UI/ButtonBurger';
 import Image from 'next/image';
 import CheckboxIos from 'src/components/UI/CheckboxIos';
 import Logo from 'src/components/UI/Icon/logo';
+import Sparkles from 'src/components/UI/Sparkles/Sparkles';
 
 interface IProps {
   refSection: {
@@ -64,7 +65,9 @@ function SideDraw(props: IProps) {
                 width={100}
                 height={32}
               /> */}
-              <Logo />
+              <Sparkles>
+                <Logo />
+              </Sparkles>
             </li>
             <li className={styles.navSideDrawItem}>
               <ButtonBurger isToggle={isToggle} toggle={handleToggleNav} />
