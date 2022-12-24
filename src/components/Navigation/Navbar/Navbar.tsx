@@ -7,6 +7,7 @@ import CheckboxIos from 'src/components/UI/CheckboxIos';
 import Image from 'next/image';
 import Logo from 'src/components/UI/Icon/logo';
 import Sparkles from 'src/components/UI/Sparkles/Sparkles';
+import Router from 'next/router';
 
 interface IProps {
   refSection: {
@@ -60,9 +61,7 @@ function Navbar(props: IProps) {
           </li>
           <li
             className={styles.navItem}
-            onClick={() =>
-              scrollToElement(refSection.refContact.current as HTMLElement)
-            }
+            onClick={() => Router.push('/contact')}
           >
             Contact
           </li>

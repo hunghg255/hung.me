@@ -8,6 +8,7 @@ import Image from 'next/image';
 import CheckboxIos from 'src/components/UI/CheckboxIos';
 import Logo from 'src/components/UI/Icon/logo';
 import Sparkles from 'src/components/UI/Sparkles/Sparkles';
+import Router from 'next/router';
 
 interface IProps {
   refSection: {
@@ -97,9 +98,7 @@ function SideDraw(props: IProps) {
           </li>
           <li
             className={styles.navSideItem}
-            onClick={() =>
-              goToElement(refSection.refContact.current as HTMLElement)
-            }
+            onClick={() => Router.push('/contact')}
           >
             Contact
           </li>
