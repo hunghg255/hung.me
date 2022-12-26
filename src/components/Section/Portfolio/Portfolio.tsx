@@ -12,11 +12,27 @@ interface IProps {
 const PROJECTS = [
   {
     name: 'Javascript question',
-    description: 'Build a js question',
+    description: 'Build a site js question',
     stack: 'Nextjs, markdown',
     linkDemo: 'https://js-qna.vercel.app/vi',
     source: 'https://github.com/hunghg255/js-qna',
     image: '/images/projects/js-qna.png',
+  },
+  {
+    name: 'EvoGym UI',
+    description: 'Build UI gym',
+    stack: 'Reactjs, Vite, Tailwindcss',
+    linkDemo: 'https://gym-ui.vercel.app/',
+    source: 'https://github.com/hunghg255/gym-ui',
+    image: '/images/projects/gym-ui.png',
+  },
+  {
+    name: 'Get Address no Google API',
+    description: 'Build get address no google api',
+    stack: 'Reactjs, Vite, Tailwindcss',
+    linkDemo: 'https://address-vn-none-api.vercel.app/',
+    source: 'https://github.com/hunghg255/address-vn-none-api',
+    image: '/images/projects/address-vn-no-api.png',
   },
   {
     name: 'Warehouse',
