@@ -27,6 +27,14 @@ const PROJECTS = [
     image: '/images/projects/gym-ui.png',
   },
   {
+    name: 'Short URL',
+    description: 'Build a short url site',
+    stack: 'Reactjs, Firebase',
+    linkDemo: 'https://url8.vercel.app/',
+    source: 'https://github.com/hunghg255/gym-ui',
+    image: '/images/projects/short-url.png',
+  },
+  {
     name: 'Get Address no Google API',
     description: 'Build get address no google api',
     stack: 'Reactjs, Vite, Tailwindcss',
