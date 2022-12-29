@@ -31,7 +31,7 @@ const PROJECTS = [
     description: 'Build a short url site',
     stack: 'Reactjs, Firebase',
     linkDemo: 'https://url8.vercel.app/',
-    source: 'https://github.com/hunghg255/gym-ui',
+    source: 'https://github.com/hunghg255/short-url',
     image: '/images/projects/short-url.png',
   },
   {
