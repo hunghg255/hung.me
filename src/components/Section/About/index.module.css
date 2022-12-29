@@ -47,6 +47,22 @@
 
 }
 
+.aboutContribution {
+  margin: 32px 0 0;
+  text-align: center;
+}
+
+.aboutContributionTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  margin: 0 0 10px;
+}
+
+.aboutContribution img {
+  margin: 0 auto;
+}
+
 
 .aboutMeStack h3 {
   text-align: center;

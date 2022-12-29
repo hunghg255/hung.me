@@ -156,6 +156,13 @@ export default function About(props: IProps) {
           />
         </div>
       </div>
+
+      <div className={styles.aboutContribution}>
+        <p className={styles.aboutContributionTitle}>
+          Contributions in this years
+        </p>
+        <img src='https://ghchart.rshah.org/hunghg2505' alt='' />
+      </div>
     </section>
   );
 }
