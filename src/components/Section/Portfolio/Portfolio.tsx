@@ -168,6 +168,14 @@ const PACKAGES = [
     githubUrl: 'https://github.com/hunghg255/btn-ripple',
     demoUrl: 'https://hunghg255.github.io/btn-ripple/',
   },
+  {
+    id: 6,
+    name: 'CLI',
+    description: `A script CLI to create source base`,
+    npmUrl: 'https://www.npmjs.com/package/create-template-fe',
+    githubUrl: 'https://github.com/hunghg2505/fe-cli',
+    demoUrl: 'https://www.npmjs.com/package/create-template-fe',
+  },
 ];
 
 export default function Portfolio(props: IProps) {
