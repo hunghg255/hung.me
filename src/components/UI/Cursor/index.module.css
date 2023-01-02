@@ -1,0 +1,12 @@
+.cursor {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  overflow: hidden;
+  position: fixed;
+  z-index: 50;
+  background: transparent;
+  border: 1px solid var(--curor);
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}

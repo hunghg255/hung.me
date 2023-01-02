@@ -6,6 +6,7 @@
 
   --highlight-color: #f25f4c;
   --color-hover: #f25f4c;
+  --curor: #f25f4c;
 
   --primary-font: 'Open Sans';
   --secondary-font: 'sans-serif';
@@ -17,6 +18,7 @@
   --primary-color: #fffffe;
   --sub-color: #a7a9be;
   --primary-bg: #0f0e17f0;
+  --curor: #fffffe;
 }
 
 *,
