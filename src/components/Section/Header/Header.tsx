@@ -41,11 +41,9 @@ function Header(props: IProps) {
         </h1>
         <h2>
           A
-          <Sparkles>
-            <div className={styles.headerTagWrapper}>
-              <span className={styles.headerTag}>{tags[idxTag]}</span>
-            </div>
-          </Sparkles>
+          <div className={styles.headerTagWrapper}>
+            <span className={styles.headerTag}>{tags[idxTag]}</span>
+          </div>
           Front-end developer
           <span className={styles.block}>|</span>
         </h2>

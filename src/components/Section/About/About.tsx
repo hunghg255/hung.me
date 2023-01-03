@@ -22,21 +22,12 @@ export default function About(props: IProps) {
       </div>
       <div className={styles.aboutMe}>
         <p>
-          Hi, my name is{' '}
-          <Sparkles>
-            <span className={styles.hightLight}>Hung</span>
-          </Sparkles>
-          , i&apos;m {new Date().getFullYear() - 1997} years old. I got a
-          bachelor of Electronics Telecommunication Engineering at Ha Noi
-          University of Science and Technology (2015 - 2020). Besides, i am
-          really passionate about{' '}
-          <Sparkles>
-            <span className={styles.hightLight}>Javascript</span>
-          </Sparkles>{' '}
-          and{' '}
-          <Sparkles>
-            <span className={styles.hightLight}>Web Development.</span>
-          </Sparkles>
+          Hi, my name is <span className={styles.hightLight}>Hung</span>,
+          i&apos;m {new Date().getFullYear() - 1997} years old. I got a bachelor
+          of Electronics Telecommunication Engineering at Ha Noi University of
+          Science and Technology (2015 - 2020). Besides, i am really passionate
+          about <span className={styles.hightLight}>Javascript</span> and{' '}
+          <span className={styles.hightLight}>Web Development.</span>
         </p>
 
         <p>
@@ -75,14 +66,8 @@ export default function About(props: IProps) {
       </div>
       <div className={styles.aboutMeStack}>
         <h3>
-          My current{' '}
-          <Sparkles>
-            <span className={styles.hightLight}>stack</span>
-          </Sparkles>{' '}
-          of{' '}
-          <Sparkles>
-            <span className={styles.hightLight}>languages/technologies</span>
-          </Sparkles>{' '}
+          My current <span className={styles.hightLight}>stack</span>
+          of <span className={styles.hightLight}>languages/technologies</span>
           is:
         </h3>
         <div>
