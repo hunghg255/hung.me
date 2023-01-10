@@ -52,9 +52,7 @@ const BlurHash = () => {
         <br />
         {blurhash?.blurhash?.base64 && (
           <>
-            {blurhash?.blurhash?.base64 && (
-              <textarea value={blurhash?.blurhash?.base64} />
-            )}
+            {blurhash?.blurhash?.base64 && <textarea value={blurhash?.blurhash?.base64} />}
             <br />
 
             <br />
@@ -69,10 +67,7 @@ const BlurHash = () => {
                 alt=''
                 style={{
                   width: 300,
-                  height:
-                    300 /
-                    (blurhash.blurhash.img.width /
-                      blurhash.blurhash.img.height),
+                  height: 300 / (blurhash.blurhash.img.width / blurhash.blurhash.img.height),
                 }}
               />
               <br />
@@ -85,10 +80,7 @@ const BlurHash = () => {
                 alt=''
                 style={{
                   width: 300,
-                  height:
-                    300 /
-                    (blurhash.blurhash.img.width /
-                      blurhash.blurhash.img.height),
+                  height: 300 / (blurhash.blurhash.img.width / blurhash.blurhash.img.height),
                 }}
               />
             </div>
