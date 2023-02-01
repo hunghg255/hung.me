@@ -157,8 +157,7 @@ const PACKAGES = [
     description: `A library convert text to Vietnamese`,
     npmUrl: 'https://www.npmjs.com/package/number-2-text-vietnamese',
     githubUrl: 'https://github.com/hunghg255/number-2-text-vietnamese',
-    demoUrl:
-      'https://hunghg255.github.io/number-2-text-vietnamese/demo/index.html',
+    demoUrl: 'https://hunghg255.github.io/number-2-text-vietnamese/demo/index.html',
   },
   {
     id: 5,
@@ -173,7 +172,7 @@ const PACKAGES = [
     name: 'CLI',
     description: `A script CLI to create source base`,
     npmUrl: 'https://www.npmjs.com/package/create-template-fe',
-    githubUrl: 'https://github.com/hunghg2505/fe-cli',
+    githubUrl: 'https://github.com/hunghg255/create-template-fe',
     demoUrl: 'https://www.npmjs.com/package/create-template-fe',
   },
 ];
