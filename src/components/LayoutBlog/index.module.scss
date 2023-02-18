@@ -1,0 +1,49 @@
+.containerBlog {
+  padding: 100px 10px;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+
+  * {
+    color: var(--primary-color);
+    line-height: 28px;
+    text-align: justify;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  p,
+  ul,
+  li,
+  a {
+    margin: initial;
+    padding: initial;
+    font-size: initial;
+  }
+
+  ul {
+    padding: 0 38px;
+    margin: 12px 0;
+  }
+
+  h1 {
+    font-size: 26px;
+    margin: 14px 0 10px;
+  }
+  h2 {
+    font-size: 24px;
+    margin: 14px 0 10px;
+  }
+
+  h3 {
+    font-size: 22px;
+    margin: 10px 0;
+  }
+
+  p {
+    font-size: 18px;
+  }
+}

@@ -2,10 +2,9 @@ import Image from 'next/image';
 import React from 'react';
 import Sparkles from 'src/components/UI/Sparkles/Sparkles';
 
-import styles from './index.module.css';
+import styles from './index.module.scss';
 
 interface IProps {
-  refPortfolio: React.RefObject<HTMLElement>;
   portfolioImg: any;
 }
 
@@ -178,11 +177,9 @@ const PACKAGES = [
 ];
 
 export default function Portfolio(props: IProps) {
-  const { portfolioImg } = props;
-
   return (
     <>
-      <section className='Portfolio container' ref={props.refPortfolio}>
+      <section className='Portfolio container' id='sectionPortfolio'>
         <h2 className={styles.portfolioTitle}>
           <Sparkles>My Packages</Sparkles>
         </h2>
@@ -268,7 +265,7 @@ export default function Portfolio(props: IProps) {
         </div>
       </section>
 
-      <section className='Portfolio container' ref={props.refPortfolio}>
+      <section className='Portfolio container'>
         <h2 className={styles.portfolioTitle}>
           <Sparkles>My Projects</Sparkles>
         </h2>

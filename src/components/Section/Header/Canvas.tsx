@@ -1,7 +1,7 @@
 import { FC, useEffect, useRef } from 'react';
 
 import { m } from 'framer-motion';
-import styles from './index.module.css';
+import styles from './index.module.scss';
 
 export const canvasImages = [
   'html',
@@ -87,13 +87,7 @@ const Canvas: FC = () => {
         ctx.translate(this.x, this.y);
         ctx.rotate(this.angle * (Math.PI / 180));
 
-        ctx.drawImage(
-          this.image,
-          -this.size / 2,
-          -this.size / 2,
-          this.size,
-          this.size,
-        );
+        ctx.drawImage(this.image, -this.size / 2, -this.size / 2, this.size, this.size);
         ctx.restore();
       }
     }

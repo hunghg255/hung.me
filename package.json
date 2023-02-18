@@ -9,7 +9,11 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@contentful/rich-text-react-renderer": "^15.16.2",
+    "@contentful/rich-text-types": "^16.0.2",
     "@studio-freight/lenis": "^0.2.14",
+    "contentful": "^9.3.0",
+    "dayjs": "^1.11.7",
     "framer-motion": "^7.6.2",
     "next": "12.3.0",
     "plaiceholder": "^2.5.0",

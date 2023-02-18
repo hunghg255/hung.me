@@ -3,10 +3,6 @@ import dynamic from 'next/dynamic';
 import Image from 'next/image';
 import React, { useRef, useState } from 'react';
 
-// const QuillC = dynamic(() => import('src/components/Quill/Quill'), {
-//   ssr: false,
-// });
-
 export const toBase64 = (file: any) =>
   new Promise((resolve, reject) => {
     const reader = new FileReader();

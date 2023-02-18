@@ -1,14 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import { scrollToElement } from 'src/utils';
-import Sparkles from '../UI/Sparkles/Sparkles';
+import { onGotoElement } from 'src/utils';
 
-import styles from './index.module.css';
+import styles from './index.module.scss';
 
-interface Iprops {
-  refHeader: React.RefObject<HTMLElement>;
-}
-
-export default function ButtonScrollTop(props: Iprops) {
+export default function ButtonScrollTop() {
   const [active, setActive] = useState(false);
 
   useEffect(() => {
@@ -23,22 +18,13 @@ export default function ButtonScrollTop(props: Iprops) {
 
   const scrollTop = () => {
     setActive(false);
-    scrollToElement(props.refHeader.current as HTMLElement);
+    onGotoElement('sectionHeader');
   };
 
   return (
-    <div
-      className={`${styles.btnScrollTop} ${
-        active ? styles.btnScrollTopActive : ''
-      }`}
-    >
+    <div className={`${styles.btnScrollTop} ${active ? styles.btnScrollTopActive : ''}`}>
       <button type='button' onClick={scrollTop} aria-label='Button Scroll Top'>
-        <svg
-          xmlns='http://www.w3.org/2000/svg'
-          width={24}
-          height={24}
-          viewBox='0 0 24 24'
-        >
+        <svg xmlns='http://www.w3.org/2000/svg' width={24} height={24} viewBox='0 0 24 24'>
           <path d='M0 16.67l2.829 2.83 9.175-9.339 9.167 9.339 2.829-2.83-11.996-12.17z' />
         </svg>
       </button>

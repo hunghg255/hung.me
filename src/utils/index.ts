@@ -8,12 +8,7 @@ const scrollToElement = (element: HTMLElement) => {
     if (!startTime) startTime = currentTime;
     const timeElapsed = currentTime - startTime;
 
-    const run = easeInOutSine(
-      timeElapsed,
-      startPosition,
-      elementPosition,
-      duration,
-    );
+    const run = easeInOutSine(timeElapsed, startPosition, elementPosition, duration);
     window.scrollTo(0, run);
     if (timeElapsed < duration) requestAnimationFrame(animate);
   }
@@ -23,6 +18,11 @@ const scrollToElement = (element: HTMLElement) => {
   }
 
   requestAnimationFrame(animate);
+};
+
+export const onGotoElement = (idElement: string) => {
+  const element = document.querySelector(`#${idElement}`) as HTMLElement;
+  element && scrollToElement(element);
 };
 
 export { scrollToElement };

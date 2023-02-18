@@ -3,7 +3,7 @@ const nextConfig = {
   swcMinify: true,
   images: {
     minimumCacheTTL: 99999999,
-    formats: ['image/avif', 'image/webp'],
+    domains: ['images.ctfassets.net'],
   },
   httpAgentOptions: {
     keepAlive: false,

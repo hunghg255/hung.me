@@ -1,20 +1,13 @@
 import React, { useState } from 'react';
 
-import styles from './index.module.css';
+import styles from './index.module.scss';
 
-import { scrollToElement } from 'src/utils';
+import { onGotoElement } from 'src/utils';
 import Image from 'next/image';
 import Canvas from './Canvas';
 import Sparkles from 'src/components/UI/Sparkles/Sparkles';
 
-interface IProps {
-  refHeader: React.RefObject<HTMLElement>;
-  refAbout: React.RefObject<HTMLElement>;
-}
-
-function Header(props: IProps) {
-  const { refAbout, refHeader } = props;
-
+function Header() {
   const [idxTag, setIdxTag] = useState(0);
   const tags = ['committed', 'self-taught', 'passionate'];
 
@@ -29,7 +22,7 @@ function Header(props: IProps) {
   }, [idxTag, tags.length]);
 
   return (
-    <header className={styles.header} ref={refHeader}>
+    <header className={styles.header} id='sectionHeader'>
       <div className={styles.headerText}>
         <h1>
           Hello ✌🏼,
@@ -47,10 +40,7 @@ function Header(props: IProps) {
           Front-end developer
           <span className={styles.block}>|</span>
         </h2>
-        <button
-          onClick={() => scrollToElement(refAbout.current as HTMLElement)}
-          type='button'
-        >
+        <button onClick={() => onGotoElement('sectionAbout')} type='button'>
           About me
         </button>
       </div>
@@ -72,7 +62,7 @@ function Header(props: IProps) {
         height={56}
         width={56}
         xmlns='http://www.w3.org/2000/svg'
-        onClick={() => scrollToElement(refAbout.current as HTMLElement)}
+        onClick={() => onGotoElement('sectionAbout')}
       >
         <path d='m12 15.586-4.293-4.293-1.414 1.414L12 18.414l5.707-5.707-1.414-1.414z' />
         <path d='m17.707 7.707-1.414-1.414L12 10.586 7.707 6.293 6.293 7.707 12 13.414z' />

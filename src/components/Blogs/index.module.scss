@@ -1,0 +1,57 @@
+.tags {
+  display: flex;
+  gap: 12px;
+  flex-flow: wrap;
+  margin: 4px 0 0;
+}
+
+.tagItem {
+  color: white;
+  border-radius: 5px;
+  font-weight: 300;
+  padding: 2px 8px;
+  font-size: 18px;
+}
+
+.javascript {
+  background-color: rgb(255, 255, 0, 0.2);
+  border: 1px solid yellow;
+}
+
+.css {
+  background-color: rgb(30, 144, 255, 0.2);
+  border: 1px solid dodgerblue;
+}
+
+.listBlog {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr 1fr 1fr;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+}
+
+.blogItem {
+  border-radius: 8px;
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 20%), 0 4px 6px -4px rgb(0 0 0 / 20%);
+  text-align: center;
+  overflow: hidden;
+  transition: all 350ms;
+
+  .img {
+    position: relative;
+    aspect-ratio: 4 / 3;
+  }
+}
+
+.content {
+  padding: 20px 12px;
+
+  h2 {
+    font-size: 16px !important;
+    text-align: left;
+  }
+}

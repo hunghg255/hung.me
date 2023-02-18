@@ -2,7 +2,8 @@ import Lenis from '@studio-freight/lenis';
 import dynamic from 'next/dynamic';
 import Head from 'next/head';
 import { useEffect } from 'react';
-import '../styles/globals.css';
+import Layout from 'src/components/Layout';
+import '../styles/globals.scss';
 
 const Cursor = dynamic(() => import('src/components/UI/Cursor/Cursor'), {
   ssr: false,
@@ -77,7 +78,9 @@ function MyApp({ Component, pageProps }) {
 
         <meta property='og:image:type' content='image/jpeg' />
       </Head>
-      <Component {...pageProps} />
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
 
       <Cursor />
     </>

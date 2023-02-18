@@ -1,28 +1,23 @@
 import React, { useState } from 'react';
 
-import styles from './index.module.css';
+import styles from './index.module.scss';
 
-import { scrollToElement } from 'src/utils';
+import { onGotoElement } from 'src/utils';
 import ButtonBurger from 'src/components/UI/ButtonBurger';
 import Image from 'next/image';
 import CheckboxIos from 'src/components/UI/CheckboxIos';
 import Logo from 'src/components/UI/Icon/logo';
 import Sparkles from 'src/components/UI/Sparkles/Sparkles';
-import Router from 'next/router';
+import Router, { useRouter } from 'next/router';
 
 interface IProps {
-  refSection: {
-    refHeader: React.RefObject<HTMLElement>;
-    refAbout: React.RefObject<HTMLElement>;
-    refPortfolio: React.RefObject<HTMLElement>;
-    refContact: React.RefObject<HTMLElement>;
-  };
   handleToggleDarkTheme: () => void;
   toggle: boolean;
 }
 
 function SideDraw(props: IProps) {
-  const { refSection, toggle, handleToggleDarkTheme } = props;
+  const { toggle, handleToggleDarkTheme } = props;
+  const router = useRouter();
 
   const [isToggle, setIsToggle] = useState(false);
 
@@ -38,25 +33,19 @@ function SideDraw(props: IProps) {
     });
   }, []);
 
-  const goToElement = (element: HTMLElement) => {
-    scrollToElement(element);
+  const goToElement = (idSection: string) => {
+    onGotoElement(idSection);
     setIsToggle(false);
   };
 
   return (
     <>
-      <nav
-        className={`${styles.navSideDraw} ${
-          isToggle ? styles.navSideDrawActive : ''
-        }`}
-      >
+      <nav className={`${styles.navSideDraw} ${isToggle ? styles.navSideDrawActive : ''}`}>
         <div className='container'>
           <ul className={styles.navSideDrawList}>
             <li
               className={`${styles.navSideDrawItem} ${styles.navSideDrawLogo}`}
-              onClick={() =>
-                goToElement(refSection.refHeader.current as HTMLElement)
-              }
+              onClick={() => router.push('/')}
             >
               {/* <Image
                 src={
@@ -76,39 +65,33 @@ function SideDraw(props: IProps) {
           </ul>
         </div>
       </nav>
-      <div
-        className={`${styles.navSide} ${isToggle ? styles.navSideActive : ''}`}
-      >
+      <div className={`${styles.navSide} ${isToggle ? styles.navSideActive : ''}`}>
         <ul className='Nav__side--list'>
-          <li
-            className={styles.navSideItem}
-            onClick={() =>
-              goToElement(refSection.refAbout.current as HTMLElement)
-            }
-          >
-            About me
+          {router.pathname === '/' ? (
+            <>
+              <li className={styles.navSideItem} onClick={() => goToElement('sectionAbout')}>
+                About me
+              </li>
+              <li className={styles.navSideItem} onClick={() => goToElement('sectionPortfolio')}>
+                Portfolio
+              </li>
+            </>
+          ) : (
+            <>
+              <li className={styles.navSideItem} onClick={() => Router.push('/')}>
+                Home
+              </li>
+            </>
+          )}
+          <li className={styles.navSideItem} onClick={() => Router.push('/blog')}>
+            Blogs
           </li>
-          <li
-            className={styles.navSideItem}
-            onClick={() =>
-              goToElement(refSection.refPortfolio.current as HTMLElement)
-            }
-          >
-            Portfolio
-          </li>
-          <li
-            className={styles.navSideItem}
-            onClick={() => Router.push('/contact')}
-          >
+          <li className={styles.navSideItem} onClick={() => Router.push('/contact')}>
             Contact
           </li>
         </ul>
         <div className={styles.btnToggle}>
-          <CheckboxIos
-            id={1}
-            isChecked={toggle}
-            handleToggle={handleToggleDarkTheme}
-          />
+          <CheckboxIos id={1} isChecked={toggle} handleToggle={handleToggleDarkTheme} />
         </div>
       </div>
     </>

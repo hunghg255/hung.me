@@ -2,15 +2,9 @@ import React from 'react';
 import Logo from 'src/components/UI/Icon/logo';
 import Sparkles from 'src/components/UI/Sparkles/Sparkles';
 
-import styles from './index.module.css';
+import styles from './index.module.scss';
 
-type TProps = {
-  toggle: boolean;
-};
-
-function Footer(props: TProps) {
-  const { toggle } = props;
-
+function Footer() {
   return (
     <footer className={`container ${styles.footer}`}>
       <Sparkles>

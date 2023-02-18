@@ -1,6 +1,6 @@
 import React from 'react';
 import Sparkles from 'src/components/UI/Sparkles/Sparkles';
-import styles from './index.module.css';
+import styles from './index.module.scss';
 
 interface IProps {
   refContact: React.RefObject<HTMLElement>;
@@ -35,12 +35,9 @@ const data = [
   },
 ];
 
-function Contact(props: IProps) {
+function Contact() {
   return (
-    <section
-      className={`Contact container ${styles.contact}`}
-      ref={props.refContact}
-    >
+    <section className={`Contact container ${styles.contact}`} id='sectionContact'>
       <h2 className={styles.contactTitle}>
         <Sparkles>Contact Me</Sparkles>
       </h2>

@@ -1,27 +1,21 @@
 import React from 'react';
 
-import styles from './index.module.css';
+import styles from './index.module.scss';
 
-import { scrollToElement } from 'src/utils';
 import CheckboxIos from 'src/components/UI/CheckboxIos';
-import Image from 'next/image';
 import Logo from 'src/components/UI/Icon/logo';
 import Sparkles from 'src/components/UI/Sparkles/Sparkles';
-import Router from 'next/router';
+import Router, { useRouter } from 'next/router';
+import { onGotoElement } from 'src/utils';
 
 interface IProps {
-  refSection: {
-    refHeader: React.RefObject<HTMLElement>;
-    refAbout: React.RefObject<HTMLElement>;
-    refPortfolio: React.RefObject<HTMLElement>;
-    refContact: React.RefObject<HTMLElement>;
-  };
   handleToggleDarkTheme: () => void;
   toggle: boolean;
 }
 
 function Navbar(props: IProps) {
-  const { refSection, handleToggleDarkTheme, toggle } = props;
+  const { handleToggleDarkTheme, toggle } = props;
+  const router = useRouter();
 
   return (
     <nav className={styles.navBar}>
@@ -29,9 +23,7 @@ function Navbar(props: IProps) {
         <ul className={styles.navList}>
           <li
             className={`${styles.navItem} ${styles.navItemLogo}`}
-            onClick={() =>
-              scrollToElement(refSection.refHeader.current as HTMLElement)
-            }
+            onClick={() => router.push('/')}
           >
             {/* <Image
               src={toggle ? '/images/logo-dark-theme.png' : '/images/logo.png'}
@@ -43,34 +35,32 @@ function Navbar(props: IProps) {
               <Logo />
             </Sparkles>
           </li>
-          <li
-            className={styles.navItem}
-            onClick={() =>
-              scrollToElement(refSection.refAbout.current as HTMLElement)
-            }
-          >
-            About me
+          {router.pathname === '/' ? (
+            <>
+              <li className={styles.navItem} onClick={() => onGotoElement('sectionAbout')}>
+                About me
+              </li>
+              <li className={styles.navItem} onClick={() => onGotoElement('sectionPortfolio')}>
+                Portfolio
+              </li>
+            </>
+          ) : (
+            <>
+              <li className={styles.navItem} onClick={() => Router.push('/')}>
+                Home
+              </li>
+            </>
+          )}
+
+          <li className={styles.navItem} onClick={() => Router.push('/blog')}>
+            Blogs
           </li>
-          <li
-            className={styles.navItem}
-            onClick={() =>
-              scrollToElement(refSection.refPortfolio.current as HTMLElement)
-            }
-          >
-            Portfolio
-          </li>
-          <li
-            className={styles.navItem}
-            onClick={() => Router.push('/contact')}
-          >
+
+          <li className={styles.navItem} onClick={() => Router.push('/contact')}>
             Contact
           </li>
           <li className={styles.navItem}>
-            <CheckboxIos
-              id={2}
-              isChecked={toggle}
-              handleToggle={handleToggleDarkTheme}
-            />
+            <CheckboxIos id={2} isChecked={toggle} handleToggle={handleToggleDarkTheme} />
           </li>
         </ul>
       </div>
