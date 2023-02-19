@@ -6,6 +6,10 @@
   height: 28px;
   opacity: 0;
   transition: 300ms;
+
+  @media (max-width: 768px) {
+    right: 1rem;
+  }
 }
 
 .btnScrollTopActive {
@@ -21,7 +25,7 @@
   cursor: pointer;
   background-color: var(--highlight-color);
   transition: 359ms;
-  box-shadow: 0 0 10px rgba(0,0,0, 0.3);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 .btnScrollTop button:hover {

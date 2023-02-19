@@ -18,7 +18,7 @@ export default function ButtonScrollTop() {
 
   const scrollTop = () => {
     setActive(false);
-    onGotoElement('sectionHeader');
+    onGotoElement('header');
   };
 
   return (

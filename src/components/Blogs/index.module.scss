@@ -3,6 +3,9 @@
   gap: 12px;
   flex-flow: wrap;
   margin: 4px 0 0;
+  @media (max-width: 768px) {
+    gap: 8px;
+  }
 }
 
 .tagItem {
@@ -11,6 +14,11 @@
   font-weight: 300;
   padding: 2px 8px;
   font-size: 18px;
+
+  @media (max-width: 768px) {
+    font-size: 12px;
+    padding: 0 4px;
+  }
 }
 
 .javascript {
@@ -50,8 +58,24 @@
 .content {
   padding: 20px 12px;
 
+  @media (max-width: 768px) {
+    padding: 10px;
+  }
+
   h2 {
     font-size: 16px !important;
     text-align: left;
+    line-height: 20px;
+    margin: 0 0 12px !important;
+    @media (max-width: 768px) {
+      font-size: 14px !important;
+    }
+  }
+}
+
+.date {
+  font-size: 14px !important;
+  @media (max-width: 768px) {
+    font-size: 12px !important;
   }
 }

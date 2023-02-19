@@ -39,7 +39,6 @@ const BlogDetail = () => {
       const slugArr = (router.query?.slug as string)?.split('-');
 
       const data = await getBlogPostsDetail(slugArr[slugArr?.length - 1] as string);
-      console.log(data);
       setblogDetail(data);
     })();
   }, [router.query?.slug]);
@@ -52,8 +51,10 @@ const BlogDetail = () => {
         <title>{blogDetail?.fields?.title}</title>
       </Head>
       <div className={styles.headers}>
-        <h1>{blogDetail?.fields?.title}</h1>
-        <p>Date: {dayjs(blogDetail?.fields?.publishedDate).format('DD MMM YYYY')}</p>
+        <h1 className={styles.title}>{blogDetail?.fields?.title}</h1>
+        <p className={styles.date}>
+          Date: {dayjs(blogDetail?.fields?.publishedDate).format('DD MMM YYYY')}
+        </p>
         <BlogTag tags={blogDetail?.metadata?.tags} />
       </div>
       <div className='blogDetail'>

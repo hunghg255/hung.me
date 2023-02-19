@@ -35,7 +35,7 @@ export default function Layout(props: IProps) {
   }, []);
 
   return (
-    <div className='Wrapper'>
+    <div className='Wrapper' id='header'>
       <Navbar handleToggleDarkTheme={handleToggle} toggle={isToggle} />
       <SideDraw handleToggleDarkTheme={handleToggle} toggle={isToggle} />
       <main>{props.children}</main>

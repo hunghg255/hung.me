@@ -13,13 +13,11 @@ const Blogs = () => {
   useEffect(() => {
     (async () => {
       const data = await getBlogPosts();
-      console.log(data);
       setblogs(data);
     })();
   }, []);
 
   if (!blogs?.data?.length) return null;
-  console.log({ blogs });
 
   return (
     <div className={styles.listBlog}>
@@ -40,7 +38,9 @@ const Blogs = () => {
                 </div>
                 <div className={styles.content}>
                   <h2>{blog.fields.title}</h2>
-                  <p>Date: {dayjs(blog.fields.publishedDate).format('DD MMM YYYY')}</p>
+                  <p className={styles.date}>
+                    Date: {dayjs(blog.fields.publishedDate).format('DD MMM YYYY')}
+                  </p>
                   <BlogTag tags={blog.metadata.tags} />
                 </div>
               </a>
