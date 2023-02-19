@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import styles from './index.module.scss';
 
@@ -25,7 +25,11 @@ function SideDraw(props: IProps) {
     setIsToggle(!isToggle);
   };
 
-  React.useEffect(() => {
+  useEffect(() => {
+    setIsToggle(false);
+  }, [router.pathname]);
+
+  useEffect(() => {
     window.addEventListener('resize', () => {
       if (window.innerHeight > 600) {
         setIsToggle(false);
