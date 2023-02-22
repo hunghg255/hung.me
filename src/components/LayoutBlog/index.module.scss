@@ -33,7 +33,6 @@
 
   ul {
     padding: 0 38px;
-    margin: 12px 0;
   }
 
   h1 {
@@ -75,5 +74,12 @@
 
   u {
     text-decoration: unset;
+  }
+
+  :global {
+    .img {
+      margin: 12px 0;
+      text-align: center;
+    }
   }
 }

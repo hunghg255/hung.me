@@ -16,13 +16,15 @@ const options = {
       const isImage = node?.data?.target?.fields?.file?.contentType?.includes('image');
       if (isImage)
         return (
-          <Image
-            src={'https:' + node?.data?.target?.fields?.file?.url}
-            width={node?.data?.target?.fields?.file?.details?.image?.width}
-            height={node?.data?.target?.fields?.file?.details?.image?.height}
-            alt=''
-            objectFit='contain'
-          />
+          <div className='img'>
+            <Image
+              src={'https:' + node?.data?.target?.fields?.file?.url}
+              width={node?.data?.target?.fields?.file?.details?.image?.width}
+              height={node?.data?.target?.fields?.file?.details?.image?.height}
+              alt=''
+              objectFit='contain'
+            />
+          </div>
         );
       return <></>;
     },
