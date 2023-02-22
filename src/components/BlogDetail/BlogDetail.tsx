@@ -45,7 +45,7 @@ const BlogDetail = (props: any) => {
   if (!blogDetail) return null;
 
   return (
-    <>
+    <div className={styles.blogDetail}>
       <Head>
         <title>{blogDetail?.fields?.title}</title>
       </Head>
@@ -59,7 +59,7 @@ const BlogDetail = (props: any) => {
       <div className='blogDetail'>
         {documentToReactComponents(blogDetail?.fields?.body, options)}
       </div>
-    </>
+    </div>
   );
 };
 

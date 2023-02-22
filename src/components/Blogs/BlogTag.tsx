@@ -7,7 +7,7 @@ const BlogTag = ({ tags }: { tags: any[] }) => {
     <div className={styles.tags}>
       {tags?.map((tagItem, idx) => {
         return (
-          <div key={idx} style={{}} className={`${styles.tagItem} ${styles[tagItem?.sys?.id]}`}>
+          <div key={idx} className={`blogTag ${styles.tagItem} ${styles[tagItem?.sys?.id]}`}>
             {tagItem?.sys?.id}
           </div>
         );

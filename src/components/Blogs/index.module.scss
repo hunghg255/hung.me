@@ -14,6 +14,7 @@
   font-weight: 300;
   padding: 2px 8px;
   font-size: 18px;
+  text-transform: capitalize;
 
   @media (max-width: 768px) {
     font-size: 12px;
@@ -22,13 +23,89 @@
 }
 
 .javascript {
-  background-color: rgb(255, 255, 0, 0.2);
-  border: 1px solid yellow;
+  background-color: rgb(202, 176, 51, 0.3);
+  border: 1px solid #cab033;
+  color: black;
 }
 
 .css {
-  background-color: rgb(30, 144, 255, 0.2);
-  border: 1px solid dodgerblue;
+  background-color: rgb(31, 75, 224, 0.3);
+  border: 1px solid #1f4be0;
+  color: #1f4be0;
+}
+
+.html {
+  background-color: rgb(211, 75, 50, 0.3);
+  border: 1px solid #d34b32;
+  color: #d34b32;
+}
+
+.docker {
+  background-color: rgb(32, 142, 224, 0.3);
+  border: 1px solid #208ee0;
+  color: #208ee0;
+}
+
+.git {
+  background-color: rgb(229, 75, 49, 0.3);
+  border: solid #e54b31;
+  color: #e54b31;
+}
+.nginx,
+.tips {
+  background-color: rgb(5, 114, 43, 0.3);
+  border: solid #05722b;
+  color: #05722b;
+}
+.nodejs {
+  background-color: rgb(136, 188, 61, 0.3);
+  border: solid #88bc3d;
+  color: #88bc3d;
+}
+.reactjs {
+  background-color: rgb(2, 210, 242, 0.3);
+  border: solid #02d2f2;
+  color: #02d2f2;
+}
+.scss {
+  background-color: rgb(194, 97, 146, 0.3);
+  border: solid #c26192;
+  color: #c26192;
+}
+.typescript {
+  background-color: rgb(46, 114, 188, 0.3);
+  border: solid #2e72bc;
+  color: #2e72bc;
+}
+.vitejs {
+  background-color: rgb(134, 108, 240, 0.3);
+  border: solid #866cf0;
+  color: #866cf0;
+}
+.webpack {
+  background-color: rgb(27, 113, 182, 0.3);
+  border: solid #1b71b6;
+  color: #1b71b6;
+}
+.solidjs {
+  background-color: rgb(3, 69, 142, 0.3);
+  border: solid #03458e;
+  color: #03458e;
+}
+.sveltejs {
+  background-color: rgb(242, 59, 0, 0.3);
+  border: solid #f23b00;
+  color: #f23b00;
+}
+.vuejs {
+  background-color: rgb(3, 179, 123, 0.3);
+  border: solid #03b37b;
+  color: #03b37b;
+}
+
+.nextjs {
+  background-color: #0f0e17f0;
+  border: solid #0f0e17f0;
 }
 
 .listBlog {

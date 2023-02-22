@@ -8,3 +8,11 @@
 
 .date {
 }
+
+.blogDetail {
+  a {
+    text-decoration: underline;
+    font-style: italic;
+    color: var(--primary-color);
+  }
+}

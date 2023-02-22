@@ -14,11 +14,15 @@
   --container: 117rem;
 }
 
-[data-theme="dark"] {
+[data-theme='dark'] {
   --primary-color: #fffffe;
   --sub-color: #a7a9be;
   --primary-bg: #0f0e17f0;
   --curor: #fffffe;
+}
+
+[data-theme='dark'] .blogTag {
+  color: white !important;
 }
 
 *,

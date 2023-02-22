@@ -8,11 +8,11 @@
     padding: 80px 10px;
   }
 
-  * {
-    color: var(--primary-color);
-    line-height: 28px;
-    text-align: justify;
-  }
+  // * {
+  //   color: var(--primary-color);
+  //   line-height: 28px;
+  //   text-align: justify;
+  // }
 
   h1,
   h2,
@@ -26,6 +26,9 @@
     margin: initial;
     padding: initial;
     font-size: initial;
+    color: var(--primary-color);
+    line-height: 28px;
+    text-align: justify;
   }
 
   ul {
@@ -68,5 +71,9 @@
     @media (max-width: 768px) {
       font-size: 14px;
     }
+  }
+
+  u {
+    text-decoration: unset;
   }
 }
