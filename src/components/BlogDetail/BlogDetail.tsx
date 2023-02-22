@@ -30,18 +30,17 @@ const options = {
   renderText: (text) => text.replace('!', '?'),
 };
 
-const BlogDetail = () => {
-  const router = useRouter();
-  const [blogDetail, setblogDetail] = useState<any>();
+const BlogDetail = (props: any) => {
+  const [blogDetail, setblogDetail] = useState<any>(props?.blogDetail);
 
-  useEffect(() => {
-    (async () => {
-      const slugArr = (router.query?.slug as string)?.split('-');
+  // useEffect(() => {
+  //   (async () => {
+  //     const slugArr = (router.query?.slug as string)?.split('-');
 
-      const data = await getBlogPostsDetail(slugArr[slugArr?.length - 1] as string);
-      setblogDetail(data);
-    })();
-  }, [router.query?.slug]);
+  //     const data = await getBlogPostsDetail(slugArr[slugArr?.length - 1] as string);
+  //     setblogDetail(data);
+  //   })();
+  // }, [router.query?.slug]);
 
   if (!blogDetail) return null;
 

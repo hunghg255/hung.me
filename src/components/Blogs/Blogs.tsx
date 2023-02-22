@@ -7,15 +7,8 @@ import BlogTag from './BlogTag';
 
 import styles from './index.module.scss';
 
-const Blogs = () => {
-  const [blogs, setblogs] = useState<IDataBlogs>();
-
-  useEffect(() => {
-    (async () => {
-      const data = await getBlogPosts();
-      setblogs(data);
-    })();
-  }, []);
+const Blogs = (props: any) => {
+  const [blogs, setBlogs] = useState<IDataBlogs>(props?.blogs);
 
   if (!blogs?.data?.length) return null;
 
