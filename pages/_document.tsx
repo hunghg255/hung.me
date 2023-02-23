@@ -1,30 +1,10 @@
-import { getCookie } from 'cookies-next';
 import Document, { Html, Head, Main, NextScript } from 'next/document';
 import Script from 'next/script';
 
-interface Props {
-  theme: boolean;
-}
-
-class MyDocument extends Document<Props> {
-  static async getInitialProps(ctx) {
-    const initialProps = await Document.getInitialProps(ctx);
-
-    let theme: string = 'light';
-
-    if (ctx.req) {
-      theme = getCookie('data-theme', {
-        req: ctx.req,
-        res: ctx.res,
-      }) as string;
-    }
-
-    return { ...initialProps, theme };
-  }
-
+class MyDocument extends Document {
   render() {
     return (
-      <Html lang='vi' data-theme={this.props.theme}>
+      <Html lang='vi'>
         <Head>
           <link
             href='https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap'

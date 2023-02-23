@@ -1,5 +1,5 @@
 import { getCookie, setCookie } from 'cookies-next';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import ButtonScrollTop from '../ButtonScrollTop';
 import Navbar from '../Navigation/Navbar';
 import SideDraw from '../Navigation/SideDraw';
@@ -10,6 +10,13 @@ interface IProps {
 
 export default function Layout(props: IProps) {
   const [isToggle, setIsToggle] = useState<boolean>(getCookie('data-theme') === 'dark');
+
+  useEffect(() => {
+    const localTheme = getCookie('data-theme') === 'dark';
+    if (localTheme) {
+      document.documentElement.setAttribute('data-theme', 'dark');
+    }
+  }, []);
 
   const handleToggle = () => {
     if (isToggle === false) {
