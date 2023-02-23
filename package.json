@@ -13,6 +13,7 @@
     "@contentful/rich-text-types": "^16.0.2",
     "@studio-freight/lenis": "^0.2.14",
     "contentful": "^9.3.0",
+    "cookies-next": "^2.1.1",
     "dayjs": "^1.11.7",
     "framer-motion": "^7.6.2",
     "next": "12.3.0",
