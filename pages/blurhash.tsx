@@ -36,7 +36,11 @@ const BlurHash = () => {
   };
 
   return (
-    <>
+    <div
+      style={{
+        margin: '100px 0 0',
+      }}
+    >
       <h1>Get BlurHash Image</h1>
       <br />
 
@@ -83,7 +87,7 @@ const BlurHash = () => {
           </>
         )}
       </div>
-    </>
+    </div>
   );
 };
 
