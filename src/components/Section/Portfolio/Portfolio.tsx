@@ -10,11 +10,11 @@ interface IProps {
 
 const PROJECTS = [
   {
-    name: 'Web questions',
+    name: 'Web totals',
     description: 'Build a site share all about web development',
     stack: 'Reactjs, Docusaurus, markdown',
-    linkDemo: 'https://web-questions.vercel.app/',
-    source: 'https://github.com/hunghg255/web-questions',
+    linkDemo: 'https://web-totals.vercel.app/',
+    source: 'https://github.com/hunghg255/web-totals',
     image: '/images/projects/web-question.png',
   },
   {
