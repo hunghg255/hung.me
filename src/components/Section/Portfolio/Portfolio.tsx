@@ -10,12 +10,12 @@ interface IProps {
 
 const PROJECTS = [
   {
-    name: 'Javascript question',
-    description: 'Build a site js question',
-    stack: 'Nextjs, markdown',
-    linkDemo: 'https://js-qna.vercel.app/vi',
-    source: 'https://github.com/hunghg255/js-qna',
-    image: '/images/projects/js-qna.png',
+    name: 'Web questions',
+    description: 'Build a site share all about web development',
+    stack: 'Reactjs, Docusaurus, markdown',
+    linkDemo: 'https://web-questions.vercel.app/',
+    source: 'https://github.com/hunghg255/web-questions',
+    image: '/images/projects/web-question.png',
   },
   {
     name: 'EvoGym UI',
