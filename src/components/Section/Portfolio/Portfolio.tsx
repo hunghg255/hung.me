@@ -127,6 +127,14 @@ const PROJECTS = [
 
 const PACKAGES = [
   {
+    id: 6,
+    name: 'CLI',
+    description: `A script CLI to create source base`,
+    npmUrl: 'https://www.npmjs.com/package/create-template-fe',
+    githubUrl: 'https://github.com/hunghg255/create-template-fe',
+    demoUrl: 'https://www.npmjs.com/package/create-template-fe',
+  },
+  {
     id: 10,
     name: 'fast-react-context',
     description: 'Make to react context faster',
@@ -173,14 +181,6 @@ const PACKAGES = [
     npmUrl: 'https://github.com/hunghg255/btn-ripple',
     githubUrl: 'https://github.com/hunghg255/btn-ripple',
     demoUrl: 'https://hunghg255.github.io/btn-ripple/',
-  },
-  {
-    id: 6,
-    name: 'CLI',
-    description: `A script CLI to create source base`,
-    npmUrl: 'https://www.npmjs.com/package/create-template-fe',
-    githubUrl: 'https://github.com/hunghg255/create-template-fe',
-    demoUrl: 'https://www.npmjs.com/package/create-template-fe',
   },
 ];
 
