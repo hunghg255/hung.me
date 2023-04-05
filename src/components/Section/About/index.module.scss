@@ -25,17 +25,18 @@
 }
 
 .aboutMe {
-  max-width: 860px;
+  // max-width: 860px;
   margin: 0 auto;
 }
 
 .aboutMe p {
   font-size: 1.5rem;
   color: var(--primary-color);
-  text-align: center;
   font-weight: 300;
   line-height: 1.8;
   margin-bottom: 1.4rem;
+  text-align: justify;
+  text-justify: inter-word;
 }
 
 .aboutMe a {
@@ -44,7 +45,6 @@
   font-style: italic;
   color: var(--primary-color);
   font-weight: 500;
-
 }
 
 .aboutContribution {
@@ -62,7 +62,6 @@
 .aboutContribution img {
   margin: 0 auto;
 }
-
 
 .aboutMeStack h3 {
   text-align: center;

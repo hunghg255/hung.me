@@ -18,11 +18,11 @@
   max-width: 117rem;
 }
 
-@media (min-width: 1170px) {
-  .headerText {
-    padding: 0 6rem;
-  }
-}
+// @media (min-width: 1170px) {
+//   .headerText {
+//     padding: 0 6rem;
+//   }
+// }
 
 .headerText h1 {
   font-size: 4.5rem;
@@ -98,7 +98,7 @@
 
 @media (min-width: 600px) {
   .header {
-    align-items: center
+    align-items: center;
   }
 
   .headerText {
