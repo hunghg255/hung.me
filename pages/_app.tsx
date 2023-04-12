@@ -1,41 +1,19 @@
-import Lenis from '@studio-freight/lenis';
 import dynamic from 'next/dynamic';
 import Head from 'next/head';
-import { useEffect } from 'react';
 import Layout from 'src/components/Layout';
 import '../styles/globals.scss';
 
 const Cursor = dynamic(() => import('src/components/UI/Cursor/Cursor'), {
   ssr: false,
 });
+const ScrollSmooth = dynamic(() => import('src/components/ScrollSmooth/ScrollSmooth'), {
+  ssr: false,
+});
+const AosComponent = dynamic(() => import('src/components/AosComponent/AosComponent'), {
+  ssr: false,
+});
 
 function MyApp({ Component, pageProps }) {
-  useEffect(() => {
-    const lenis = new Lenis({
-      duration: 1.2,
-      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // https://www.desmos.com/calculator/brs54l4xou
-      direction: 'vertical', // vertical, horizontal
-      gestureDirection: 'vertical', // vertical, horizontal, both
-      smooth: true,
-      mouseMultiplier: 1,
-      smoothTouch: false,
-      touchMultiplier: 2,
-      infinite: false,
-    });
-
-    function raf(time: any) {
-      if (!time) return;
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
-
-    requestAnimationFrame(raf);
-
-    return () => {
-      window.cancelAnimationFrame(raf as any);
-    };
-  }, []);
-
   return (
     <>
       <Head>
@@ -83,6 +61,8 @@ function MyApp({ Component, pageProps }) {
       </Layout>
 
       <Cursor />
+      <ScrollSmooth />
+      <AosComponent />
     </>
   );
 }

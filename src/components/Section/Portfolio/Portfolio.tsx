@@ -195,7 +195,7 @@ export default function Portfolio(props: IProps) {
           <ul>
             {PACKAGES.map((it: any) => {
               return (
-                <li key={it.id}>
+                <li key={it.id} data-aos='fade-up'>
                   <p className={styles.packageName}>{it.name}</p>
                   <p className={styles.packageDesc}>{it.description}</p>
                   <p className={styles.itemView}>
@@ -280,7 +280,7 @@ export default function Portfolio(props: IProps) {
         <div className={styles.project}>
           <ul>
             {PROJECTS.map((item, idx) => (
-              <li key={idx.toString()} className={styles.projectItem}>
+              <li key={idx.toString()} className={styles.projectItem} data-aos='zoom-in'>
                 <div className='Project__item__wrapper'>
                   <div className={styles.projectItemImage}>
                     <Image

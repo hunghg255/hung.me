@@ -7,7 +7,7 @@ import styles from './index.module.scss';
 export default function About() {
   return (
     <section className='About container' id='sectionAbout'>
-      <div className={styles.aboutHeading}>
+      <div className={styles.aboutHeading} data-aos='fade-up'>
         <h2 className={styles.aboutTitle}>
           <Sparkles>About me </Sparkles>
         </h2>
@@ -16,7 +16,7 @@ export default function About() {
           if you&apos;re <span>wondering</span> who <span>I am...</span>
         </h3>
       </div>
-      <div className={styles.aboutMe}>
+      <div className={styles.aboutMe} data-aos='fade-up'>
         <p>
           Hi, my name is <span className={styles.hightLight}>Hung</span>, i&apos;m{' '}
           {new Date().getFullYear() - 1997} years old. I got a bachelor of Electronics
@@ -56,7 +56,7 @@ export default function About() {
           I want to be a good person in the field that I have chosen so I tried a lot, worked hard.
         </p>
       </div>
-      <div className={styles.aboutMeStack}>
+      <div className={styles.aboutMeStack} data-aos='fade-up'>
         <h3>
           My current <span className={styles.hightLight}>stack</span>
           of <span className={styles.hightLight}>languages/technologies</span>
@@ -84,6 +84,10 @@ export default function About() {
             alt='TailwindCSS'
           />
           <img
+            src='https://img.shields.io/badge/AntDesign-1677ff.svg?style=flat-square&logo=ant-design&logoColor=white'
+            alt='Antd'
+          />
+          <img
             src='https://img.shields.io/badge/Javascript-%23323330.svg?style=flat-square&logo=javascript&logoColor=%23F7DF1E'
             alt='Javascript'
           />
@@ -100,15 +104,36 @@ export default function About() {
             alt='Nextjs'
           />
           <img
+            src='https://img.shields.io/badge/Remix-black?style=flat-square&logo=remix&logoColor=white'
+            alt='Remix.run'
+          />
+          <img
+            src='https://img.shields.io/badge/solidjs-4578bc?style=flat-square&logo=solid&logoColor=white'
+            alt='Remix.run'
+          />
+          <img
             src='https://img.shields.io/badge/Vuejs-%2335495e.svg?style=flat-square&logo=vuedotjs&logoColor=%234FC08D'
             alt='Vuejs'
           />
+          <img
+            src='https://img.shields.io/badge/Svelte-ff3e00?style=flat-square&logo=svelte&logoColor=white'
+            alt='Svelte'
+          />
+          <img
+            src='https://img.shields.io/badge/Vitejs-blueviolet?style=flat-square&logo=vite&logoColor=white'
+            alt='Vitejs'
+          />
+          <img
+            src='https://img.shields.io/badge/Webpack-dodgerblue?style=flat-square&logo=webpack&logoColor=white'
+            alt='Webpack'
+          />
+
           <img
             src='https://img.shields.io/badge/Nodejs-6DA55F?style=flat-square&logo=node.js&logoColor=white'
             alt='Nodejs'
           />
           <img
-            src='https://img.shields.io/badge/Expressjs-6DA55F?style=flat-square&logo=express&logoColor=white'
+            src='https://img.shields.io/badge/Expressjs-6DA55F?style=flat-square&logo=nestjs&logoColor=white'
             alt='Expressjs'
           />
           <img
