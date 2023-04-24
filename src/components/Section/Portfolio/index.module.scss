@@ -105,6 +105,10 @@
   border: 1px solid var(--primary-color);
 }
 
+.linkBorder svg {
+  min-width: 14px;
+}
+
 .itemView {
   display: flex;
   justify-content: center;
