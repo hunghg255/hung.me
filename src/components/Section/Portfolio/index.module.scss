@@ -130,8 +130,7 @@
   margin-bottom: 2.5rem;
   border-radius: 8px;
   /* background-color: #fff; */
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2),
-    0 4px 6px -4px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2), 0 4px 6px -4px rgba(0, 0, 0, 0.2);
   text-align: center;
   overflow: hidden;
   transition: all 350ms;
@@ -178,9 +177,19 @@
   }
 }
 
-
 .packages .itemView {
   justify-content: flex-start;
+}
+
+.packages ul {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+  row-gap: 15px;
+
+  @media (max-width: 576px) {
+    margin: 0;
+  }
 }
 
 .packages li {
@@ -188,7 +197,17 @@
   border-radius: 10px;
   border: 1px solid var(--sub-color);
   box-shadow: 0 0 30px 20px rgba(0, 0, 0, 0.02);
-  margin: 0 0 12px;
+  margin: 0 15px;
+  width: calc(33.33% - 30px);
+
+  @media (max-width: 768px) {
+    width: calc(50% - 30px);
+  }
+
+  @media (max-width: 576px) {
+    width: 100%;
+    margin: 0;
+  }
 }
 
 .packageName {
@@ -202,4 +221,3 @@
   font-size: 1.4rem;
   margin: 4px 0 12px;
 }
-
