@@ -1,8 +1,8 @@
 import { createClient } from 'contentful';
 
 const client = createClient({
-  space: process.env.NEXT_PUBLIC_CONTENT_FULL_SPACE,
-  accessToken: process.env.NEXT_PUBLIC_CONTENT_FULL_TOKEN,
+  space: 'zdhzm3gdml81',
+  accessToken: 'YQd1HhG99AYvvD5fddOmVXaDob0NQrM6iGoHVWU8m1c',
 });
 
 export interface IData {
