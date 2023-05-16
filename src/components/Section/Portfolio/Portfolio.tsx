@@ -183,7 +183,23 @@ const PACKAGES = [
     demoUrl: 'https://hunghg255.github.io/btn-ripple/',
   },
   {
-    id: 5,
+    id: 11,
+    name: 'Svg to jsx',
+    description: `A script to convert svg file to jsx`,
+    npmUrl: 'https://github.com/hunghg255/svg-to-jsx',
+    githubUrl: 'https://www.npmjs.com/package/agile-svg2jsx',
+    demoUrl: 'https://react-generate-svg-2-icon.vercel.app/',
+  },
+  {
+    id: 12,
+    name: 'Github Corners',
+    description: `A package link to github`,
+    npmUrl: 'https://www.npmjs.com/package/react-gh-corners',
+    githubUrl: 'https://github.com/hunghg255/react-github-corners',
+    demoUrl: 'https://github-corners.vercel.app/',
+  },
+  {
+    id: 10,
     name: 'Agile CSS Suggestion',
     description: `An extension suggestion css class name for vscode`,
     npmUrl: '',
@@ -191,6 +207,16 @@ const PACKAGES = [
     demoUrl: '',
     marketplaceUrl:
       'https://marketplace.visualstudio.com/items?itemName=AgileCssSuggestion.agile-css-suggestion',
+  },
+  {
+    id: 8,
+    name: 'CSS to Tailwindss',
+    description: `An extension convert css to tailwindcss`,
+    npmUrl: '',
+    githubUrl: '',
+    demoUrl: '',
+    marketplaceUrl:
+      'https://marketplace.visualstudio.com/items?itemName=hunghg255.css-2-tailwindcss',
   },
 ];
 
