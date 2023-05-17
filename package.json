@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "postbuild": "next-sitemap"
   },
   "dependencies": {
     "@contentful/rich-text-react-renderer": "^15.16.2",
@@ -18,6 +19,7 @@
     "dayjs": "^1.11.7",
     "framer-motion": "^7.6.2",
     "next": "12.3.0",
+    "next-sitemap": "^4.0.9",
     "plaiceholder": "^2.5.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
