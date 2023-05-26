@@ -9,7 +9,9 @@ body {
   box-sizing: border-box;
   font-size: 14px;
   line-height: normal;
-  text-rendering: optimizeSpeed;
+  // text-rendering: optimizeSpeed;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
 body {

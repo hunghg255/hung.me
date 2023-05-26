@@ -1,6 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   swcMinify: true,
+  output: 'standalone',
   images: {
     minimumCacheTTL: 99999999,
     domains: ['images.ctfassets.net'],

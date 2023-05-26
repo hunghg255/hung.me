@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
-<url><loc>https://hung.thedev.id</loc><lastmod>2023-05-17T09:44:56.450Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://hung.thedev.id/blog</loc><lastmod>2023-05-17T09:44:56.450Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://hung.thedev.id/blurhash</loc><lastmod>2023-05-17T09:44:56.450Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://hung.thedev.id/blog/promise-async-await-12eS7NS7auf5kcv9X8YN7x</loc><lastmod>2023-05-17T09:44:56.450Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://hung.thedev.id/blog/js-data-types-5tgT5622NNKcQrJIosX3d0</loc><lastmod>2023-05-17T09:44:56.450Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://hung.thedev.id/blog/asynchronous-programming-1utNRhl7oGrB18pMBWDyJk</loc><lastmod>2023-05-17T09:44:56.450Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://hung.thedev.id</loc><lastmod>2023-05-19T03:20:32.868Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://hung.thedev.id/blog</loc><lastmod>2023-05-19T03:20:32.868Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://hung.thedev.id/blurhash</loc><lastmod>2023-05-19T03:20:32.868Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://hung.thedev.id/blog/promise-async-await-12eS7NS7auf5kcv9X8YN7x</loc><lastmod>2023-05-19T03:20:32.868Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://hung.thedev.id/blog/js-data-types-5tgT5622NNKcQrJIosX3d0</loc><lastmod>2023-05-19T03:20:32.868Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://hung.thedev.id/blog/asynchronous-programming-1utNRhl7oGrB18pMBWDyJk</loc><lastmod>2023-05-19T03:20:32.868Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
 </urlset>
