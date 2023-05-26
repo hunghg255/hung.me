@@ -1,6 +1,14 @@
 @import './reset.css';
 @import './settings.css';
 
+* {
+  text-rendering: optimizeLegibility;
+}
+
+html.touch * {
+  text-rendering: optimizeSpeed;
+}
+
 *,
 html,
 body {
@@ -9,9 +17,6 @@ body {
   box-sizing: border-box;
   font-size: 14px;
   line-height: normal;
-  // text-rendering: optimizeSpeed;
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
 }
 
 body {
