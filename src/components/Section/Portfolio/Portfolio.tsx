@@ -199,6 +199,22 @@ const PACKAGES = [
     demoUrl: 'https://github-corners.vercel.app/',
   },
   {
+    id: 14,
+    name: 'CSS to Tailwindcss',
+    description: `Library convert css to tailwindcss`,
+    npmUrl: 'https://www.npmjs.com/package/css2tailwind',
+    githubUrl: 'https://github.com/hunghg255/css2tailwind',
+    demoUrl: 'https://css2tailwind.vercel.app/css-to-tailwind',
+  },
+  {
+    id: 15,
+    name: 'React OTP Input',
+    description: `OTP input component for reactjs`,
+    npmUrl: 'https://www.npmjs.com/package/reactjs-otp-input',
+    githubUrl: 'https://github.com/hunghg255/reactjs-otp-input',
+    demoUrl: 'https://reactjs-otp-input-demo.vercel.app/',
+  },
+  {
     id: 10,
     name: 'Agile CSS Suggestion',
     description: `An extension suggestion css class name for vscode`,
