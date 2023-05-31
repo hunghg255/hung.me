@@ -1,6 +1,7 @@
 {
-  "name": "next",
-  "version": "0.1.0",
+  "name": "hung.me",
+  "description": "My personal website",
+  "version": "2.5.5",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -34,5 +35,26 @@
     "eslint-config-next": "12.3.0",
     "sass": "^1.54.9",
     "typescript": "4.8.3"
+  },
+  "keywords": [
+    "nextjs",
+    "portfolio",
+    "react",
+    "reactjs"
+  ],
+  "author": "hunghg255",
+  "license": "MIT",
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not op_mini all"
+  ],
+  "homepage": "https://hung.thedev.id/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hunghg255/hung.me"
+  },
+  "bugs": {
+    "url": "https://github.com/hunghg255/hung.me/issues"
   }
 }
