@@ -18,10 +18,10 @@
 }
 
 [data-theme='dark'] {
-  --primary-color: #fffffe;
+  --primary-color: #fefefe;
   --sub-color: #a7a9be;
   --primary-bg: #0f0e17f0;
-  --curor: #fffffe;
+  --curor: #fefefe;
 }
 
 [data-theme='dark'] .blogTag {
