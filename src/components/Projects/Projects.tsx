@@ -21,7 +21,7 @@ const LABELS = {
 const RepoItem = ({ repo }: { repo: All }) => {
   return (
     <article className={styles.repoItem}>
-      <a href={repo.url} target='_blank' rel='noreferrer'>
+      <a href={repo.html_url} target='_blank' rel='noreferrer'>
         <h5 className={styles.repoName}>
           <svg
             aria-hidden='true'
