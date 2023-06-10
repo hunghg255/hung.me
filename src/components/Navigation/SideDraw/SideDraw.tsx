@@ -87,6 +87,9 @@ function SideDraw(props: IProps) {
               </li>
             </>
           )}
+          <li className={styles.navSideItem} onClick={() => Router.push('/projects')}>
+            Projects
+          </li>
           <li className={styles.navSideItem} onClick={() => Router.push('/blog')}>
             Blogs
           </li>

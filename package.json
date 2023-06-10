@@ -27,6 +27,7 @@
     "sharp": "^0.31.1"
   },
   "devDependencies": {
+    "@octokit/types": "^9.2.3",
     "@types/aos": "^3.0.4",
     "@types/node": "18.7.16",
     "@types/react": "18.0.18",

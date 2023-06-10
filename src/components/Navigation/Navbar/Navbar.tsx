@@ -52,6 +52,10 @@ function Navbar(props: IProps) {
             </>
           )}
 
+          <li className={styles.navItem} onClick={() => Router.push('/projects')}>
+            Projects
+          </li>
+
           <li className={styles.navItem} onClick={() => Router.push('/blog')}>
             Blogs
           </li>
