@@ -70,6 +70,10 @@
   font-size: 1.6rem;
   line-height: 1.9;
   color: var(--primary-color);
+
+  @media (max-width: 768px) {
+    font-size: 1.4rem;
+  }
 }
 
 .desc {
@@ -87,6 +91,7 @@
   overflow: hidden;
   padding: 2px 8px;
   position: relative;
+  white-space: nowrap;
 
   &::after {
     content: '';
