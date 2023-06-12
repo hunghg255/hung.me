@@ -8,14 +8,15 @@
 }
 
 .title {
-  font-size: 2.4rem;
+  font-size: 3.2rem;
   font-weight: 600;
   line-height: 1.9;
-  color: var(--primary-color);
+  color: var(--highlight-color);
   margin-bottom: 3.8rem;
+  text-align: center;
 
   @media (max-width: 768px) {
-    font-size: 1.8rem;
+    font-size: 2rem;
   }
 }
 

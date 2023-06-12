@@ -109,7 +109,7 @@ const RepoItem = ({ repo }: { repo: All }) => {
 const RepoList = ({ label, repos }: { label: string; repos: All[] }) => {
   return (
     <div className={styles.repoListWrap}>
-      <h3 className={styles.repoTitle}>{label}</h3>
+      <h3 className={`${styles.repoTitle} hightLight`}>{label}</h3>
       <div className={styles.repoList}>
         {repos.map((repo) => {
           return <RepoItem key={repo.id} repo={repo} />;
@@ -122,7 +122,7 @@ const RepoList = ({ label, repos }: { label: string; repos: All[] }) => {
 const Projects = ({ projects }: IPropsProjects) => {
   return (
     <section className={styles.wrap}>
-      <h1 className={`${styles.title} hightLight`}>Projects</h1>
+      <h1 className={styles.title}>My Projects</h1>
 
       {Object.keys(projects).map((key) => {
         return <RepoList key={key} label={LABELS[key]} repos={projects[key]} />;
