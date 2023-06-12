@@ -37,7 +37,7 @@ const RepoItem = ({ repo }: { repo: All }) => {
           <span>{repo.name}</span>
           <span className={styles.repoStatus}>
             {repo.private ? 'Private' : 'Public'}
-            {repo.is_template ? 'Template' : ''}
+            {repo.is_template ? ' template' : ''}
           </span>
         </h5>
 
