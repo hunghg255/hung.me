@@ -6,7 +6,7 @@
   position: fixed;
   z-index: 9999;
   background: transparent;
-  border: 1px solid var(--curor);
+  border: 1px solid var(--highlight-color);
   transform: translate(-50%, -50%);
   pointer-events: none;
 }
