@@ -258,7 +258,7 @@ export const getProjects = async () => {
   //   sort: 'updated',
   // })
   const data = await fetch(
-    'https://api.github.com/users/hunghg255/repos?per_page=100&type=owner&sort=updated',
+    'https://api.github.com/users/hunghg255/repos?per_page=200&type=owner&sort=updated',
   ).then((r) => r.json());
 
   const publicRepos = data.filter((repo) => !repo.private && !repo.archived);
