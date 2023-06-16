@@ -1,4 +1,5 @@
 import { useRouter } from 'next/router';
+
 import BlogDetail from 'src/components/BlogDetail/BlogDetail';
 import LayoutBlog from 'src/components/LayoutBlog/LayoutBlog';
 import { getBlogPosts, getBlogPostsDetail } from 'src/utils/contentful';
@@ -30,7 +31,7 @@ export const getStaticPaths = async () => {
   };
 };
 
-export async function getStaticProps({ locale, params }: any) {
+export async function getStaticProps({ params }: any) {
   const slugArr = params?.slug?.split('-');
   const data = await getBlogPostsDetail(slugArr[slugArr?.length - 1] as string);
 

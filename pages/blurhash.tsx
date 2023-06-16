@@ -1,13 +1,12 @@
 /* eslint-disable @next/next/no-img-element */
-import dynamic from 'next/dynamic';
-import Image from 'next/image';
 import React, { useRef, useState } from 'react';
 
 export const toBase64 = (file: any) =>
   new Promise((resolve, reject) => {
     const reader = new FileReader();
     reader.readAsDataURL(file);
-    reader.onload = () => resolve(reader.result);
+    reader.addEventListener('load', () => resolve(reader.result));
+    // eslint-disable-next-line unicorn/prefer-add-event-listener
     reader.onerror = (error) => reject(error);
   });
 
@@ -18,10 +17,12 @@ const BlurHash = () => {
   const [loading, setLoading] = useState(false);
 
   const onSubmit = async () => {
-    if (loading) return;
+    if (loading) {
+      return;
+    }
     try {
       setLoading(true);
-      let formData = new FormData();
+      const formData = new FormData();
       formData.append('file', refInput.current?.files?.[0]);
       const base64 = await toBase64(refInput.current?.files?.[0]);
 
@@ -32,7 +33,7 @@ const BlurHash = () => {
       setLoading(false);
       setBlurhash(r);
       setCurrentImage(base64);
-    } catch (error) {}
+    } catch {}
   };
 
   return (

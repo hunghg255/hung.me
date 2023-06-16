@@ -6,5 +6,5 @@ export const pageview = (url: any) => {
       event: 'pageview',
       page: url,
     });
-  } catch (error) {}
+  } catch {}
 };

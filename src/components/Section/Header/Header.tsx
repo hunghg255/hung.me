@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 
-import styles from './index.module.scss';
-
-import { onGotoElement } from 'src/utils';
 import Image from 'next/image';
-import Canvas from './Canvas';
+
 import Sparkles from 'src/components/UI/Sparkles/Sparkles';
+import { onGotoElement } from 'src/utils';
+
+import Canvas from './Canvas';
+import styles from './index.module.scss';
 
 function Header() {
   const [idxTag, setIdxTag] = useState(0);
@@ -50,7 +51,7 @@ function Header() {
           alt=''
           width={1120}
           height={1178}
-          objectFit='contain'
+          className='object-contain'
           priority={true}
         />
       </div>

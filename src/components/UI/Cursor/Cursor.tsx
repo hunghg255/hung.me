@@ -53,7 +53,9 @@ const Cursor: FC = () => {
   const { updateCursor } = useCursor();
 
   useEffect(() => {
-    if (window.matchMedia('(pointer: coarse)').matches) return;
+    if (window.matchMedia('(pointer: coarse)').matches) {
+      return;
+    }
 
     window.addEventListener('mousemove', (e) => {
       if (cursorRef.current) {
@@ -91,4 +93,3 @@ const Cursor: FC = () => {
 };
 
 export default Cursor;
-1;

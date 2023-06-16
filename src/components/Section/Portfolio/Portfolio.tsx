@@ -1,12 +1,11 @@
-import Image from 'next/image';
+/* eslint-disable quotes */
 import React from 'react';
+
+import Image from 'next/image';
+
 import Sparkles from 'src/components/UI/Sparkles/Sparkles';
 
 import styles from './index.module.scss';
-
-interface IProps {
-  portfolioImg: any;
-}
 
 const PROJECTS = [
   {
@@ -125,7 +124,7 @@ const PROJECTS = [
   },
 ];
 
-export default function Portfolio(props: IProps) {
+export default function Portfolio() {
   return (
     <>
       <section className='Portfolio container' id='sectionPortfolio'>
@@ -143,7 +142,7 @@ export default function Portfolio(props: IProps) {
                       alt={item.name}
                       width={357}
                       height={202}
-                      objectFit='cover'
+                      className='object-contain'
                       // placeholder='blur'
                       // blurDataURL={portfolioImg[idx]?.base64}
                       priority={true}

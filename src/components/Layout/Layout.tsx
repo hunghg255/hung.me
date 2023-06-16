@@ -1,5 +1,7 @@
-import { getCookie, setCookie } from 'cookies-next';
 import React, { useEffect, useState } from 'react';
+
+import { getCookie, setCookie } from 'cookies-next';
+
 import ButtonScrollTop from '../ButtonScrollTop';
 import Navbar from '../Navigation/Navbar';
 import SideDraw from '../Navigation/SideDraw';
@@ -14,7 +16,7 @@ export default function Layout(props: IProps) {
   useEffect(() => {
     const localTheme = getCookie('data-theme') === 'dark';
     if (localTheme) {
-      document.documentElement.setAttribute('data-theme', 'dark');
+      document.documentElement.dataset.theme = 'dark';
     }
   }, []);
 
@@ -22,16 +24,16 @@ export default function Layout(props: IProps) {
     if (isToggle === false) {
       localStorage?.setItem('data-theme', 'dark');
       setCookie('data-theme', 'dark', {
-        maxAge: 2147483647,
+        maxAge: 2_147_483_647,
       });
-      document.documentElement.setAttribute('data-theme', 'dark');
+      document.documentElement.dataset.theme = 'dark';
 
       setIsToggle(true);
     } else {
       setCookie('data-theme', 'light', {
-        maxAge: 2147483647,
+        maxAge: 2_147_483_647,
       });
-      document.documentElement.removeAttribute('data-theme');
+      delete document.documentElement.dataset.theme;
       setIsToggle(false);
     }
   };

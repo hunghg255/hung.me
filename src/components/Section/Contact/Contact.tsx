@@ -1,11 +1,8 @@
 import React from 'react';
-import Sparkles from 'src/components/UI/Sparkles/Sparkles';
-import styles from './index.module.scss';
 
-interface IProps {
-  refContact: React.RefObject<HTMLElement>;
-  toggle: boolean;
-}
+import Sparkles from 'src/components/UI/Sparkles/Sparkles';
+
+import styles from './index.module.scss';
 
 const data = [
   {

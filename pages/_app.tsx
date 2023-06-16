@@ -1,6 +1,10 @@
+/* eslint-disable react/no-unknown-property */
 import dynamic from 'next/dynamic';
+import { Open_Sans } from 'next/font/google';
 import Head from 'next/head';
+
 import Layout from 'src/components/Layout';
+
 import '../styles/globals.scss';
 
 const Cursor = dynamic(() => import('src/components/UI/Cursor/Cursor'), {
@@ -13,7 +17,13 @@ const AosComponent = dynamic(() => import('src/components/AosComponent/AosCompon
   ssr: false,
 });
 
-function MyApp({ Component, pageProps }) {
+const OpenSansFont = Open_Sans({
+  subsets: ['latin'],
+  display: 'swap',
+  weight: ['300', '400', '600', '700'],
+});
+
+function MyApp({ Component, pageProps }: any) {
   return (
     <>
       <Head>
@@ -56,6 +66,13 @@ function MyApp({ Component, pageProps }) {
 
         <meta property='og:image:type' content='image/jpeg' />
       </Head>
+
+      <style jsx global>{`
+        :root {
+          --fontOpenSans: ${OpenSansFont.style.fontFamily};
+        }
+      `}</style>
+
       <Layout>
         <Component {...pageProps} />
       </Layout>

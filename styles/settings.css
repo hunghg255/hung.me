@@ -7,8 +7,6 @@
   --highlight-color: #f25f4c;
   --color-hover: #f25f4c;
 
-  --primary-font: 'Open Sans';
-  --secondary-font: 'sans-serif';
   --wrapper: 192rem;
   --container: 117rem;
 
@@ -40,7 +38,7 @@
 ::placeholder,
 textarea::placeholder {
   opacity: 0.7;
-  font-family: var(--primary-color);
+  font-family: var(--fontOpenSans) !important;
   font-weight: 500;
 }
 
@@ -49,7 +47,7 @@ html {
 }
 
 body {
-  font-family: var(--primary-font);
+  font-family: var(--fontOpenSans) !important;
   font-weight: 300;
   line-height: 1.4;
   overflow-x: hidden;

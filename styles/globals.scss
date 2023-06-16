@@ -89,3 +89,7 @@ section {
   transform: rotate(-2deg);
   z-index: -1;
 }
+
+.object-contain {
+  object-fit: contain;
+}

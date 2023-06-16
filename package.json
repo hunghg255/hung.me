@@ -8,7 +8,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "postbuild": "next-sitemap"
+    "postbuild": "next-sitemap",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@contentful/rich-text-react-renderer": "^15.16.2",
@@ -19,7 +20,7 @@
     "cookies-next": "^2.1.1",
     "dayjs": "^1.11.7",
     "framer-motion": "^7.6.2",
-    "next": "12.3.0",
+    "next": "^13.4.6",
     "next-sitemap": "^4.0.9",
     "plaiceholder": "^2.5.0",
     "react": "18.2.0",
@@ -27,6 +28,7 @@
     "sharp": "^0.31.1"
   },
   "devDependencies": {
+    "@hunghg255/eslint-config-react": "^0.0.7",
     "@octokit/types": "^9.2.3",
     "@types/aos": "^3.0.4",
     "@types/node": "18.7.16",
@@ -34,6 +36,7 @@
     "@types/react-dom": "18.0.6",
     "eslint": "8.23.0",
     "eslint-config-next": "12.3.0",
+    "husky": "^8.0.0",
     "sass": "^1.54.9",
     "typescript": "4.8.3"
   },

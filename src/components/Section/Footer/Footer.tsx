@@ -1,4 +1,5 @@
 import React from 'react';
+
 import Logo from 'src/components/UI/Icon/logo';
 import Sparkles from 'src/components/UI/Sparkles/Sparkles';
 

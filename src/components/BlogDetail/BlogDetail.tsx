@@ -1,20 +1,19 @@
+import React, { useState } from 'react';
+
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import { BLOCKS } from '@contentful/rich-text-types';
+import dayjs from 'dayjs';
 import Head from 'next/head';
 import Image from 'next/image';
-import { useRouter } from 'next/router';
-import React, { useEffect, useState } from 'react';
-import { getBlogPostsDetail } from 'src/utils/contentful';
-import dayjs from 'dayjs';
 
 import styles from './index.module.scss';
 import BlogTag from '../Blogs/BlogTag';
 
 const options = {
   renderNode: {
-    [BLOCKS.EMBEDDED_ASSET]: (node, children) => {
+    [BLOCKS.EMBEDDED_ASSET]: (node) => {
       const isImage = node?.data?.target?.fields?.file?.contentType?.includes('image');
-      if (isImage)
+      if (isImage) {
         return (
           <div className='img'>
             <Image
@@ -22,10 +21,11 @@ const options = {
               width={node?.data?.target?.fields?.file?.details?.image?.width}
               height={node?.data?.target?.fields?.file?.details?.image?.height}
               alt=''
-              objectFit='contain'
+              className='object-contain'
             />
           </div>
         );
+      }
       return <></>;
     },
   },
@@ -33,7 +33,7 @@ const options = {
 };
 
 const BlogDetail = (props: any) => {
-  const [blogDetail, setblogDetail] = useState<any>(props?.blogDetail);
+  const [blogDetail] = useState<any>(props?.blogDetail);
 
   // useEffect(() => {
   //   (async () => {
@@ -44,7 +44,9 @@ const BlogDetail = (props: any) => {
   //   })();
   // }, [router.query?.slug]);
 
-  if (!blogDetail) return null;
+  if (!blogDetail) {
+    return <></>;
+  }
 
   return (
     <div className={styles.blogDetail}>

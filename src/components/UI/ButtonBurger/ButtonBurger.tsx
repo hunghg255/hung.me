@@ -10,9 +10,7 @@ interface IPropsButtonBurger {
 export default function ButtonBurger(props: IPropsButtonBurger) {
   return (
     <div
-      className={`${styles.btnBurger} ${
-        props.isToggle ? styles.btnBurgerActive : ''
-      }`}
+      className={`${styles.btnBurger} ${props.isToggle ? styles.btnBurgerActive : ''}`}
       onClick={props.toggle}
     >
       <div className={styles.btnBurgerLine}></div>

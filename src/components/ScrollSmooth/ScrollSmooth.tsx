@@ -1,5 +1,6 @@
+import { useEffect } from 'react';
+
 import Lenis from '@studio-freight/lenis';
-import React, { useEffect } from 'react';
 
 const ScrollSmooth = () => {
   useEffect(() => {
@@ -16,7 +17,9 @@ const ScrollSmooth = () => {
     });
 
     function raf(time: any) {
-      if (!time) return;
+      if (!time) {
+        return;
+      }
       lenis.raf(time);
       requestAnimationFrame(raf);
     }
@@ -28,7 +31,7 @@ const ScrollSmooth = () => {
     };
   }, []);
 
-  return null;
+  return <></>;
 };
 
 export default ScrollSmooth;

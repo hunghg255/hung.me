@@ -1,12 +1,14 @@
+/* eslint-disable multiline-ternary */
 import React from 'react';
 
-import styles from './index.module.scss';
+import Router, { useRouter } from 'next/router';
 
 import CheckboxIos from 'src/components/UI/CheckboxIos';
 import Logo from 'src/components/UI/Icon/logo';
 import Sparkles from 'src/components/UI/Sparkles/Sparkles';
-import Router, { useRouter } from 'next/router';
 import { onGotoElement } from 'src/utils';
+
+import styles from './index.module.scss';
 
 interface IProps {
   handleToggleDarkTheme: () => void;

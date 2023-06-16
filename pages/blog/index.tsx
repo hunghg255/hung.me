@@ -1,4 +1,5 @@
 import Head from 'next/head';
+
 import Blogs from 'src/components/Blogs/Blogs';
 import LayoutBlog from 'src/components/LayoutBlog/LayoutBlog';
 import { getBlogPosts } from 'src/utils/contentful';
@@ -16,7 +17,7 @@ const BlogPage = ({ blogs }: any) => {
   );
 };
 
-export async function getStaticProps(context) {
+export async function getStaticProps() {
   const data = await getBlogPosts();
 
   return {

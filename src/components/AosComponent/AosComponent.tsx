@@ -1,7 +1,8 @@
 import 'aos/dist/aos.css';
 
-import AOS from 'aos';
 import { useEffect } from 'react';
+
+import AOS from 'aos';
 
 const AosComponent = () => {
   useEffect(() => {
@@ -16,7 +17,7 @@ const AosComponent = () => {
     };
   }, []);
 
-  return null;
+  return <></>;
 };
 
 export default AosComponent;

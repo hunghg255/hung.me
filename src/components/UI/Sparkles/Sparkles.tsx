@@ -1,4 +1,5 @@
 import React from 'react';
+
 import styles from './index.module.css';
 
 const random = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
@@ -27,7 +28,7 @@ const DEFAULT_COLOR = '#FFC700';
 
 const generateSparkle = (color = DEFAULT_COLOR) => {
   return {
-    id: String(random(10000, 99999)),
+    id: String(random(10_000, 99_999)),
     createdAt: Date.now(),
     // Bright yellow color:
     color,
@@ -44,7 +45,7 @@ const generateSparkle = (color = DEFAULT_COLOR) => {
 };
 
 const range = (start, end, step = 1) => {
-  let output = [];
+  const output = [];
   if (typeof end === 'undefined') {
     end = start;
     start = 0;
@@ -64,8 +65,7 @@ const useRandomInterval = (callback, minDelay, maxDelay) => {
   }, [callback]);
 
   React.useEffect(() => {
-    let isEnabled =
-      typeof minDelay === 'number' && typeof maxDelay === 'number';
+    const isEnabled = typeof minDelay === 'number' && typeof maxDelay === 'number';
 
     if (isEnabled) {
       const handleTick = () => {
@@ -88,7 +88,7 @@ const useRandomInterval = (callback, minDelay, maxDelay) => {
   return cancel;
 };
 
-function SparkleInstance({ color, size, style }) {
+function SparkleInstance({ color, size, style }: any) {
   return (
     <span className={styles.svgWrap} style={style}>
       <svg
@@ -108,7 +108,7 @@ function SparkleInstance({ color, size, style }) {
   );
 }
 
-const Sparkles = ({ children }) => {
+const Sparkles = ({ children }: any) => {
   const [sparkles, setSparkles] = React.useState(() => {
     return range(0, 3).map(() => generateSparkle(randomColor()));
   });

@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import React from 'react';
+
 import Sparkles from 'src/components/UI/Sparkles/Sparkles';
 
 import styles from './index.module.scss';

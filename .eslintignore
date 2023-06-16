@@ -1,0 +1,18 @@
+# Ignore artifacts:
+build
+coverage
+
+node_modules
+
+# Ignore all HTML files:
+*.html
+
+.github
+
+.next
+
+.swc
+
+next.config.js
+
+next-i18next.config.js

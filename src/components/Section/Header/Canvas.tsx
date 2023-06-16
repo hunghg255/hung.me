@@ -1,6 +1,8 @@
+/* eslint-disable unicorn/no-nested-ternary */
 import { FC, useEffect, useRef } from 'react';
 
 import { m } from 'framer-motion';
+
 import styles from './index.module.scss';
 
 export const canvasImages = [
@@ -35,7 +37,9 @@ const Canvas: FC = () => {
   useEffect(() => {
     const canvas = canvasRef.current;
 
-    if (!canvas) return;
+    if (!canvas) {
+      return;
+    }
 
     const images = canvasImages.map((source) => {
       const image = document.createElement('img');
@@ -43,7 +47,7 @@ const Canvas: FC = () => {
       return image;
     });
 
-    let ctx = canvas.getContext('2d') as CanvasRenderingContext2D;
+    const ctx = canvas.getContext('2d') as CanvasRenderingContext2D;
 
     class Particle {
       x: number;
@@ -73,10 +77,18 @@ const Canvas: FC = () => {
       }
 
       update() {
-        if (this.x < this.size / 2) this.dx = -this.dx;
-        if (this.x > innerWidth - this.size / 2) this.dx = -this.dx;
-        if (this.y < this.size / 2) this.dy = -this.dy;
-        if (this.y > innerHeight - this.size / 2) this.dy = -this.dy;
+        if (this.x < this.size / 2) {
+          this.dx = -this.dx;
+        }
+        if (this.x > innerWidth - this.size / 2) {
+          this.dx = -this.dx;
+        }
+        if (this.y < this.size / 2) {
+          this.dy = -this.dy;
+        }
+        if (this.y > innerHeight - this.size / 2) {
+          this.dy = -this.dy;
+        }
 
         this.x += this.dx;
         this.y += this.dy;
@@ -97,11 +109,11 @@ const Canvas: FC = () => {
 
     let particles: Particle[] = [];
 
-    let expectedSize = Math.round(innerWidth / 20);
+    const expectedSize = Math.round(innerWidth / 20);
     let SIZE = expectedSize < 30 ? 30 : expectedSize > 50 ? 50 : expectedSize;
 
     const setup = () => {
-      let expectedSize = Math.round(innerWidth / 20);
+      const expectedSize = Math.round(innerWidth / 20);
       SIZE = expectedSize < 30 ? 30 : expectedSize > 50 ? 50 : expectedSize;
 
       particles = images.map(
@@ -126,9 +138,9 @@ const Canvas: FC = () => {
 
       ctx.clearRect(0, 0, innerWidth, innerHeight);
 
-      particles.forEach((particle) => {
+      for (const particle of particles) {
         particle.update();
-      });
+      }
     };
 
     setup();
