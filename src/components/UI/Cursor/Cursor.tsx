@@ -87,6 +87,7 @@ const Cursor: FC = () => {
     };
 
     updateMouse();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return <div ref={cursorRef} className={styles.cursor}></div>;

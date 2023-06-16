@@ -28,7 +28,7 @@
     "sharp": "^0.31.1"
   },
   "devDependencies": {
-    "@hunghg255/eslint-config-react": "^0.0.7",
+    "@hunghg255/eslint-config-react": "^0.0.12",
     "@octokit/types": "^9.2.3",
     "@types/aos": "^3.0.4",
     "@types/node": "18.7.16",
