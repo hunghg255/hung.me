@@ -3,7 +3,7 @@ import React from 'react';
 import styles from './index.module.css';
 
 interface IProps {
-  handleToggle: () => void;
+  handleToggle: (e: any) => void;
   id: number;
   isChecked: boolean;
 }

@@ -1,6 +1,9 @@
+/* eslint-disable unicorn/consistent-function-scoping */
 import React, { useEffect, useState } from 'react';
 
-import { getCookie, setCookie } from 'cookies-next';
+import { getCookie } from 'cookies-next';
+
+import { toggleDark } from 'src/utils';
 
 import ButtonScrollTop from '../ButtonScrollTop';
 import Navbar from '../Navigation/Navbar';
@@ -17,25 +20,12 @@ export default function Layout(props: IProps) {
     const localTheme = getCookie('data-theme') === 'dark';
     if (localTheme) {
       document.documentElement.dataset.theme = 'dark';
+      setIsToggle(true);
     }
   }, []);
 
-  const handleToggle = () => {
-    if (isToggle === false) {
-      localStorage?.setItem('data-theme', 'dark');
-      setCookie('data-theme', 'dark', {
-        maxAge: 2_147_483_647,
-      });
-      document.documentElement.dataset.theme = 'dark';
-
-      setIsToggle(true);
-    } else {
-      setCookie('data-theme', 'light', {
-        maxAge: 2_147_483_647,
-      });
-      delete document.documentElement.dataset.theme;
-      setIsToggle(false);
-    }
+  const handleToggle = (e: any) => {
+    toggleDark(e.nativeEvent);
   };
 
   return (

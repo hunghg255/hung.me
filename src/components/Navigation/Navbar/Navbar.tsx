@@ -11,7 +11,7 @@ import { onGotoElement } from 'src/utils';
 import styles from './index.module.scss';
 
 interface IProps {
-  handleToggleDarkTheme: () => void;
+  handleToggleDarkTheme: (e: any) => void;
   toggle: boolean;
 }
 

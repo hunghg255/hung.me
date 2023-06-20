@@ -1,3 +1,5 @@
+import { getCookie, setCookie } from 'cookies-next';
+
 function easeInOutSine(t: number, b: number, c: number, d: number) {
   return (-c / 2) * (Math.cos((Math.PI * t) / d) - 1) + b;
 }
@@ -33,4 +35,54 @@ export function polar2cart(x = 0, y = 0, r = 0, theta = 0) {
   const dx = r * Math.cos(theta);
   const dy = r * Math.sin(theta);
   return [x + dx, y + dy];
+}
+
+export function toggleDark(event: MouseEvent) {
+  const isAppearanceTransition =
+    // @ts-expect-error: Transition API
+    document.startViewTransition && !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const isToggle = getCookie('data-theme') === 'dark';
+
+  const onSetTheme = () => {
+    if (isToggle === false) {
+      localStorage?.setItem('data-theme', 'dark');
+      setCookie('data-theme', 'dark', {
+        maxAge: 2_147_483_647,
+      });
+      document.documentElement.dataset.theme = 'dark';
+    } else {
+      setCookie('data-theme', 'light', {
+        maxAge: 2_147_483_647,
+      });
+      delete document.documentElement.dataset.theme;
+    }
+  };
+
+  if (!isAppearanceTransition) {
+    onSetTheme();
+
+    return;
+  }
+
+  const x = event.clientX;
+  const y = event.clientY;
+  const endRadius = Math.hypot(Math.max(x, innerWidth - x), Math.max(y, innerHeight - y));
+
+  // @ts-expect-error: Transition API
+  const transition = document.startViewTransition(onSetTheme);
+
+  transition.ready.then(() => {
+    const clipPath = [`circle(0px at ${x}px ${y}px)`, `circle(${endRadius}px at ${x}px ${y}px)`];
+
+    document.documentElement.animate(
+      {
+        clipPath: isToggle ? clipPath : [...clipPath].reverse(),
+      },
+      {
+        duration: 400,
+        easing: 'ease-out',
+        pseudoElement: isToggle ? '::view-transition-new(root)' : '::view-transition-old(root)',
+      },
+    );
+  });
 }
