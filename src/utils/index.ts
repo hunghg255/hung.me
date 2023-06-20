@@ -2,7 +2,7 @@ function easeInOutSine(t: number, b: number, c: number, d: number) {
   return (-c / 2) * (Math.cos((Math.PI * t) / d) - 1) + b;
 }
 
-const scrollToElement = (element: HTMLElement) => {
+export const scrollToElement = (element: HTMLElement) => {
   const elementPosition = element.getBoundingClientRect().top - 40;
   const startPosition = window.pageYOffset;
   let startTime = 0;
@@ -29,4 +29,8 @@ export const onGotoElement = (idElement: string) => {
   element && scrollToElement(element);
 };
 
-export { scrollToElement };
+export function polar2cart(x = 0, y = 0, r = 0, theta = 0) {
+  const dx = r * Math.cos(theta);
+  const dy = r * Math.sin(theta);
+  return [x + dx, y + dy];
+}

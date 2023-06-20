@@ -16,6 +16,9 @@ const ScrollSmooth = dynamic(() => import('src/components/ScrollSmooth/ScrollSmo
 const AosComponent = dynamic(() => import('src/components/AosComponent/AosComponent'), {
   ssr: false,
 });
+const Plum = dynamic(() => import('src/components/Plum/Plum'), {
+  ssr: false,
+});
 
 const OpenSansFont = Open_Sans({
   subsets: ['latin'],
@@ -80,6 +83,7 @@ function MyApp({ Component, pageProps }: any) {
       <Cursor />
       <ScrollSmooth />
       <AosComponent />
+      <Plum />
     </>
   );
 }
