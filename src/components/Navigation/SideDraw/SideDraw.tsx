@@ -68,16 +68,40 @@ function SideDraw(props: IProps) {
       <div className={`${styles.navSide} ${isToggle ? styles.navSideActive : ''}`}>
         <ul className='Nav__side--list'>
           <li className={styles.navSideItem}>
-            <Link href={'/projects'}>Projects</Link>
+            <Link href={'/projects'} aria-label='Projects'>
+              Projects
+            </Link>
           </li>
           <li className={styles.navSideItem}>
-            <Link href={'/blog'}>Blog</Link>
+            <Link href={'/blog'} aria-label='Blog'>
+              Blog
+            </Link>
           </li>
           <li className={styles.navSideItem}>
-            <a href='https://github.com/hunghg255'>Github</a>
+            <a
+              href='https://github.com/hunghg255'
+              target='_blank'
+              rel='noreferrer'
+              aria-label='Github'
+            >
+              Github
+            </a>
           </li>
           <li className={styles.navSideItem}>
-            <a href='https://twitter.com/hunghg255'>Twitter</a>
+            <a
+              href='https://twitter.com/hunghg255'
+              target='_blank'
+              rel='noreferrer'
+              aria-label='Github'
+            >
+              Twitter
+            </a>
+          </li>
+
+          <li className={styles.navSideItem}>
+            <Link href='/sitemap-0.xml' aria-label='RSS'>
+              RSS
+            </Link>
           </li>
         </ul>
         <div className={styles.btnToggle}>

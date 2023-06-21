@@ -33,15 +33,24 @@ function Navbar(props: IProps) {
           </li>
 
           <li className={styles.navItem}>
-            <Link href='/projects'>Projects</Link>
+            <Link href='/projects' aria-label='Projects'>
+              Projects
+            </Link>
           </li>
 
           <li className={styles.navItem}>
-            <Link href='/blog'>Blog</Link>
+            <Link href='/blog' aria-label='Blog'>
+              Blog
+            </Link>
           </li>
 
           <li className={styles.navItem}>
-            <a href='https://github.com/hunghg255'>
+            <a
+              href='https://github.com/hunghg255'
+              target='_blank'
+              rel='noreferrer'
+              aria-label='Github'
+            >
               <svg xmlns='http://www.w3.org/2000/svg' width='1em' height='1em' viewBox='0 0 24 24'>
                 <path
                   fill='currentColor'
@@ -51,7 +60,12 @@ function Navbar(props: IProps) {
             </a>
           </li>
           <li className={styles.navItem}>
-            <a href='https://twitter.com/hunghg255'>
+            <a
+              href='https://twitter.com/hunghg255'
+              target='_blank'
+              rel='noreferrer'
+              aria-label='Twitter'
+            >
               <svg xmlns='http://www.w3.org/2000/svg' width='1em' height='1em' viewBox='0 0 15 15'>
                 <path
                   fill='currentColor'
@@ -62,7 +76,7 @@ function Navbar(props: IProps) {
           </li>
 
           <li className={styles.navItem}>
-            <Link href='/sitemap-0.xml'>
+            <Link href='/sitemap-0.xml' aria-label='RSS'>
               <svg xmlns='http://www.w3.org/2000/svg' width='1em' height='1em' viewBox='0 0 16 16'>
                 <g fill='currentColor'>
                   <path d='M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z'></path>
