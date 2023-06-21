@@ -1,6 +1,4 @@
-/* eslint-disable react/no-unknown-property */
 import dynamic from 'next/dynamic';
-import { Open_Sans } from 'next/font/google';
 import Head from 'next/head';
 
 import Layout from 'src/components/Layout';
@@ -21,12 +19,6 @@ const Plum = dynamic(() => import('src/components/Plum/Plum'), {
 });
 const Progressbar = dynamic(() => import('src/components/Progessbar/Progessbar'), {
   ssr: false,
-});
-
-const OpenSansFont = Open_Sans({
-  subsets: ['latin'],
-  display: 'swap',
-  weight: ['300', '400', '600', '700'],
 });
 
 function MyApp({ Component, pageProps }: any) {
@@ -72,12 +64,6 @@ function MyApp({ Component, pageProps }: any) {
 
         <meta property='og:image:type' content='image/jpeg' />
       </Head>
-
-      <style jsx global>{`
-        :root {
-          --fontOpenSans: ${OpenSansFont.style.fontFamily};
-        }
-      `}</style>
 
       <Layout>
         <Component {...pageProps} />
