@@ -7,7 +7,7 @@
   z-index: 1000;
   display: none;
   transition: 350ms;
-  background: #ffffff14;
+  background: var(--bg-header);
   backdrop-filter: blur(8px);
 }
 
@@ -26,8 +26,7 @@
   max-width: 42px;
 }
 
-.navItem {
-  text-transform: uppercase;
+.navItem a {
   font-size: 1.4rem;
   font-weight: 600;
   color: var(--primary-color);
@@ -37,8 +36,24 @@
   font-family: var(--fontOpenSans) !important;
 }
 
+.navItem a {
+  display: flex;
+  align-items: center;
+
+  svg path {
+    fill: var(--primary-color) !important;
+    transition: all 300ms;
+  }
+}
+
 .navItem:hover {
-  color: var(--color-hover);
+  a {
+    color: var(--color-hover);
+  }
+
+  a svg path {
+    fill: var(--color-hover) !important;
+  }
 }
 
 @media (min-width: 600px) {

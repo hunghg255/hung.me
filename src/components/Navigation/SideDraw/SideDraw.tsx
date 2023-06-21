@@ -1,13 +1,13 @@
 /* eslint-disable multiline-ternary */
 import React, { useEffect, useState } from 'react';
 
-import Router, { useRouter } from 'next/router';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 import ButtonBurger from 'src/components/UI/ButtonBurger';
 import CheckboxIos from 'src/components/UI/CheckboxIos';
 import Logo from 'src/components/UI/Icon/logo';
 import Sparkles from 'src/components/UI/Sparkles/Sparkles';
-import { onGotoElement } from 'src/utils';
 
 import styles from './index.module.scss';
 
@@ -38,11 +38,6 @@ function SideDraw(props: IProps) {
     });
   }, []);
 
-  const goToElement = (idSection: string) => {
-    onGotoElement(idSection);
-    setIsToggle(false);
-  };
-
   return (
     <>
       <nav className={`${styles.navSideDraw} ${isToggle ? styles.navSideDrawActive : ''}`}>
@@ -72,30 +67,17 @@ function SideDraw(props: IProps) {
       </nav>
       <div className={`${styles.navSide} ${isToggle ? styles.navSideActive : ''}`}>
         <ul className='Nav__side--list'>
-          {router.pathname === '/' ? (
-            <>
-              <li className={styles.navSideItem} onClick={() => goToElement('sectionAbout')}>
-                About me
-              </li>
-              <li className={styles.navSideItem} onClick={() => goToElement('sectionPortfolio')}>
-                Portfolio
-              </li>
-            </>
-          ) : (
-            <>
-              <li className={styles.navSideItem} onClick={() => Router.push('/')}>
-                Home
-              </li>
-            </>
-          )}
-          <li className={styles.navSideItem} onClick={() => Router.push('/projects')}>
-            Projects
+          <li className={styles.navSideItem}>
+            <Link href={'/projects'}>Projects</Link>
           </li>
-          <li className={styles.navSideItem} onClick={() => Router.push('/blog')}>
-            Blogs
+          <li className={styles.navSideItem}>
+            <Link href={'/blog'}>Blog</Link>
           </li>
-          <li className={styles.navSideItem} onClick={() => Router.push('/contact')}>
-            Contact
+          <li className={styles.navSideItem}>
+            <a href='https://github.com/hunghg255'>Github</a>
+          </li>
+          <li className={styles.navSideItem}>
+            <a href='https://twitter.com/hunghg255'>Twitter</a>
           </li>
         </ul>
         <div className={styles.btnToggle}>

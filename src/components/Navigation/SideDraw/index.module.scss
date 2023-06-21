@@ -4,9 +4,10 @@
   left: 0;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
   width: 100%;
-  background-color: var(--primary-bg);
   z-index: 1000;
   transition: 350ms;
+  background: var(--bg-header);
+  backdrop-filter: blur(8px);
 }
 
 .navSideDrawActive {
@@ -53,7 +54,6 @@
 }
 
 .navSideItem {
-  text-transform: uppercase;
   font-size: 1.3rem;
   text-align: center;
   font-weight: 600;
@@ -69,8 +69,16 @@
   }
 }
 
+.navSideItem a {
+  color: var(--primary-color);
+}
+
 .navSideItem:hover {
   color: var(--color-hover);
+
+  a {
+    color: var(--color-hover);
+  }
 }
 
 .navSideActive .navSideItem {

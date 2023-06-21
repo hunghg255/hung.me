@@ -11,7 +11,7 @@ function Footer() {
       <Sparkles>
         <Logo />
       </Sparkles>
-      <p>Copyright &copy; {new Date().getFullYear()}, HGH</p>
+      <p>Copyright &copy; {new Date().getFullYear()}, Gia Hung</p>
     </footer>
   );
 }

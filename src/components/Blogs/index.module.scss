@@ -121,14 +121,21 @@
 
 .blogItem {
   border-radius: 8px;
-  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 20%), 0 4px 6px -4px rgb(0 0 0 / 20%);
   text-align: center;
   overflow: hidden;
   transition: all 350ms;
-
+  box-shadow: 0 0 40px 20px rgba(0, 0, 0, 0.02);
+  border: 1px solid var(--border-repo);
+  background: rgba(255, 255, 255, 0.01);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
   .img {
     position: relative;
     aspect-ratio: 4 / 3;
+
+    img {
+      object-fit: cover;
+    }
   }
 }
 

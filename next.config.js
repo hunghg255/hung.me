@@ -24,14 +24,6 @@ const nextConfig = {
       },
     ];
   },
-  async rewrites() {
-    return [
-      {
-        source: '/contact',
-        destination: 'https://hung-contact.is-a.dev/',
-      },
-    ];
-  },
 };
 
 module.exports = nextConfig;

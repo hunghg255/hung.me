@@ -1,24 +1,21 @@
 .contactTitle {
   color: var(--highlight-color);
-  font-size: 2rem;;
+  font-size: 2rem;
   margin: 0px 0px 1.6rem;
-  text-transform: uppercase;
   font-weight: 700;
   transition: color 0.2s ease-out 0s;
   text-align: center;
 }
 
-
-
 .contactMail {
   color: var(--primary-color);
-    font-size: 1.6rem;
-    position: relative;
-    font-weight: 600;
-    margin-top: 5.5rem;
-    margin-bottom: 3rem;
-    transition: color 0.2s ease-out 0s;
-    text-align: center;
+  font-size: 1.6rem;
+  position: relative;
+  font-weight: 600;
+  margin-top: 5.5rem;
+  margin-bottom: 3rem;
+  transition: color 0.2s ease-out 0s;
+  text-align: center;
 }
 
 .contactSocials {
@@ -54,7 +51,7 @@
     font-size: 2.6rem;
   }
   .contactMail {
-      font-size: 2rem;
+    font-size: 2rem;
   }
 
   .contactSocials li {
@@ -70,10 +67,9 @@
     margin: 0 1rem;
   }
 
-
-.contactSocials li a {
-  padding: 1rem;
-}
+  .contactSocials li a {
+    padding: 1rem;
+  }
 }
 
 .contact path {

@@ -19,6 +19,9 @@ const AosComponent = dynamic(() => import('src/components/AosComponent/AosCompon
 const Plum = dynamic(() => import('src/components/Plum/Plum'), {
   ssr: false,
 });
+const Progressbar = dynamic(() => import('src/components/Progessbar/Progessbar'), {
+  ssr: false,
+});
 
 const OpenSansFont = Open_Sans({
   subsets: ['latin'],
@@ -84,6 +87,7 @@ function MyApp({ Component, pageProps }: any) {
       <ScrollSmooth />
       <AosComponent />
       <Plum />
+      <Progressbar />
     </>
   );
 }

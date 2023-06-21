@@ -26,6 +26,9 @@
   background-color: var(--highlight-color);
   transition: 359ms;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .btnScrollTop button:hover {
@@ -34,7 +37,7 @@
 
 .btnScrollTop button svg {
   width: 100%;
-  transform: scale(0.7);
+  transform: scale(1.8);
 }
 
 .btnScrollTop button path {

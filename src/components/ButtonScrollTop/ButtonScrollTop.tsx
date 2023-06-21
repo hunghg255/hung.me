@@ -25,8 +25,11 @@ export default function ButtonScrollTop() {
   return (
     <div className={`${styles.btnScrollTop} ${active ? styles.btnScrollTopActive : ''}`}>
       <button type='button' onClick={scrollTop} aria-label='Button Scroll Top'>
-        <svg xmlns='http://www.w3.org/2000/svg' width={24} height={24} viewBox='0 0 24 24'>
-          <path d='M0 16.67l2.829 2.83 9.175-9.339 9.167 9.339 2.829-2.83-11.996-12.17z' />
+        <svg xmlns='http://www.w3.org/2000/svg' width='1em' height='1em' viewBox='0 0 24 24'>
+          <path
+            fill='currentColor'
+            d='M6.7 14.7q-.275-.275-.275-.7t.275-.7l4.6-4.6q.15-.15.325-.212T12 8.425q.2 0 .388.075t.312.2l4.6 4.6q.275.275.275.7t-.275.7q-.275.275-.7.275t-.7-.275L12 10.8l-3.9 3.9q-.275.275-.7.275t-.7-.275Z'
+          ></path>
         </svg>
       </button>
     </div>

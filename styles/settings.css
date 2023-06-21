@@ -13,13 +13,16 @@
   animation: rainbow 40s linear infinite;
 
   --border-repo: rgba(0, 0, 0, 0.1);
+
+  --bg-header: #ffffffa6;
 }
 
 [data-theme='dark'] {
   --primary-color: #fefefe;
   --sub-color: #a7a9be;
-  --primary-bg: #0f0e17f0;
+  --primary-bg: #050505;
   --border-repo: rgba(255, 255, 255, 0.1);
+  --bg-header: #000000a6;
 }
 
 [data-theme='dark'] .blogTag {
