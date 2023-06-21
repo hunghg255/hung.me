@@ -55,7 +55,7 @@ function MyApp({ Component, pageProps }: any) {
         />
         <meta
           property='og:image'
-          content='https://res.cloudinary.com/hunghg255/image/upload/v1654956015/Screen_Shot_2022-06-07_at_11.25.34_bpnymt.png'
+          content='https://cdn.jsdelivr.net/gh/hunghg255/static/og-img.png'
         />
 
         <meta property='twitter:card' content='summary_large_image' />
@@ -67,7 +67,7 @@ function MyApp({ Component, pageProps }: any) {
         />
         <meta
           property='twitter:image'
-          content='https://res.cloudinary.com/hunghg255/image/upload/v1654956015/Screen_Shot_2022-06-07_at_11.25.34_bpnymt.png'
+          content='https://cdn.jsdelivr.net/gh/hunghg255/static/og-img.png'
         />
 
         <meta property='og:image:type' content='image/jpeg' />
