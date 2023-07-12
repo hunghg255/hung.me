@@ -20,6 +20,9 @@ const Plum = dynamic(() => import('src/components/Plum/Plum'), {
 const Progressbar = dynamic(() => import('src/components/Progessbar/Progessbar'), {
   ssr: false,
 });
+const LogArt = dynamic(() => import('src/components/LogArt/LogArt'), {
+  ssr: false,
+});
 
 function MyApp({ Component, pageProps }: any) {
   return (
@@ -74,6 +77,7 @@ function MyApp({ Component, pageProps }: any) {
       <AosComponent />
       <Plum />
       <Progressbar />
+      <LogArt />
     </>
   );
 }
