@@ -6,7 +6,6 @@ import { useRouter } from 'next/router';
 
 import CheckboxIos from 'src/components/UI/CheckboxIos';
 import Logo from 'src/components/UI/Icon/logo';
-import Sparkles from 'src/components/UI/Sparkles/Sparkles';
 
 import styles from './index.module.scss';
 
@@ -27,9 +26,7 @@ function Navbar(props: IProps) {
             className={`${styles.navItem} ${styles.navItemLogo}`}
             onClick={() => router.push('/')}
           >
-            <Sparkles>
-              <Logo />
-            </Sparkles>
+            <Logo />
           </li>
 
           <li className={styles.navItem}>

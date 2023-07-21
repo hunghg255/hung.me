@@ -51,18 +51,30 @@ section {
 }
 
 .icon-logo path {
-  stroke-dasharray: 1000;
-  stroke-dashoffset: 1000;
-  animation: logoDraw 1.25s ease-in-out forwards;
+  stroke-dashoffset: 1px;
+  stroke-dasharray: 350px 0;
+  animation: logoDraw 8s ease forwards infinite;
 }
 
 @keyframes logoDraw {
   0% {
-    stroke-dashoffset: 1000;
+    stroke-dashoffset: 1px;
+    stroke-dasharray: 0 1000;
+    opacity: 0;
   }
-
-  100% {
-    stroke-dashoffset: 0;
+  10% {
+    opacity: 1;
+  }
+  40% {
+    stroke-dasharray: 1000 0;
+  }
+  /* Moving back */
+  85% {
+    stroke-dasharray: 1000 0;
+  }
+  95%,
+  to {
+    stroke-dasharray: 0 1000;
   }
 }
 
