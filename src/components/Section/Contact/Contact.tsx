@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import React from 'react';
 
 import Sparkles from 'src/components/UI/Sparkles/Sparkles';
@@ -70,6 +71,17 @@ function Contact() {
           </a>
         </li>
       </ul>
+
+      <div className={styles.donate}>
+        <a href='https://www.buymeacoffee.com/hunghg255' target='_blank' rel='noreferrer'>
+          <img
+            src='https://cdn.buymeacoffee.com/buttons/default-orange.png'
+            alt='Buy Me A Coffee'
+            height='41'
+            width='174'
+          />
+        </a>
+      </div>
     </section>
   );
 }
