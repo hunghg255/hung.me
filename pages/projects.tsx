@@ -15,6 +15,7 @@ const ProjectsPage = (props: IPropsProjectsPage) => {
       <Head>
         <title>Projects</title>
         <link rel='canonical' href='https://hung.thedev.id/projects'></link>
+        <meta property='og:url' content='https://hung.thedev.id/projects' />
       </Head>
       <Projects projects={props?.projects} />
     </>

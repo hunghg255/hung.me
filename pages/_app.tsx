@@ -30,7 +30,7 @@ function MyApp({ Component, pageProps }: any) {
       <Head>
         <meta charSet='utf-8' />
         <title>Hunghg | Front-end Developer</title>
-
+        <meta property='og:site_name' content='Hunghg | Front-end Developer' />
         <meta property='og:type' content='website' />
 
         <link rel='shortcut icon' href='/favicon.ico' />
@@ -40,9 +40,9 @@ function MyApp({ Component, pageProps }: any) {
           name='description'
           content="I'm Hung an Front-end Developer. I got a bachelor of Electronics Telecommunication Engineering at Ha Noi University of Science and Technology (2015 - 2020)"
         />
-
+        <meta property='og:locale' content='vi_VN' />
         <meta property='og:type' content='website' />
-        <meta property='og:url' content='https://hunghg.vercel.app/' />
+        <meta property='og:url' content='https://hung.thedev.id/' />
         <meta property='og:title' content='Hunghg | Front-end Developer' />
         <meta
           property='og:description'
@@ -54,7 +54,7 @@ function MyApp({ Component, pageProps }: any) {
         />
 
         <meta property='twitter:card' content='summary_large_image' />
-        <meta property='twitter:url' content='https://hunghg.vercel.app/' />
+        <meta property='twitter:url' content='https://hung.thedev.id/' />
         <meta property='twitter:title' content='Hunghg | Front-end Developer' />
         <meta
           property='twitter:description'

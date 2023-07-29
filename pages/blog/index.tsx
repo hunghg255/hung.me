@@ -10,6 +10,7 @@ const BlogPage = ({ blogs }: any) => {
       <Head>
         <title>Blogs</title>
         <link rel='canonical' href='https://hung.thedev.id/blog'></link>
+        <meta property='og:url' content='https://hung.thedev.id/blog' />
       </Head>
       <LayoutBlog>
         <Blogs blogs={blogs} />

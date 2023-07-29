@@ -13,6 +13,7 @@ function Home() {
     <>
       <Head>
         <link rel='canonical' href='https://hung.thedev.id/'></link>
+        <meta property='og:url' content='https://hung.thedev.id/' />
       </Head>
       <Header />
       <About />
