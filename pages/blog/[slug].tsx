@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import { useRouter } from 'next/router';
 
 import BlogDetail from 'src/components/BlogDetail/BlogDetail';
@@ -12,9 +13,15 @@ const BlogDetailPage = ({ blogDetail }: any) => {
   }
 
   return (
-    <LayoutBlog>
-      <BlogDetail blogDetail={blogDetail} />
-    </LayoutBlog>
+    <>
+      <Head>
+        <title>{blogDetail?.fields?.title}</title>
+        <link rel='canonical' href='https://hung.thedev.id/blog'></link>
+      </Head>
+      <LayoutBlog>
+        <BlogDetail blogDetail={blogDetail} />
+      </LayoutBlog>
+    </>
   );
 };
 

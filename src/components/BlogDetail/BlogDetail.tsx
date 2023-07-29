@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import { BLOCKS } from '@contentful/rich-text-types';
 import dayjs from 'dayjs';
-import Head from 'next/head';
 import Image from 'next/image';
 
 import styles from './index.module.scss';
@@ -50,9 +49,6 @@ const BlogDetail = (props: any) => {
 
   return (
     <div className={styles.blogDetail}>
-      <Head>
-        <title>{blogDetail?.fields?.title}</title>
-      </Head>
       <div className={styles.headers}>
         <h1 className={styles.title}>{blogDetail?.fields?.title}</h1>
         <p className={styles.date}>

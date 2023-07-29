@@ -14,6 +14,7 @@ const ProjectsPage = (props: IPropsProjectsPage) => {
     <>
       <Head>
         <title>Projects</title>
+        <link rel='canonical' href='https://hung.thedev.id/projects'></link>
       </Head>
       <Projects projects={props?.projects} />
     </>

@@ -9,6 +9,7 @@ const BlogPage = ({ blogs }: any) => {
     <>
       <Head>
         <title>Blogs</title>
+        <link rel='canonical' href='https://hung.thedev.id/blog'></link>
       </Head>
       <LayoutBlog>
         <Blogs blogs={blogs} />

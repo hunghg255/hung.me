@@ -66,6 +66,20 @@ function MyApp({ Component, pageProps }: any) {
         />
 
         <meta property='og:image:type' content='image/jpeg' />
+        <meta name='robots' content='index, follow' />
+        <meta
+          name='googlebot'
+          content='index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1'
+        />
+        <meta
+          name='bingbot'
+          content='index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1'
+        />
+
+        <meta
+          name='google-site-verification'
+          content='fQuFJdHbSiH8czBosKz0oVZDXIDJRCEHcYIrzOoMNn4'
+        />
       </Head>
 
       <Layout>
