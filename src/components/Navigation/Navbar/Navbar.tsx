@@ -4,6 +4,7 @@ import React from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 
+import ActiveLink from 'src/components/UI/ActiveLink/ActiveLink';
 import CheckboxIos from 'src/components/UI/CheckboxIos';
 import Logo from 'src/components/UI/Icon/logo';
 
@@ -30,15 +31,15 @@ function Navbar(props: IProps) {
           </li>
 
           <li className={styles.navItem}>
-            <Link href='/projects' aria-label='Projects'>
+            <ActiveLink activeClassName='active-link' href='/projects' aria-label='Projects'>
               Projects
-            </Link>
+            </ActiveLink>
           </li>
 
           <li className={styles.navItem}>
-            <Link href='/blog' aria-label='Blog'>
+            <ActiveLink href='/blog' activeClassName='active-link' aria-label='Blog'>
               Blog
-            </Link>
+            </ActiveLink>
           </li>
 
           <li className={styles.navItem}>

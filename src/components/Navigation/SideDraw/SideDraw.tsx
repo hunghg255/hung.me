@@ -4,6 +4,7 @@ import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 
+import ActiveLink from 'src/components/UI/ActiveLink/ActiveLink';
 import ButtonBurger from 'src/components/UI/ButtonBurger';
 import CheckboxIos from 'src/components/UI/CheckboxIos';
 import Logo from 'src/components/UI/Icon/logo';
@@ -68,14 +69,14 @@ function SideDraw(props: IProps) {
       <div className={`${styles.navSide} ${isToggle ? styles.navSideActive : ''}`}>
         <ul className='Nav__side--list'>
           <li className={styles.navSideItem}>
-            <Link href={'/projects'} aria-label='Projects'>
+            <ActiveLink activeClassName='active-link' href={'/projects'} aria-label='Projects'>
               Projects
-            </Link>
+            </ActiveLink>
           </li>
           <li className={styles.navSideItem}>
-            <Link href={'/blog'} aria-label='Blog'>
+            <ActiveLink activeClassName='active-link' href={'/blog'} aria-label='Blog'>
               Blog
-            </Link>
+            </ActiveLink>
           </li>
           <li className={styles.navSideItem}>
             <a

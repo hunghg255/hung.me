@@ -1,8 +1,9 @@
+/* eslint-disable react/no-unknown-property */
 import dynamic from 'next/dynamic';
 import Head from 'next/head';
 
 import Layout from 'src/components/Layout';
-
+import { iaWriter } from 'src/components/UI/font/font';
 import '../styles/globals.scss';
 
 const Cursor = dynamic(() => import('src/components/UI/Cursor/Cursor'), {
@@ -81,6 +82,12 @@ function MyApp({ Component, pageProps }: any) {
           content='fQuFJdHbSiH8czBosKz0oVZDXIDJRCEHcYIrzOoMNn4'
         />
       </Head>
+
+      <style jsx global>{`
+        :root {
+          --fontIaWriter: ${iaWriter.style.fontFamily};
+        }
+      `}</style>
 
       <Layout>
         <Component {...pageProps} />
