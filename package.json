@@ -9,7 +9,8 @@
     "start": "next start",
     "lint": "next lint",
     "postbuild": "next-sitemap",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "release": "changeset publish"
   },
   "dependencies": {
     "@contentful/rich-text-react-renderer": "^15.16.2",
@@ -28,6 +29,7 @@
     "sharp": "^0.31.1"
   },
   "devDependencies": {
+    "@changesets/cli": "^2.26.2",
     "@hunghg255/eslint-config-react": "^0.0.12",
     "@octokit/types": "^9.2.3",
     "@types/aos": "^3.0.4",
