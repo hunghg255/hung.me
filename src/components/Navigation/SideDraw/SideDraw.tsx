@@ -80,6 +80,16 @@ function SideDraw(props: IProps) {
           </li>
           <li className={styles.navSideItem}>
             <a
+              href='https://hunghg-resume.vercel.app/resume.pdf'
+              target='_blank'
+              rel='noreferrer'
+              aria-label='Resume'
+            >
+              Resume
+            </a>
+          </li>
+          <li className={styles.navSideItem}>
+            <a
               href='https://github.com/hunghg255'
               target='_blank'
               rel='noreferrer'

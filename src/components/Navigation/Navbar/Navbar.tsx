@@ -44,6 +44,30 @@ function Navbar(props: IProps) {
 
           <li className={styles.navItem}>
             <a
+              href='https://hunghg-resume.vercel.app/resume.pdf'
+              target='_blank'
+              rel='noreferrer'
+              aria-label='Resume'
+            >
+              <svg
+                xmlns='http://www.w3.org/2000/svg'
+                width='1em'
+                height='1em'
+                viewBox='0 0 20 20'
+                {...props}
+              >
+                <path
+                  fill='currentColor'
+                  fillRule='evenodd'
+                  d='M4 4a2 2 0 0 1 2-2h4.586A2 2 0 0 1 12 2.586L15.414 6A2 2 0 0 1 16 7.414V16a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4Zm2 6a1 1 0 0 1 1-1h6a1 1 0 1 1 0 2H7a1 1 0 0 1-1-1Zm1 3a1 1 0 1 0 0 2h6a1 1 0 1 0 0-2H7Z'
+                  clipRule='evenodd'
+                ></path>
+              </svg>
+            </a>
+          </li>
+
+          <li className={styles.navItem}>
+            <a
               href='https://github.com/hunghg255'
               target='_blank'
               rel='noreferrer'
