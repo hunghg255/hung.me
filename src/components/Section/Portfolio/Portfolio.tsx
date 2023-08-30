@@ -9,6 +9,14 @@ import styles from './index.module.scss';
 
 const PROJECTS = [
   {
+    name: 'UnNote',
+    description: 'Share code with your friends no database, no login',
+    stack: 'HTML, CSS, Javascript, Service Worker',
+    linkDemo: 'https://unnote.vercel.app/',
+    source: 'https://github.com/hunghg255/unnote',
+    image: '/images/projects/unnote.png',
+  },
+  {
     name: 'Web totals',
     description: 'Build a site share all about web development',
     stack: 'Reactjs, Docusaurus, markdown',
