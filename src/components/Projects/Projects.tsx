@@ -16,6 +16,7 @@ const LABELS = {
   Reactjs: 'Reactjs',
   Config: 'Configs',
   Templates: 'Templates',
+  Actions: 'Github Actions',
   All: 'All',
 };
 
