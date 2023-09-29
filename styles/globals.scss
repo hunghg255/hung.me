@@ -126,7 +126,3 @@ section {
 [data-theme='dark']::view-transition-new(root) {
   z-index: 1;
 }
-
-.active-link {
-  color: var(--highlight-color) !important;
-}

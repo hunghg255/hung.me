@@ -31,7 +31,7 @@ function Navbar(props: IProps) {
           </li>
 
           <li className={styles.navItem}>
-            <ActiveLink activeClassName='active-link' href='/projects' aria-label='Projects'>
+            <ActiveLink activeClassName='activeLink' href='/projects' aria-label='Projects'>
               Projects
             </ActiveLink>
           </li>

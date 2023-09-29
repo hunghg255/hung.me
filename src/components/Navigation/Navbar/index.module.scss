@@ -30,7 +30,7 @@
   font-size: 1.4rem;
   font-weight: 600;
   color: var(--primary-color);
-  transition: 350ms;
+  // transition: 350ms;
   cursor: pointer;
   margin: 0 1rem;
 }
@@ -45,15 +45,15 @@
   }
 }
 
-.navItem:hover {
-  a {
-    color: var(--color-hover);
-  }
+// .navItem {
+//   a:hover {
+//     color: var(--color-hover);
+//   }
 
-  a svg path {
-    fill: var(--color-hover) !important;
-  }
-}
+//   a:hover svg path {
+//     fill: var(--color-hover) !important;
+//   }
+// }
 
 @media (min-width: 600px) {
   .navBar {

@@ -69,12 +69,12 @@ function SideDraw(props: IProps) {
       <div className={`${styles.navSide} ${isToggle ? styles.navSideActive : ''}`}>
         <ul className='Nav__side--list'>
           <li className={styles.navSideItem}>
-            <ActiveLink activeClassName='active-link' href={'/projects'} aria-label='Projects'>
+            <ActiveLink activeClassName='activeLink' href={'/projects'} aria-label='Projects'>
               Projects
             </ActiveLink>
           </li>
           <li className={styles.navSideItem}>
-            <ActiveLink activeClassName='active-link' href={'/blog'} aria-label='Blog'>
+            <ActiveLink activeClassName='activeLink' href={'/blog'} aria-label='Blog'>
               Blog
             </ActiveLink>
           </li>
