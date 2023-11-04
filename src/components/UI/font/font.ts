@@ -1,19 +1,30 @@
 import localFont from 'next/font/local';
 
-export const iaWriter = localFont({
+// export const iaWriter = localFont({
+//   src: [
+//     {
+//       path: './iAWriterQuattroV.ttf',
+//       weight: '400',
+//       style: 'normal',
+//     },
+//     {
+//       path: './iAWriterQuattroV-Italic.ttf',
+//       weight: '400',
+//       style: 'italic',
+//     },
+//   ],
+//   variable: '--fontIAWriter',
+// });
+
+export const fontGeist = localFont({
   src: [
     {
-      path: './iAWriterQuattroV.ttf',
+      path: './geist/Geist-Regular.woff2',
       weight: '400',
       style: 'normal',
     },
-    {
-      path: './iAWriterQuattroV-Italic.ttf',
-      weight: '400',
-      style: 'italic',
-    },
   ],
-  variable: '--fontIAWriter',
+  variable: '--fontGeist',
 });
 
 // export const firaCode = localFont({

@@ -3,7 +3,7 @@ import dynamic from 'next/dynamic';
 import Head from 'next/head';
 
 import Layout from 'src/components/Layout';
-import { iaWriter } from 'src/components/UI/font/font';
+import { fontGeist } from 'src/components/UI/font/font';
 import '../styles/globals.scss';
 
 const Cursor = dynamic(() => import('src/components/UI/Cursor/Cursor'), {
@@ -85,7 +85,7 @@ function MyApp({ Component, pageProps }: any) {
 
       <style jsx global>{`
         :root {
-          --fontIaWriter: ${iaWriter.style.fontFamily};
+          --fontGeist: ${fontGeist.style.fontFamily};
         }
       `}</style>
 
