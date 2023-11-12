@@ -1,9 +1,9 @@
 /* eslint-disable react/no-unknown-property */
 import dynamic from 'next/dynamic';
-import Head from 'next/head';
 
-import Layout from 'src/components/Layout';
+import HeaderContainer from 'src/components/HeaderContainer/HeaderContainer';
 import { fontGeist } from 'src/components/UI/font/font';
+
 import '../styles/globals.scss';
 
 const Cursor = dynamic(() => import('src/components/UI/Cursor/Cursor'), {
@@ -24,11 +24,14 @@ const Progressbar = dynamic(() => import('src/components/Progessbar/Progessbar')
 const LogArt = dynamic(() => import('src/components/LogArt/LogArt'), {
   ssr: false,
 });
+const ButtonScrollTop = dynamic(() => import('src/components/ButtonScrollTop'), {
+  ssr: false,
+});
 
-function MyApp({ Component, pageProps }: any) {
+export default function RootLayout({ children }: any) {
   return (
-    <>
-      <Head>
+    <html className={fontGeist.variable}>
+      <head>
         <meta charSet='utf-8' />
         <title>Hunghg | Front-end Developer</title>
         <meta property='og:site_name' content='Hunghg | Front-end Developer' />
@@ -81,26 +84,20 @@ function MyApp({ Component, pageProps }: any) {
           name='google-site-verification'
           content='fQuFJdHbSiH8czBosKz0oVZDXIDJRCEHcYIrzOoMNn4'
         />
-      </Head>
+      </head>
+      <body>
+        <HeaderContainer />
 
-      <style jsx global>{`
-        :root {
-          --fontGeist: ${fontGeist.style.fontFamily};
-        }
-      `}</style>
+        <main>{children}</main>
 
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
-
-      <Cursor />
-      <ScrollSmooth />
-      <AosComponent />
-      <Plum />
-      <Progressbar />
-      <LogArt />
-    </>
+        <Cursor />
+        <ScrollSmooth />
+        <AosComponent />
+        <Plum />
+        <Progressbar />
+        <LogArt />
+        <ButtonScrollTop />
+      </body>
+    </html>
   );
 }
-
-export default MyApp;

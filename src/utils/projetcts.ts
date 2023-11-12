@@ -259,6 +259,7 @@ export const getProjects = async () => {
   // })
   const data = await fetch(
     'https://api.github.com/users/hunghg255/repos?per_page=250&type=owner&sort=updated&private=false',
+    { next: { revalidate: 30 } },
   ).then((r) => r.json());
 
   const publicRepos = data.filter((repo) => !repo.private && !repo.archived);

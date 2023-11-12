@@ -1,3 +1,4 @@
+'use client';
 import { FC, useEffect, useRef } from 'react';
 
 import styles from './index.module.css';

@@ -1,18 +1,19 @@
+'use client';
+
 import React, { useEffect, useState } from 'react';
 
 import { getCookie } from 'cookies-next';
 
 import { toggleDark } from 'src/utils';
 
-import ButtonScrollTop from '../ButtonScrollTop';
 import Navbar from '../Navigation/Navbar';
 import SideDraw from '../Navigation/SideDraw';
 
-interface IProps {
-  children: React.ReactNode;
-}
+const handleToggle = (e: any) => {
+  toggleDark(e.nativeEvent);
+};
 
-export default function Layout(props: IProps) {
+const HeaderContainer = () => {
   const [isToggle, setIsToggle] = useState<boolean>(getCookie('data-theme') === 'dark');
 
   useEffect(() => {
@@ -23,17 +24,12 @@ export default function Layout(props: IProps) {
     }
   }, []);
 
-  const handleToggle = (e: any) => {
-    toggleDark(e.nativeEvent);
-  };
-
   return (
-    <div className='Wrapper' id='header'>
+    <header className={'Wrapper'}>
       <Navbar handleToggleDarkTheme={handleToggle} toggle={isToggle} />
       <SideDraw handleToggleDarkTheme={handleToggle} toggle={isToggle} />
-      <main>{props.children}</main>
-
-      <ButtonScrollTop />
-    </div>
+    </header>
   );
-}
+};
+
+export default HeaderContainer;

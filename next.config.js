@@ -1,11 +1,24 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   swcMinify: true,
-  output: 'standalone',
+  // output: 'standalone',
+  // experimental: {
+  //   ppr: true,
+  // },
   images: {
-    minimumCacheTTL: 99999999,
-    domains: ['images.ctfassets.net'],
+    remotePatterns: [
+      {
+        protocol: 'http',
+        hostname: '**',
+      },
+      {
+        protocol: 'https',
+        hostname: '**',
+      },
+    ],
+    formats: ['image/webp'],
   },
+
   httpAgentOptions: {
     keepAlive: false,
   },

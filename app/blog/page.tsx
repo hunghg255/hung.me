@@ -1,33 +1,24 @@
-import Head from 'next/head';
-
 import Blogs from 'src/components/Blogs/Blogs';
 import LayoutBlog from 'src/components/LayoutBlog/LayoutBlog';
 import { getBlogPosts } from 'src/utils/contentful';
 
-const BlogPage = ({ blogs }: any) => {
+export const revalidate = 30;
+
+const BlogPage = async () => {
+  const data = await getBlogPosts();
+
   return (
     <>
-      <Head>
+      {/* <Head>
         <title>Blogs</title>
         <link rel='canonical' href='https://hung.thedev.id/blog'></link>
         <meta property='og:url' content='https://hung.thedev.id/blog' />
-      </Head>
+      </Head> */}
       <LayoutBlog>
-        <Blogs blogs={blogs} />
+        <Blogs blogs={data} />
       </LayoutBlog>
     </>
   );
 };
-
-export async function getStaticProps() {
-  const data = await getBlogPosts();
-
-  return {
-    props: {
-      blogs: data,
-    }, // will be passed to the page component as props
-    revalidate: 30,
-  };
-}
 
 export default BlogPage;

@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useState } from 'react';
 
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
@@ -33,19 +35,6 @@ const options = {
 
 const BlogDetail = (props: any) => {
   const [blogDetail] = useState<any>(props?.blogDetail);
-
-  // useEffect(() => {
-  //   (async () => {
-  //     const slugArr = (router.query?.slug as string)?.split('-');
-
-  //     const data = await getBlogPostsDetail(slugArr[slugArr?.length - 1] as string);
-  //     setblogDetail(data);
-  //   })();
-  // }, [router.query?.slug]);
-
-  if (!blogDetail) {
-    return <></>;
-  }
 
   return (
     <div className={styles.blogDetail}>

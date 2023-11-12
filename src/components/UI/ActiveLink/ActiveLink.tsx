@@ -1,17 +1,17 @@
 import React, { AnchorHTMLAttributes, forwardRef } from 'react';
 
 import Link, { LinkProps } from 'next/link';
-import { useRouter } from 'next/router';
+import { usePathname } from 'next/navigation';
 
 type TActiveLinkProps = LinkProps &
   AnchorHTMLAttributes<HTMLAnchorElement> & { activeClassName?: string };
 
 const ActiveLink = forwardRef<HTMLAnchorElement, TActiveLinkProps>(
   ({ className, activeClassName, href, ...props }, ref) => {
-    const router = useRouter();
+    const pathname = usePathname();
 
     // const active = router.asPath === href || router.pathname === href;
-    const active = router.pathname.startsWith(href as string);
+    const active = pathname.startsWith(href as string);
 
     return (
       <>

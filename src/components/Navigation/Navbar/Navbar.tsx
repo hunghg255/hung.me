@@ -1,8 +1,10 @@
+'use client';
+
 /* eslint-disable multiline-ternary */
 import React from 'react';
 
 import Link from 'next/link';
-import { useRouter } from 'next/router';
+import { useRouter } from 'next/navigation';
 
 import ActiveLink from 'src/components/UI/ActiveLink/ActiveLink';
 import CheckboxIos from 'src/components/UI/CheckboxIos';

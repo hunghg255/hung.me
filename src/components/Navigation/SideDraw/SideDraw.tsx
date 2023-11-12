@@ -1,8 +1,10 @@
+'use client';
+
 /* eslint-disable multiline-ternary */
 import React, { useEffect, useState } from 'react';
 
 import Link from 'next/link';
-import { useRouter } from 'next/router';
+import { useRouter, usePathname } from 'next/navigation';
 
 import ActiveLink from 'src/components/UI/ActiveLink/ActiveLink';
 import ButtonBurger from 'src/components/UI/ButtonBurger';
@@ -20,6 +22,7 @@ interface IProps {
 function SideDraw(props: IProps) {
   const { toggle, handleToggleDarkTheme } = props;
   const router = useRouter();
+  const pathname = usePathname();
 
   const [isToggle, setIsToggle] = useState(false);
 
@@ -29,7 +32,7 @@ function SideDraw(props: IProps) {
 
   useEffect(() => {
     setIsToggle(false);
-  }, [router.pathname]);
+  }, [pathname]);
 
   useEffect(() => {
     window.addEventListener('resize', () => {

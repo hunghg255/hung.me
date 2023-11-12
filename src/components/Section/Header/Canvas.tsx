@@ -1,4 +1,3 @@
-/* eslint-disable unicorn/no-nested-ternary */
 import { FC, useEffect, useRef } from 'react';
 
 import { m } from 'framer-motion';

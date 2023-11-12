@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useEffect, useRef } from 'react';
 
 import { useRafFn } from 'src/hooks/useRafFn';
@@ -58,7 +60,6 @@ const Plum = () => {
     let steps: any[] = [];
     let prevSteps: any[] = [];
 
-    // eslint-disable-next-line unicorn/no-object-as-default-parameter
     const step = (x: number, y: number, rad: number, counter: { value: number } = { value: 0 }) => {
       const length = random() * len.current;
       counter.value += 1;
