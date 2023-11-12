@@ -25,7 +25,7 @@ const HeaderContainer = () => {
   }, []);
 
   return (
-    <header className={'Wrapper'}>
+    <header className={'Wrapper'} id='header'>
       <Navbar handleToggleDarkTheme={handleToggle} toggle={isToggle} />
       <SideDraw handleToggleDarkTheme={handleToggle} toggle={isToggle} />
     </header>
