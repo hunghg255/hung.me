@@ -3,7 +3,7 @@ import dynamic from 'next/dynamic';
 
 import HeaderContainer from 'src/components/HeaderContainer/HeaderContainer';
 import { fontGeist } from 'src/components/UI/font/font';
-
+import { cookies } from 'next/headers';
 import '../styles/globals.scss';
 
 const Cursor = dynamic(() => import('src/components/UI/Cursor/Cursor'), {
@@ -29,8 +29,11 @@ const ButtonScrollTop = dynamic(() => import('src/components/ButtonScrollTop'), 
 });
 
 export default function RootLayout({ children }: any) {
+  const cookieStore = cookies();
+  const dataTheme = cookieStore.get('data-theme');
+
   return (
-    <html className={fontGeist.variable}>
+    <html className={fontGeist.variable} data-theme={dataTheme.value || 'dark'}>
       <head>
         <meta charSet='utf-8' />
         <title>Hunghg | Front-end Developer</title>
@@ -86,7 +89,7 @@ export default function RootLayout({ children }: any) {
         />
       </head>
       <body>
-        <HeaderContainer />
+        <HeaderContainer dataTheme={dataTheme.value || 'dark'} />
 
         <main>{children}</main>
 

@@ -1,7 +1,5 @@
 'use client';
 
-import 'aos/dist/aos.css';
-
 import { useEffect } from 'react';
 
 import AOS from 'aos';
@@ -12,7 +10,7 @@ const AosComponent = () => {
       AOS.init({
         once: true,
       });
-    }, 150);
+    }, 200);
 
     return () => {
       clearTimeout(t);

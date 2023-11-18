@@ -5,6 +5,7 @@ import React from 'react';
 import dynamic from 'next/dynamic';
 
 import Header from 'src/components/Section/Header';
+import 'aos/dist/aos.css';
 
 const About = dynamic(() => import('src/components/Section/About'));
 const Contact = dynamic(() => import('src/components/Section/Contact'));

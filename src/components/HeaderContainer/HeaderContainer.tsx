@@ -13,8 +13,8 @@ const handleToggle = (e: any) => {
   toggleDark(e.nativeEvent);
 };
 
-const HeaderContainer = () => {
-  const [isToggle, setIsToggle] = useState<boolean>(getCookie('data-theme') === 'dark');
+const HeaderContainer = ({ dataTheme }: { dataTheme: 'dark' | 'light' }) => {
+  const [isToggle, setIsToggle] = useState<boolean>(dataTheme as any);
 
   useEffect(() => {
     const localTheme = getCookie('data-theme') === 'dark';
