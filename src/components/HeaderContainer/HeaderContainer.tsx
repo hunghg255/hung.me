@@ -13,7 +13,7 @@ const handleToggle = (e: any) => {
   toggleDark(e.nativeEvent);
 };
 
-const HeaderContainer = ({ dataTheme }: { dataTheme: 'dark' | 'light' }) => {
+const HeaderContainer = ({ dataTheme }: any) => {
   const [isToggle, setIsToggle] = useState<boolean>(dataTheme as any);
 
   useEffect(() => {

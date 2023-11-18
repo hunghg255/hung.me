@@ -33,7 +33,7 @@ export default function RootLayout({ children }: any) {
   const dataTheme = cookieStore.get('data-theme');
 
   return (
-    <html className={fontGeist.variable} data-theme={dataTheme.value || 'dark'}>
+    <html className={fontGeist.variable} data-theme={dataTheme?.value ? dataTheme.value : 'dark'}>
       <head>
         <meta charSet='utf-8' />
         <title>Hunghg | Front-end Developer</title>
@@ -89,7 +89,7 @@ export default function RootLayout({ children }: any) {
         />
       </head>
       <body>
-        <HeaderContainer dataTheme={(dataTheme.value as any) || 'dark'} />
+        <HeaderContainer dataTheme={dataTheme?.value ? dataTheme.value : 'dark'} />
 
         <main>{children}</main>
 
