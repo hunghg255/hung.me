@@ -89,7 +89,7 @@ export default function RootLayout({ children }: any) {
         />
       </head>
       <body>
-        <HeaderContainer dataTheme={dataTheme.value || 'dark'} />
+        <HeaderContainer dataTheme={(dataTheme.value as any) || 'dark'} />
 
         <main>{children}</main>
 
