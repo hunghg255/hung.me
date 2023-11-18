@@ -21,6 +21,9 @@ const HeaderContainer = ({ dataTheme }: { dataTheme: 'dark' | 'light' }) => {
     if (localTheme) {
       document.documentElement.dataset.theme = 'dark';
       setIsToggle(true);
+    } else {
+      document.documentElement.dataset.theme = 'light';
+      setIsToggle(false);
     }
   }, []);
 
