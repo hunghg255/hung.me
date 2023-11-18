@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  swcMinify: true,
+  // swcMinify: true,
   // output: 'standalone',
   // experimental: {
   //   ppr: true,
@@ -17,10 +17,6 @@ const nextConfig = {
       },
     ],
     formats: ['image/webp'],
-  },
-
-  httpAgentOptions: {
-    keepAlive: false,
   },
   headers: async function headers() {
     if (process.env.NODE_ENV === 'development') return [];
