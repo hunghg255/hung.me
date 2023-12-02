@@ -32,7 +32,7 @@ function Navbar(props: IProps) {
             <Logo />
           </li>
 
-          <li className={styles.navItem}>
+          {/* <li className={styles.navItem}>
             <ActiveLink activeClassName='activeLink' href='/projects' aria-label='Projects'>
               Projects
             </ActiveLink>
@@ -108,7 +108,7 @@ function Navbar(props: IProps) {
                 </g>
               </svg>
             </Link>
-          </li>
+          </li> */}
 
           <li className={styles.navItem}>
             <CheckboxIos id={2} isChecked={toggle} handleToggle={handleToggleDarkTheme} />

@@ -9,12 +9,12 @@ import '../styles/globals.scss';
 const Cursor = dynamic(() => import('src/components/UI/Cursor/Cursor'), {
   ssr: false,
 });
-const ScrollSmooth = dynamic(() => import('src/components/ScrollSmooth/ScrollSmooth'), {
-  ssr: false,
-});
-const AosComponent = dynamic(() => import('src/components/AosComponent/AosComponent'), {
-  ssr: false,
-});
+// const ScrollSmooth = dynamic(() => import('src/components/ScrollSmooth/ScrollSmooth'), {
+//   ssr: false,
+// });
+// const AosComponent = dynamic(() => import('src/components/AosComponent/AosComponent'), {
+//   ssr: false,
+// });
 const Plum = dynamic(() => import('src/components/Plum/Plum'), {
   ssr: false,
 });
@@ -25,6 +25,9 @@ const LogArt = dynamic(() => import('src/components/LogArt/LogArt'), {
   ssr: false,
 });
 const ButtonScrollTop = dynamic(() => import('src/components/ButtonScrollTop'), {
+  ssr: false,
+});
+const BottomNavigation = dynamic(() => import('src/components/BottomNavigation/BottomNavigation'), {
   ssr: false,
 });
 
@@ -93,9 +96,9 @@ export default function RootLayout({ children }: any) {
 
         <main>{children}</main>
 
+        <BottomNavigation />
+
         <Cursor />
-        <ScrollSmooth />
-        <AosComponent />
         <Plum />
         <Progressbar />
         <LogArt />

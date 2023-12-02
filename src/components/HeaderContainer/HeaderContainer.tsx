@@ -7,7 +7,7 @@ import { getCookie } from 'cookies-next';
 import { toggleDark } from 'src/utils';
 
 import Navbar from '../Navigation/Navbar';
-import SideDraw from '../Navigation/SideDraw';
+// import SideDraw from '../Navigation/SideDraw';
 
 const handleToggle = (e: any) => {
   toggleDark(e.nativeEvent);
@@ -30,7 +30,7 @@ const HeaderContainer = ({ dataTheme }: any) => {
   return (
     <header className={'Wrapper'} id='header'>
       <Navbar handleToggleDarkTheme={handleToggle} toggle={isToggle} />
-      <SideDraw handleToggleDarkTheme={handleToggle} toggle={isToggle} />
+      {/* <SideDraw handleToggleDarkTheme={handleToggle} toggle={isToggle} /> */}
     </header>
   );
 };

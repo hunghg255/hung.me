@@ -15,6 +15,8 @@
   --border-repo: rgba(0, 0, 0, 0.1);
 
   --bg-header: #ffffffa6;
+
+  --bg-bottom: #ffffffa6;
 }
 
 [data-theme='dark'] {
@@ -23,6 +25,7 @@
   --primary-bg: #050505;
   --border-repo: rgba(255, 255, 255, 0.1);
   --bg-header: #000000a6;
+  --bg-bottom: #404040a6;
 }
 
 [data-theme='dark'] .blogTag {
