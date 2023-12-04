@@ -11,7 +11,7 @@ const ActiveLink = forwardRef<HTMLAnchorElement, TActiveLinkProps>(
     const pathname = usePathname();
 
     // const active = router.asPath === href || router.pathname === href;
-    const active = pathname.startsWith(href as string);
+    const active = href === '/' ? pathname === href : pathname.startsWith(href as string);
 
     return (
       <>
