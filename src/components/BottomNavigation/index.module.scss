@@ -26,12 +26,21 @@
   }
 
   @media (max-width: 576px) {
-    max-width: 280px;
+    bottom: 10px;
+    max-width: calc(100% - 10px);
+  }
+
+  @media (max-width: 360px) {
+    max-width: calc(100% - 10px);
   }
 
   ul {
     display: flex;
     gap: 4px;
+
+    @media (max-width: 576px) {
+      gap: 0;
+    }
 
     li,
     a {
