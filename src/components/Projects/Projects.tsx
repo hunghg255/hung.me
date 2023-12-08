@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { All, IProjects, getLanguageColor } from 'src/utils/projetcts';
+import { All, IProjects, getLanguageColor, getProjects } from 'src/utils/projetcts';
 
 import styles from './index.module.scss';
 
@@ -108,6 +108,36 @@ const RepoItem = ({ repo }: { repo: All }) => {
   );
 };
 
+export const ProjectSkeleton = () => {
+  return (
+    <section className={styles.wrap}>
+      <h1 className={styles.title}>Projects</h1>
+
+      {Object.keys(LABELS).map((key) => {
+        return (
+          <div key={key} className={styles.repoListWrap}>
+            <h3 className={`${styles.repoTitle} hightLight`}>{LABELS[key]}</h3>
+            <div className={styles.repoList}>
+              <article
+                className={styles.repoItem}
+                style={{
+                  height: '150px',
+                }}
+              ></article>
+              <article
+                className={styles.repoItem}
+                style={{
+                  height: '150px',
+                }}
+              ></article>
+            </div>
+          </div>
+        );
+      })}
+    </section>
+  );
+};
+
 const RepoList = ({ label, repos }: { label: string; repos: All[] }) => {
   return (
     <div className={styles.repoListWrap}>
@@ -121,7 +151,9 @@ const RepoList = ({ label, repos }: { label: string; repos: All[] }) => {
   );
 };
 
-const Projects = ({ projects }: IPropsProjects) => {
+const Projects = async () => {
+  const projects = await getProjects();
+
   return (
     <section className={styles.wrap}>
       <h1 className={styles.title}>Projects</h1>

@@ -1,5 +1,3 @@
-'use client';
-
 import React, { useState } from 'react';
 
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
@@ -9,6 +7,7 @@ import Image from 'next/image';
 
 import styles from './index.module.scss';
 import BlogTag from '../Blogs/BlogTag';
+import { getBlogPostsDetail } from 'src/utils/contentful';
 
 const options = {
   renderNode: {
@@ -33,8 +32,75 @@ const options = {
   renderText: (text) => text.replace('!', '?'),
 };
 
-const BlogDetail = (props: any) => {
-  const [blogDetail] = useState<any>(props?.blogDetail);
+export const BlogDetailSkeleton = () => {
+  return (
+    <div className={styles.blogDetail}>
+      <div className={styles.headers}>
+        <p
+          className='skeleton'
+          style={{
+            height: '20px',
+            marginBottom: '10px',
+          }}
+        ></p>
+        <p
+          className='skeleton'
+          style={{
+            height: '20px',
+            marginBottom: '10px',
+          }}
+        ></p>
+      </div>
+      <div className='blogDetail'>
+        <p
+          className='skeleton'
+          style={{
+            height: '20px',
+            marginBottom: '10px',
+          }}
+        ></p>
+        <p
+          className='skeleton'
+          style={{
+            height: '20px',
+            marginBottom: '10px',
+          }}
+        ></p>
+        <p
+          className='skeleton'
+          style={{
+            height: '20px',
+            marginBottom: '10px',
+          }}
+        ></p>
+        <p
+          className='skeleton'
+          style={{
+            height: '20px',
+            marginBottom: '10px',
+          }}
+        ></p>
+        <p
+          className='skeleton'
+          style={{
+            height: '20px',
+            marginBottom: '10px',
+          }}
+        ></p>
+        <p
+          className='skeleton'
+          style={{
+            height: '20px',
+            marginBottom: '10px',
+          }}
+        ></p>
+      </div>
+    </div>
+  );
+};
+
+const BlogDetail = async ({ slug }: any) => {
+  const blogDetail = await getBlogPostsDetail(slug as string);
 
   return (
     <div className={styles.blogDetail}>

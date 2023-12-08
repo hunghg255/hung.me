@@ -6,17 +6,48 @@ import dayjs from 'dayjs';
 import Image from 'next/image';
 import Link from 'next/link';
 
-import { IDataBlogs } from 'src/utils/contentful';
+import { IDataBlogs, getBlogPosts } from 'src/utils/contentful';
 
 import BlogTag from './BlogTag';
 import styles from './index.module.scss';
 
-const Blogs = (props: any) => {
-  const [blogs] = useState<IDataBlogs>(props?.blogs);
+export const BlogsSkeleton = () => {
+  return (
+    <>
+      <h1 className={styles.title1}>Blogs</h1>
 
-  if (!blogs?.data?.length) {
-    return <></>;
-  }
+      <div className={styles.listBlog}>
+        {[...Array(3)].map((_, i) => {
+          return (
+            <div key={i} className={styles.blogItem}>
+              <Link href={`/`}>
+                <div className={`${styles.img} skeleton`}></div>
+                <div className={styles.content}>
+                  <h2
+                    className='skeleton'
+                    style={{
+                      height: '20px',
+                      marginBottom: '10px',
+                    }}
+                  ></h2>
+                  <p
+                    className={'skeleton'}
+                    style={{
+                      height: '20px',
+                    }}
+                  ></p>
+                </div>
+              </Link>
+            </div>
+          );
+        })}
+      </div>
+    </>
+  );
+};
+
+const Blogs = async () => {
+  const blogs = await getBlogPosts();
 
   return (
     <>
