@@ -90,6 +90,8 @@ export default function RootLayout({ children }: any) {
           name='google-site-verification'
           content='fQuFJdHbSiH8czBosKz0oVZDXIDJRCEHcYIrzOoMNn4'
         />
+
+        <script src='https://cursor-party.hunghg255.partykit.dev/cursors.js' defer></script>
       </head>
       <body>
         <HeaderContainer dataTheme={dataTheme?.value ? dataTheme.value : 'dark'} />
