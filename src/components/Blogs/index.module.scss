@@ -24,6 +24,7 @@
   padding: 2px 8px;
   font-size: 18px;
   text-transform: capitalize;
+  background-color: var(--highlight-color);
 
   @media (max-width: 768px) {
     font-size: 12px;

@@ -1,15 +1,14 @@
 'use client';
 
-import { useState } from 'react';
-
 import dayjs from 'dayjs';
 import Image from 'next/image';
 import Link from 'next/link';
 
-import { IDataBlogs, getBlogPosts } from 'src/utils/contentful';
+import { getBlogPosts } from 'src/utils/contentful';
 
 import BlogTag from './BlogTag';
 import styles from './index.module.scss';
+import { getBlogWebTotal } from 'src/utils/web-total';
 
 export const BlogsSkeleton = () => {
   return (
@@ -47,13 +46,47 @@ export const BlogsSkeleton = () => {
 };
 
 const Blogs = async () => {
-  const blogs = await getBlogPosts();
+  const [blogs, blogsWebtotal] = await Promise.all([getBlogPosts(), getBlogWebTotal()]);
 
   return (
     <>
       <h1 className={styles.title1}>Blogs</h1>
 
       <div className={styles.listBlog}>
+        {blogsWebtotal.map((blog, idx) => {
+          const tags = blog.category?.length
+            ? blog.category.map((it) => {
+                return {
+                  sys: {
+                    id: it._text,
+                  },
+                };
+              })
+            : [];
+
+          return (
+            <div key={`blog-webtotal-${idx}`} className={styles.blogItem}>
+              <Link target='_blank' href={blog.link._text}>
+                <div className={styles.img}>
+                  <Image
+                    src={'/images/projects/default.png'}
+                    alt=''
+                    fill
+                    className='object-contain'
+                  />
+                </div>
+                <div className={styles.content}>
+                  <h2>{blog.title._cdata}</h2>
+                  <p className={styles.date}>
+                    Date: {dayjs(blog.pubDate._text).format('DD MMM YYYY')}
+                  </p>
+                  <BlogTag tags={tags} />
+                </div>
+              </Link>
+            </div>
+          );
+        })}
+
         {blogs.data.map((blog) => {
           return (
             <div key={blog.fields.slug} className={styles.blogItem}>
