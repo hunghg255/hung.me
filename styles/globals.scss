@@ -27,6 +27,10 @@ body {
   overflow-x: hidden;
 }
 
+main {
+  padding: 0 0 80px;
+}
+
 body::-webkit-scrollbar {
   width: 0;
 }
