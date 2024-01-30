@@ -5,6 +5,7 @@ import HeaderContainer from 'src/components/HeaderContainer/HeaderContainer';
 import { fontGeist } from 'src/components/UI/font/font';
 import { cookies } from 'next/headers';
 import '../styles/globals.scss';
+import Noise from 'src/components/Noise/Noise';
 
 const Cursor = dynamic(() => import('src/components/UI/Cursor/Cursor'), {
   ssr: false,
@@ -94,6 +95,8 @@ export default function RootLayout({ children }: any) {
         <script src='https://cursor-party.hunghg255.partykit.dev/cursors.js' defer></script>
       </head>
       <body>
+        <Noise />
+
         <HeaderContainer dataTheme={dataTheme?.value ? dataTheme.value : 'dark'} />
 
         <main>{children}</main>
