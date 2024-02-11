@@ -7,9 +7,9 @@ import { cookies } from 'next/headers';
 import '../styles/globals.scss';
 import Noise from 'src/components/Noise/Noise';
 
-const Cursor = dynamic(() => import('src/components/UI/Cursor/Cursor'), {
-  ssr: false,
-});
+// const Cursor = dynamic(() => import('src/components/UI/Cursor/Cursor'), {
+//   ssr: false,
+// });
 // const ScrollSmooth = dynamic(() => import('src/components/ScrollSmooth/ScrollSmooth'), {
 //   ssr: false,
 // });
@@ -19,9 +19,9 @@ const Cursor = dynamic(() => import('src/components/UI/Cursor/Cursor'), {
 const Plum = dynamic(() => import('src/components/Plum/Plum'), {
   ssr: false,
 });
-const Progressbar = dynamic(() => import('src/components/Progessbar/Progessbar'), {
-  ssr: false,
-});
+// const Progressbar = dynamic(() => import('src/components/Progessbar/Progessbar'), {
+//   ssr: false,
+// });
 const LogArt = dynamic(() => import('src/components/LogArt/LogArt'), {
   ssr: false,
 });
@@ -103,9 +103,9 @@ export default function RootLayout({ children }: any) {
 
         <BottomNavigation />
 
-        <Cursor />
+        {/* <Cursor /> */}
         <Plum />
-        <Progressbar />
+        {/* <Progressbar /> */}
         <LogArt />
         <ButtonScrollTop />
       </body>

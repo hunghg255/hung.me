@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // swcMinify: true,
-  // output: 'standalone',
+  swcMinify: true,
+  output: 'standalone',
   // experimental: {
   //   ppr: true,
   // },

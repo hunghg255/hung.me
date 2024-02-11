@@ -16,6 +16,7 @@
     "@contentful/rich-text-types": "^16.3.3",
     "@studio-freight/lenis": "^0.2.28",
     "aos": "^2.3.4",
+    "classnames": "^2.5.1",
     "contentful": "^9.3.5",
     "cookies-next": "^2.1.2",
     "dayjs": "^1.11.10",

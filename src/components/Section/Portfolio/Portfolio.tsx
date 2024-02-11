@@ -6,6 +6,7 @@ import Image from 'next/image';
 import Sparkles from 'src/components/UI/Sparkles/Sparkles';
 
 import styles from './index.module.scss';
+import { BlurImage } from 'src/components/UI/BlurImage/BlurImage';
 
 const PROJECTS = [
   {
@@ -145,7 +146,7 @@ export default function Portfolio() {
               <li key={idx.toString()} className={styles.projectItem} data-aos='zoom-in'>
                 <div className='Project__item__wrapper'>
                   <div className={styles.projectItemImage}>
-                    <Image
+                    <BlurImage
                       src={item.image}
                       alt={item.name}
                       width={357}
@@ -153,8 +154,18 @@ export default function Portfolio() {
                       className='object-contain'
                       // placeholder='blur'
                       // blurDataURL={portfolioImg[idx]?.base64}
-                      priority={true}
+                      quality={60}
                     />
+                    {/* <Image
+                      src={item.image}
+                      alt={item.name}
+                      width={357}
+                      height={202}
+                      className='object-contain'
+                      // placeholder='blur'
+                      // blurDataURL={portfolioImg[idx]?.base64}
+                      quality={60}
+                    /> */}
                   </div>
                   <div className={styles.projectItemInfo}>
                     <h3>
