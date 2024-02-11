@@ -1,5 +1,3 @@
-import { getCookie, setCookie } from 'cookies-next';
-
 function easeInOutSine(t: number, b: number, c: number, d: number) {
   return (-c / 2) * (Math.cos((Math.PI * t) / d) - 1) + b;
 }
@@ -41,20 +39,17 @@ export function toggleDark(event: MouseEvent) {
   const isAppearanceTransition =
     // @ts-expect-error: Transition API
     document.startViewTransition && !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const isToggle = getCookie('data-theme') === 'dark';
+  //@ts-ignore
+  const isToggle = localStorage.getItem('data-theme') === 'dark';
 
   const onSetTheme = () => {
     if (isToggle === false) {
       localStorage?.setItem('data-theme', 'dark');
-      setCookie('data-theme', 'dark', {
-        maxAge: 2_147_483_647,
-      });
       document.documentElement.dataset.theme = 'dark';
     } else {
-      setCookie('data-theme', 'light', {
-        maxAge: 2_147_483_647,
-      });
-      delete document.documentElement.dataset.theme;
+      // delete document.documentElement.dataset.theme;
+      localStorage?.setItem('data-theme', 'light');
+      document.documentElement.dataset.theme = 'light';
     }
   };
 

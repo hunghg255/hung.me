@@ -1,7 +1,13 @@
+const path = require('path');
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   swcMinify: true,
+  reactStrictMode: false,
   output: 'standalone',
+  sassOptions: {
+    includePaths: [path.join(__dirname, 'styles')],
+  },
   // experimental: {
   //   ppr: true,
   // },

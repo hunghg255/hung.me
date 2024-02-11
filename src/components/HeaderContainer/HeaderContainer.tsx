@@ -2,8 +2,6 @@
 
 import React, { useEffect, useState } from 'react';
 
-import { getCookie } from 'cookies-next';
-
 import { toggleDark } from 'src/utils';
 
 import Navbar from '../Navigation/Navbar';
@@ -13,11 +11,11 @@ const handleToggle = (e: any) => {
   toggleDark(e.nativeEvent);
 };
 
-const HeaderContainer = ({ dataTheme }: any) => {
-  const [isToggle, setIsToggle] = useState<boolean>(dataTheme as any);
+const HeaderContainer = () => {
+  const [isToggle, setIsToggle] = useState<boolean>(true);
 
   useEffect(() => {
-    const localTheme = getCookie('data-theme') === 'dark';
+    const localTheme = localStorage.getItem('data-theme') === 'dark';
     if (localTheme) {
       document.documentElement.dataset.theme = 'dark';
       setIsToggle(true);

@@ -3,9 +3,10 @@ import dynamic from 'next/dynamic';
 
 import HeaderContainer from 'src/components/HeaderContainer/HeaderContainer';
 import { fontGeist } from 'src/components/UI/font/font';
-import { cookies } from 'next/headers';
+// import { cookies } from 'next/headers';
 import '../styles/globals.scss';
 import Noise from 'src/components/Noise/Noise';
+import { ThemeConfig } from 'src/components/ThemeConfig/ThemeConfig';
 
 // const Cursor = dynamic(() => import('src/components/UI/Cursor/Cursor'), {
 //   ssr: false,
@@ -33,11 +34,11 @@ const BottomNavigation = dynamic(() => import('src/components/BottomNavigation/B
 });
 
 export default function RootLayout({ children }: any) {
-  const cookieStore = cookies();
-  const dataTheme = cookieStore.get('data-theme');
+  // const cookieStore = cookies();
+  // const dataTheme = cookieStore.get('data-theme');
 
   return (
-    <html className={fontGeist.variable} data-theme={dataTheme?.value ? dataTheme.value : 'dark'}>
+    <html className={fontGeist.variable}>
       <head>
         <meta charSet='utf-8' />
         <title>Hunghg | Front-end Developer</title>
@@ -97,7 +98,7 @@ export default function RootLayout({ children }: any) {
       <body>
         <Noise />
 
-        <HeaderContainer dataTheme={dataTheme?.value ? dataTheme.value : 'dark'} />
+        <HeaderContainer />
 
         <main>{children}</main>
 
@@ -108,6 +109,8 @@ export default function RootLayout({ children }: any) {
         {/* <Progressbar /> */}
         <LogArt />
         <ButtonScrollTop />
+
+        <ThemeConfig forcedTheme={false} />
       </body>
     </html>
   );
