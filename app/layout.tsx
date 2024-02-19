@@ -33,6 +33,8 @@ const BottomNavigation = dynamic(() => import('src/components/BottomNavigation/B
   ssr: false,
 });
 
+export const runtime = 'edge';
+
 export default function RootLayout({ children }: any) {
   // const cookieStore = cookies();
   // const dataTheme = cookieStore.get('data-theme');
