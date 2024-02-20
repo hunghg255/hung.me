@@ -9,6 +9,7 @@ import { getBlogPosts } from 'src/utils/contentful';
 import BlogTag from './BlogTag';
 import styles from './index.module.scss';
 import { getBlogWebTotal } from 'src/utils/web-total';
+import { BlurImage } from 'src/components/UI/BlurImage/BlurImage';
 
 export const BlogsSkeleton = () => {
   return (
@@ -68,7 +69,7 @@ const Blogs = async () => {
             <div key={`blog-webtotal-${idx}`} className={styles.blogItem}>
               <Link target='_blank' href={blog.link._text}>
                 <div className={styles.img}>
-                  <Image
+                  <BlurImage
                     src={'/images/projects/default.png'}
                     alt=''
                     fill
@@ -87,7 +88,7 @@ const Blogs = async () => {
           );
         })}
 
-        {blogs.data.map((blog) => {
+        {/* {blogs.data.map((blog) => {
           return (
             <div key={blog.fields.slug} className={styles.blogItem}>
               <Link href={`/blog/${blog.fields.slug}-${blog.sys.id}`}>
@@ -111,7 +112,7 @@ const Blogs = async () => {
               </Link>
             </div>
           );
-        })}
+        })} */}
       </div>
     </>
   );
