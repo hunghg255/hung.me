@@ -110,7 +110,7 @@ export default function RootLayout({ children }: any) {
         <Plum />
         {/* <Progressbar /> */}
         <LogArt />
-        <ButtonScrollTop />
+        {/* <ButtonScrollTop /> */}
 
         <ThemeConfig forcedTheme={false} />
       </body>

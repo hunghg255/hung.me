@@ -9,7 +9,8 @@
     "start": "next start",
     "lint": "next lint",
     "postbuild": "next-sitemap",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "gen-icon": "csvgtocss"
   },
   "dependencies": {
     "@contentful/rich-text-react-renderer": "^15.19.3",
@@ -38,6 +39,7 @@
     "@types/node": "18.7.16",
     "@types/react": "18.0.18",
     "@types/react-dom": "18.0.6",
+    "csvgtocss": "^0.0.10",
     "eslint": "8.23.0",
     "eslint-config-next": "12.3.0",
     "husky": "^8.0.3",

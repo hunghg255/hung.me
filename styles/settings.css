@@ -16,9 +16,14 @@
 
   --bg-header: #ffffffa6;
 
-  --bg-bottom: #ffffffa6;
-
   --skeleton: #e2e5e7;
+
+  --bg-bottom: #fafafa;
+  --bg-item: #fafafa;
+  --bg-item-active: #efeff0;
+  --border-bottom: #e4e4e7;
+  --item-color: #71717a;
+  --item-color-active: #0a0b0b;
 }
 
 [data-theme='dark'] {
@@ -27,8 +32,14 @@
   --primary-bg: #050505;
   --border-repo: rgba(255, 255, 255, 0.1);
   --bg-header: #000000a6;
-  --bg-bottom: #404040a6;
   --skeleton: #404040a6;
+
+  --bg-bottom: #0a0b0d;
+  --bg-item: #191919;
+  --bg-item-active: #27272a;
+  --item-color: #a1a1aa;
+  --item-color-active: #fafafa;
+  --border-bottom: #27272a;
 }
 
 [data-theme='dark'] .blogTag {

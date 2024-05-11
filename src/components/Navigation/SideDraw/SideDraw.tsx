@@ -9,7 +9,7 @@ import { useRouter, usePathname } from 'next/navigation';
 import ActiveLink from 'src/components/UI/ActiveLink/ActiveLink';
 import ButtonBurger from 'src/components/UI/ButtonBurger';
 import CheckboxIos from 'src/components/UI/CheckboxIos';
-import Logo from 'src/components/UI/Icon/logo';
+import Logo from 'src/components/UI/IconSvg/logo';
 import Sparkles from 'src/components/UI/Sparkles/Sparkles';
 
 import styles from './index.module.scss';

@@ -12,7 +12,7 @@ const HomePage = () => {
       <Header />
       <About />
       <Portfolio />
-      <Contact />
+      {/* <Contact /> */}
       <Footer />
     </>
   );
