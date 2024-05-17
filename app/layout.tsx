@@ -6,7 +6,7 @@ import { fontGeist } from 'src/components/UI/font/font';
 // import { cookies } from 'next/headers';
 import '../styles/globals.scss';
 import Noise from 'src/components/Noise/Noise';
-import { ThemeConfig } from 'src/components/ThemeConfig/ThemeConfig';
+import { ThemeProvider } from 'next-themes';
 
 // const Cursor = dynamic(() => import('src/components/UI/Cursor/Cursor'), {
 //   ssr: false,
@@ -40,7 +40,7 @@ export default function RootLayout({ children }: any) {
   // const dataTheme = cookieStore.get('data-theme');
 
   return (
-    <html className={fontGeist.variable}>
+    <html className={fontGeist.variable} suppressHydrationWarning>
       <head>
         <meta charSet='utf-8' />
         <title>Hunghg | Front-end Developer</title>
@@ -102,8 +102,9 @@ export default function RootLayout({ children }: any) {
 
         <HeaderContainer />
 
-        <main>{children}</main>
-
+        <ThemeProvider>
+          <main>{children}</main>
+        </ThemeProvider>
         <BottomNavigation />
 
         {/* <Cursor /> */}
@@ -111,8 +112,6 @@ export default function RootLayout({ children }: any) {
         {/* <Progressbar /> */}
         <LogArt />
         {/* <ButtonScrollTop /> */}
-
-        <ThemeConfig forcedTheme={false} />
       </body>
     </html>
   );

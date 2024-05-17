@@ -19,7 +19,7 @@ dependencies:
     version: 2.3.4
   autoprefixer:
     specifier: ^10.4.17
-    version: 10.4.17(postcss@8.4.31)
+    version: 10.4.17(postcss@8.4.38)
   classnames:
     specifier: ^2.5.1
     version: 2.5.1
@@ -41,6 +41,9 @@ dependencies:
   next-sitemap:
     specifier: ^4.2.3
     version: 4.2.3(next@14.0.4)
+  next-themes:
+    specifier: ^0.3.0
+    version: 0.3.0(react-dom@18.2.0)(react@18.2.0)
   plaiceholder:
     specifier: ^2.5.0
     version: 2.5.0(sharp@0.31.3)
@@ -1935,7 +1938,7 @@ packages:
     resolution: {integrity: sha512-Oei9OH4tRh0YqU3GxhX79dM/mwVgvbZJaSNaRk+bshkj0S5cfHcgYakreBjrHwatXKbz+IoIdYLxrKim2MjW0Q==}
     dev: false
 
-  /autoprefixer@10.4.17(postcss@8.4.31):
+  /autoprefixer@10.4.17(postcss@8.4.38):
     resolution: {integrity: sha512-/cpVNRLSfhOtcGflT13P2794gVSgmPgTR+erw5ifnMLZb0UnSlkK4tquLmkd3BhA+nLo5tX8Cu0upUsGKvKbmg==}
     engines: {node: ^10 || ^12 || >=14}
     hasBin: true
@@ -1947,7 +1950,7 @@ packages:
       fraction.js: 4.3.7
       normalize-range: 0.1.2
       picocolors: 1.0.0
-      postcss: 8.4.31
+      postcss: 8.4.38
       postcss-value-parser: 4.2.0
     dev: false
 
@@ -4979,7 +4982,6 @@ packages:
     resolution: {integrity: sha512-eSRppjcPIatRIMC1U6UngP8XFcz8MQWGQdt1MTBQ7NaAmvXDfvNxbvWV3x2y6CdEUciCSsDHDQZbhYaB8QEo2g==}
     engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
     hasBin: true
-    dev: true
 
   /napi-build-utils@1.0.2:
     resolution: {integrity: sha512-ONmRUqK7zj7DWX0D9ADe03wbwOBZxNAfF20PlGfCWQcD3+/MakShIHrMqx9YwPTfxDdF1zLeL+RGZiR9kGMLdg==}
@@ -5001,6 +5003,16 @@ packages:
       fast-glob: 3.2.12
       minimist: 1.2.8
       next: 14.0.4(@babel/core@7.24.5)(react-dom@18.2.0)(react@18.2.0)(sass@1.70.0)
+    dev: false
+
+  /next-themes@0.3.0(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-/QHIrsYpd6Kfk7xakK4svpDI5mmXP0gfvCoJdGpZQ2TOrQZmsW0QxjaiLn8wbIKjtm4BTSqLoix4lxYYOnLJ/w==}
+    peerDependencies:
+      react: ^16.8 || ^17 || ^18
+      react-dom: ^16.8 || ^17 || ^18
+    dependencies:
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
     dev: false
 
   /next@14.0.4(@babel/core@7.24.5)(react-dom@18.2.0)(react@18.2.0)(sass@1.70.0):
@@ -5723,7 +5735,6 @@ packages:
       nanoid: 3.3.7
       picocolors: 1.0.0
       source-map-js: 1.2.0
-    dev: true
 
   /prebuild-install@7.1.1:
     resolution: {integrity: sha512-jAXscXWMcCK8GgCoHOfIr0ODh5ai8mj63L2nWrjuAgXE6tDyYGnx4/8o/rCgU+B4JSyZBKbeZqzhtwtC3ovxjw==}
@@ -6020,7 +6031,7 @@ packages:
       rollup: 3.29.4
       typescript: 5.4.5
     optionalDependencies:
-      '@babel/code-frame': 7.22.5
+      '@babel/code-frame': 7.24.2
     dev: true
 
   /rollup@3.29.4:
@@ -6256,7 +6267,6 @@ packages:
   /source-map-js@1.2.0:
     resolution: {integrity: sha512-itJW8lvSA0TXEphiRoawsCksnlf8SyvmFzIhltqAHluXd88pkCd+cXJVHTDwdCr0IzwptSm035IHQktUu1QUMg==}
     engines: {node: '>=0.10.0'}
-    dev: true
 
   /spawndamnit@2.0.0:
     resolution: {integrity: sha512-j4JKEcncSjFlqIwU5L/rp2N5SIPsdxaRsIv678+TZxZ0SRDJTm8JrxJMjE/XuiEZNEir3S8l0Fa3Ke339WI4qA==}
