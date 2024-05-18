@@ -32,8 +32,14 @@ main {
   padding: 0 0 80px;
 }
 
+/* Chrome, Safari, Opera */
 body::-webkit-scrollbar {
   width: 0;
+}
+
+body {
+  -ms-overflow-style: none; /* IE, Edge */
+  scrollbar-width: none; /* Firefox */
 }
 
 section {
