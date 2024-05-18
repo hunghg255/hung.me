@@ -1,14 +1,14 @@
 import React, { Suspense } from 'react';
 
-import Projects, { ProjectSkeleton } from 'src/components/Projects/Projects';
+import Projects from 'src/components/Projects/Projects';
+import { getProjects } from 'src/utils/projetcts';
+
+export const revalidate = 3600;
 
 const ProjectsPage = async () => {
-  return (
-    <Suspense fallback={<ProjectSkeleton />}>
-      {/* @ts-ignore */}
-      <Projects />
-    </Suspense>
-  );
+  const projects = await getProjects();
+
+  return <Projects projects={projects} />;
 };
 
 export default ProjectsPage;

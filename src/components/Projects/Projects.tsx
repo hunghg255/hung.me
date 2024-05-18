@@ -151,9 +151,7 @@ const RepoList = ({ label, repos }: { label: string; repos: All[] }) => {
   );
 };
 
-const Projects = async () => {
-  const projects = await getProjects();
-
+const Projects = ({ projects }: any) => {
   return (
     <section className={styles.wrap}>
       <h1 className={styles.title}>Projects</h1>
