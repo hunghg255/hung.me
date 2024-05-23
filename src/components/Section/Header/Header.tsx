@@ -9,6 +9,7 @@ import { onGotoElement } from 'src/utils';
 
 import Canvas from './Canvas';
 import styles from './index.module.scss';
+import { FlipWords } from 'src/components/UI/FlipWords/FlipWords';
 
 function Header() {
   const [idxTag, setIdxTag] = useState(0);
@@ -38,7 +39,8 @@ function Header() {
         <h2>
           A
           <div className={styles.headerTagWrapper}>
-            <span className={styles.headerTag}>{tags[idxTag]}</span>
+            <FlipWords words={tags} />
+            {/* <span className={styles.headerTag}>{tags[idxTag]}</span> */}
           </div>
           Front-end developer
           <span className={styles.block}>|</span>

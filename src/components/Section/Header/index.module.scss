@@ -46,6 +46,12 @@
 .headerTagWrapper {
   width: 90px;
   position: relative;
+
+  span {
+    font-weight: 600;
+    color: var(--highlight-color);
+    font-style: italic;
+  }
 }
 
 .headerText .headerTag {
