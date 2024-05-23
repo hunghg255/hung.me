@@ -22,7 +22,7 @@
     "contentful": "^9.3.6",
     "cookies-next": "^2.1.2",
     "dayjs": "^1.11.11",
-    "framer-motion": "^7.10.3",
+    "framer-motion": "^11.2.6",
     "next": "^14.2.3",
     "next-sitemap": "^4.2.3",
     "next-themes": "^0.3.0",
