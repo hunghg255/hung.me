@@ -4,10 +4,10 @@ import React, { useEffect, useState } from 'react';
 
 import styles from './index.module.scss';
 import ActiveLink from 'src/components/UI/ActiveLink/ActiveLink';
-import Link from 'next/link';
 import { Icon } from 'src/components/UI/Icon/Icon';
 import { getCookie } from 'cookies-next';
 import { toggleDark } from 'src/utils';
+import { motion } from 'framer-motion';
 
 const ButtonToggleTheme = () => {
   const [isToggle, setIsToggle] = useState<boolean>(getCookie('data-theme') === 'dark');
@@ -34,7 +34,16 @@ const ButtonToggleTheme = () => {
 
 const BottomNavigation = () => {
   return (
-    <div className={styles.containerBottomNavigation}>
+    <motion.div
+      className={styles.containerBottomNavigation}
+      initial={{ opacity: 0, bottom: 0 }}
+      animate={{ opacity: 1, bottom: 33 }}
+      transition={{
+        duration: 0.8,
+        delay: 0.8,
+        ease: [0, 0.71, 0.2, 1.01],
+      }}
+    >
       <ul>
         <li className={styles.navItem}>
           <ActiveLink href='/' aria-label='Home' activeClassName={styles.active}>
@@ -84,7 +93,7 @@ const BottomNavigation = () => {
           <span>Toggle Theme</span>
         </li>
       </ul>
-    </div>
+    </motion.div>
   );
 };
 

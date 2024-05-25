@@ -2,15 +2,12 @@
   position: fixed;
   bottom: 33px;
   left: 50%;
-  transform: translateX(-50%);
   z-index: 1000;
   background: var(--bg-bottom);
-  transition: all 350ms ease-in-out;
-
+  transform: translateX(-50%);
   backdrop-filter: blur(8px);
   border-radius: 50px;
   padding: 4px;
-  animation: appear 350ms ease-in-out;
   border: 1px solid var(--border-bottom);
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
 
@@ -116,11 +113,11 @@
   }
 }
 
-@keyframes appear {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
+// @keyframes appear {
+//   from {
+//     opacity: 0;
+//   }
+//   to {
+//     opacity: 1;
+//   }
+// }
