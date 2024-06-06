@@ -12,7 +12,7 @@ const PROJECTS = [
   {
     name: 'Photo Smaller',
     description: 'Photo Smaller is a super easy-to-use offline image compression tool. ',
-    stack: 'Reactjs, Wasm, Zustand, Service Worker',
+    stack: 'Reactjs, Wasm, Mobx, Service Worker',
     linkDemo: 'https://photo-smaller.vercel.app/',
     source: 'https://github.com/hunghg255/photo-smaller',
     image: '/images/projects/photo-smaller.png',
