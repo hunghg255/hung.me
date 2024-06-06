@@ -10,6 +10,14 @@ import { BlurImage } from 'src/components/UI/BlurImage/BlurImage';
 
 const PROJECTS = [
   {
+    name: 'Photo Smaller',
+    description: 'Photo Smaller is a super easy-to-use offline image compression tool. ',
+    stack: 'Reactjs, Wasm, Zustand, Service Worker',
+    linkDemo: 'https://photo-smaller.vercel.app/',
+    source: 'https://github.com/hunghg255/photo-smaller',
+    image: '/images/projects/photo-smaller.png',
+  },
+  {
     name: 'UnNote',
     description: 'Share code with your friends no database, no login',
     stack: 'HTML, CSS, Javascript, Service Worker',
