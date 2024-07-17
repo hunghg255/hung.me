@@ -59,7 +59,7 @@ const BottomNavigation = () => {
         </li>
 
         <li className={styles.navItem}>
-          <ActiveLink href='/blog' aria-label='Blog' activeClassName={styles.active}>
+          <ActiveLink href='/blogs' aria-label='Blog' activeClassName={styles.active}>
             <Icon icon='icon-glasses' />
           </ActiveLink>
           <span>Blog</span>

@@ -77,8 +77,8 @@ function SideDraw(props: IProps) {
             </ActiveLink>
           </li>
           <li className={styles.navSideItem}>
-            <ActiveLink activeClassName='activeLink' href={'/blog'} aria-label='Blog'>
-              Blog
+            <ActiveLink activeClassName='activeLink' href={'/blogs'} aria-label='Blog'>
+              Blogs
             </ActiveLink>
           </li>
           <li className={styles.navSideItem}>

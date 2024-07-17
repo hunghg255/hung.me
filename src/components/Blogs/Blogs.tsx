@@ -47,7 +47,10 @@ export const BlogsSkeleton = () => {
 };
 
 const Blogs = async () => {
-  const [blogs, blogsWebtotal] = await Promise.all([getBlogPosts(), getBlogWebTotal()]);
+  const [blogsWebtotal] = await Promise.all([getBlogWebTotal()]);
+  console.log({
+    blogsWebtotal,
+  });
 
   return (
     <>
@@ -64,13 +67,18 @@ const Blogs = async () => {
                 };
               })
             : [];
+          if (
+            !blog.link._text.includes('blogs') ||
+            blog.link._text === 'https://web-totals.vercel.app/blogs/blog'
+          )
+            return <></>;
 
           return (
             <div key={`blog-webtotal-${idx}`} className={styles.blogItem}>
               <Link target='_blank' href={blog.link._text}>
                 <div className={styles.img}>
                   <BlurImage
-                    src={'/images/projects/default.png'}
+                    src={blog?.enclosure?._attributes?.url || '/images/projects/default.png'}
                     alt=''
                     fill
                     className='object-contain'
@@ -79,7 +87,7 @@ const Blogs = async () => {
                 <div className={styles.content}>
                   <h2>{blog.title._cdata}</h2>
                   <p className={styles.date}>
-                    Date: {dayjs(blog.pubDate._text).format('DD MMM YYYY')}
+                    Publish date: {dayjs(blog.pubDate._text).format('DD MMM YYYY')}
                   </p>
                   <BlogTag tags={tags} />
                 </div>
