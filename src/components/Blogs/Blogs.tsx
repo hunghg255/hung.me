@@ -46,9 +46,6 @@ export const BlogsSkeleton = () => {
 
 const Blogs = async () => {
   const [blogsWebtotal] = await Promise.all([getBlogWebTotal()]);
-  console.log({
-    blogsWebtotal,
-  });
 
   return (
     <>
