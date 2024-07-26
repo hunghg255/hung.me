@@ -9,28 +9,25 @@
     "start": "next start",
     "lint": "next lint",
     "postbuild": "next-sitemap",
-    "prepare": "husky install",
-    "gen-icon": "csvgtocss"
+    "gen-icon": "csvgtocss",
+    "prepare": "git-scm-hooks",
+    "verify-commit": "verify-commit-msg"
   },
   "dependencies": {
-    "@contentful/rich-text-react-renderer": "^15.19.6",
-    "@contentful/rich-text-types": "^16.3.5",
     "@studio-freight/lenis": "^0.2.28",
     "aos": "^2.3.4",
     "autoprefixer": "^10.4.19",
-    "babel-plugin-react-compiler": "0.0.0-experimental-592953e-20240517",
+    "babel-plugin-react-compiler": "0.0.0-experimental-334f00b-20240725",
     "classnames": "^2.5.1",
-    "contentful": "^9.3.6",
     "cookies-next": "^2.1.2",
     "dayjs": "^1.11.11",
     "framer-motion": "^11.2.6",
     "next": "15.0.0-rc.0",
     "next-sitemap": "^4.2.3",
     "next-themes": "^0.3.0",
-    "plaiceholder": "^2.5.0",
-    "react": "19.0.0-rc-935180c7e0-20240524",
-    "react-dom": "19.0.0-rc-935180c7e0-20240524",
-    "sharp": "^0.31.3",
+    "react": "19.0.0-rc-14a4699f-20240725",
+    "react-dom": "19.0.0-rc-14a4699f-20240725",
+    "sharp": "^0.33.4",
     "xml-js": "^1.6.11"
   },
   "devDependencies": {
@@ -44,9 +41,10 @@
     "csvgtocss": "^0.0.10",
     "eslint": "8.23.0",
     "eslint-config-next": "12.3.0",
-    "husky": "^8.0.3",
+    "git-scm-hooks": "^0.0.11",
     "sass": "^1.77.2",
-    "typescript": "4.8.3"
+    "typescript": "4.8.3",
+    "verify-commit-msg": "^0.0.14"
   },
   "keywords": [
     "nextjs",
@@ -68,5 +66,8 @@
   },
   "bugs": {
     "url": "https://github.com/hunghg255/hung.me/issues"
+  },
+  "git-hooks": {
+    "commit-msg": "npm run verify-commit"
   }
 }

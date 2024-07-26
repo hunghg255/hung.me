@@ -4,8 +4,6 @@ import dayjs from 'dayjs';
 import Image from 'next/image';
 import Link from 'next/link';
 
-import { getBlogPosts } from 'src/utils/contentful';
-
 import BlogTag from './BlogTag';
 import styles from './index.module.scss';
 import { getBlogWebTotal } from 'src/utils/web-total';
