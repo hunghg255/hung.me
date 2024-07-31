@@ -10,6 +10,30 @@ import { BlurImage } from 'src/components/UI/BlurImage/BlurImage';
 
 const PROJECTS = [
   {
+    name: 'RC Tiptap Editor',
+    description: 'A modern WYSIWYG rich text editor based on tiptap and shadcn ui for Reactjs',
+    stack: 'Reactjs',
+    linkDemo: 'https://rc-tiptap-editor.vercel.app/',
+    source: 'https://github.com/hunghg255/rc-tiptap-editor',
+    image: '/images/projects/rc-tiptap-editor.png',
+  },
+  {
+    name: 'Tiny Codesandbox',
+    description: 'A tiny codesandbox with Monaco Editor',
+    stack: 'Reactjs, Javascript, Monaco Editor',
+    linkDemo: 'https://tiny-codesandbox.vercel.app/',
+    source: 'https://github.com/hunghg255/tiny-codesandbox',
+    image: '/images/projects/tiny-codesandbox.png',
+  },
+  {
+    name: 'Blur Image',
+    description: 'Modern approach to Low Quality Image Placeholders (LQIP) using webp and sharp.',
+    stack: 'Nodejs, Javascript, Sharp',
+    linkDemo: 'https://blur-images.vercel.app/',
+    source: 'https://github.com/hunghg255/blur-images',
+    image: '/images/projects/blur-image.png',
+  },
+  {
     name: 'Photo Smaller',
     description: 'Photo Smaller is a super easy-to-use offline image compression tool. ',
     stack: 'Reactjs, Wasm, Mobx, Service Worker',
@@ -65,22 +89,22 @@ const PROJECTS = [
     source: 'https://github.com/hunghg255/warehouse/tree/main',
     image: '/images/projects/warehouse.png',
   },
-  {
-    name: 'Todoapp MERN',
-    description: 'Build todoapp MERN stack',
-    stack: 'Reactjs - redux - Typescript - mongodb - nodejs',
-    linkDemo: '',
-    source: 'https://github.com/hunghg255/Todo-mern',
-    image: '/images/projects/todoMERN.png',
-  },
-  {
-    name: 'Auth firebase',
-    description: 'A basic auth use firebase',
-    stack: 'Reactjs - ReactBootstrap - Firebase ',
-    linkDemo: 'https://auth-react-firebase-cf412.web.app/',
-    source: 'https://github.com/hunghg255/react-auth-firebase',
-    image: '/images/projects/authFirebase.png',
-  },
+  // {
+  //   name: 'Todoapp MERN',
+  //   description: 'Build todoapp MERN stack',
+  //   stack: 'Reactjs - redux - Typescript - mongodb - nodejs',
+  //   linkDemo: '',
+  //   source: 'https://github.com/hunghg255/Todo-mern',
+  //   image: '/images/projects/todoMERN.png',
+  // },
+  // {
+  //   name: 'Auth firebase',
+  //   description: 'A basic auth use firebase',
+  //   stack: 'Reactjs - ReactBootstrap - Firebase ',
+  //   linkDemo: 'https://auth-react-firebase-cf412.web.app/',
+  //   source: 'https://github.com/hunghg255/react-auth-firebase',
+  //   image: '/images/projects/authFirebase.png',
+  // },
   {
     name: 'Movies trailer',
     description:
@@ -90,22 +114,22 @@ const PROJECTS = [
     source: 'https://github.com/hunghg255/movies_api_reactjs',
     image: '/images/projects/movies.png',
   },
-  {
-    name: 'Facebook clone',
-    description: 'A facebook clone made with nextjs',
-    stack: 'Nextjs, Firebase, Tailwindcss',
-    linkDemo: '',
-    source: 'https://github.com/hunghg255/fb-clone',
-    image: '/images/projects/fbclone.png',
-  },
-  {
-    name: 'Youtube UI clone',
-    description: 'A youtube UI clone made with reactjs',
-    stack: 'Reactjs',
-    linkDemo: 'https://youtube-ui-clone-gamma.vercel.app/',
-    source: 'https://github.com/hunghg255/youtube-ui-clone',
-    image: '/images/projects/ytClone.png',
-  },
+  // {
+  //   name: 'Facebook clone',
+  //   description: 'A facebook clone made with nextjs',
+  //   stack: 'Nextjs, Firebase, Tailwindcss',
+  //   linkDemo: '',
+  //   source: 'https://github.com/hunghg255/fb-clone',
+  //   image: '/images/projects/fbclone.png',
+  // },
+  // {
+  //   name: 'Youtube UI clone',
+  //   description: 'A youtube UI clone made with reactjs',
+  //   stack: 'Reactjs',
+  //   linkDemo: 'https://youtube-ui-clone-gamma.vercel.app/',
+  //   source: 'https://github.com/hunghg255/youtube-ui-clone',
+  //   image: '/images/projects/ytClone.png',
+  // },
   {
     name: 'Codepen clone',
     description: 'A Codepen clone made with reactjs',
@@ -131,14 +155,14 @@ const PROJECTS = [
     source: 'https://github.com/hunghg255/madies-clone',
     image: '/images/projects/madies.png',
   },
-  {
-    name: 'Vanilla Shuffle Image',
-    description: 'A library to shuffle an array of images.',
-    stack: 'HTML - CSS - JAVASCRIPT',
-    linkDemo: 'https://hoainam12k.github.io/vanilla-shuffe-images/dist/',
-    source: 'https://github.com/hunghg255/vanilla-shuffe-images',
-    image: '/images/projects/shuffleImage.png',
-  },
+  // {
+  //   name: 'Vanilla Shuffle Image',
+  //   description: 'A library to shuffle an array of images.',
+  //   stack: 'HTML - CSS - JAVASCRIPT',
+  //   linkDemo: 'https://hoainam12k.github.io/vanilla-shuffe-images/dist/',
+  //   source: 'https://github.com/hunghg255/vanilla-shuffe-images',
+  //   image: '/images/projects/shuffleImage.png',
+  // },
 ];
 
 export default function Portfolio() {
