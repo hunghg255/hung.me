@@ -13,9 +13,9 @@ const PROJECTS = [
     name: 'RC Tiptap Editor',
     description: 'A modern WYSIWYG rich text editor based on tiptap and shadcn ui for Reactjs',
     stack: 'Reactjs',
-    linkDemo: 'https://rc-tiptap-editor.vercel.app/',
-    source: 'https://github.com/hunghg255/rc-tiptap-editor',
-    image: '/images/projects/rc-tiptap-editor.png',
+    linkDemo: 'https://reactjs-tiptap-editor-playground.vercel.app/',
+    source: 'https://github.com/hunghg255/reactjs-tiptap-editor',
+    image: '/images/projects/reactjs-editor.png',
   },
   {
     name: 'Tiny Codesandbox',
