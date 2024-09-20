@@ -64,7 +64,7 @@ const Blogs = async () => {
             : [];
           if (
             !blog.link._text.includes('blogs') ||
-            blog.link._text === 'https://web-totals.vercel.app/blogs/blog'
+            blog.link._text === 'https://blog.hunghg.me/blogs/blog'
           )
             return <></>;
 

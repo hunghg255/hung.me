@@ -53,7 +53,7 @@ const PROJECTS = [
     name: 'Web totals',
     description: 'Build a site share all about web development',
     stack: 'Reactjs, Docusaurus, markdown',
-    linkDemo: 'https://web-totals.vercel.app/',
+    linkDemo: 'https://blog.hunghg.me/',
     source: 'https://github.com/hunghg255/web-totals',
     image: '/images/projects/web-question.png',
   },

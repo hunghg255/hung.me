@@ -5,7 +5,7 @@ export const uppercaseFirstLetter = (string) => {
 };
 
 export const getBlogWebTotal = async () => {
-  const xml = await fetch('https://web-totals.vercel.app/rss.xml', {
+  const xml = await fetch('https://blog.hunghg.me/rss.xml', {
     next: { revalidate: 60 },
   }).then((res) => res.text());
 

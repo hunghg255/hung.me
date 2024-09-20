@@ -1,4 +1,4 @@
-**[hung.me](https://hung.thedev.id)**
+**[hung.me](https://hunghg.me)**
 
 My personal website powered by [Nextjs](https://nextjs.org/)
 

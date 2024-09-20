@@ -56,7 +56,7 @@ export default function RootLayout({ children }: any) {
         />
         <meta property='og:locale' content='vi_VN' />
         <meta property='og:type' content='website' />
-        <meta property='og:url' content='https://hung.thedev.id/' />
+        <meta property='og:url' content='https://hunghg.me/' />
         <meta property='og:title' content='Hunghg | Front-end Developer' />
         <meta
           property='og:description'
@@ -68,7 +68,7 @@ export default function RootLayout({ children }: any) {
         />
 
         <meta property='twitter:card' content='summary_large_image' />
-        <meta property='twitter:url' content='https://hung.thedev.id/' />
+        <meta property='twitter:url' content='https://hunghg.me/' />
         <meta property='twitter:title' content='Hunghg | Front-end Developer' />
         <meta
           property='twitter:description'

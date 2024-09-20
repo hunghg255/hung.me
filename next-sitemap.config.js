@@ -1,6 +1,6 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: 'https://hung.thedev.id',
+  siteUrl: 'https://hunghg.me',
   generateRobotsTxt: true, // (optional)
   // ...other options
 };
