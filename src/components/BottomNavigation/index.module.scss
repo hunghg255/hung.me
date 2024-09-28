@@ -10,10 +10,60 @@
   padding: 4px;
   border: 1px solid var(--border-bottom);
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+  --item-width: 64px;
+
+  :global {
+    .nav {
+      --binoculars-top-offset: 5px;
+      --items: 6;
+      --current-item: 0;
+      --enter-nav: 0;
+      position: relative;
+    }
+
+    .nav .nav-inner,
+    .nav .binoculars {
+      list-style: none;
+      display: flex;
+      white-space: nowrap;
+    }
+
+    .nav .binoculars {
+      position: absolute;
+      z-index: 22;
+      left: 50%;
+      translate: -50% 0;
+      transform: translate(
+        calc(var(--x) * var(--item-width)),
+        calc(var(--y) * (var(--item-width) * 0.5))
+      );
+      bottom: calc(100% + var(--binoculars-top-offset));
+      width: calc(var(--items) * var(--item-width));
+      height: 100%;
+      opacity: var(--enter-nav);
+      background-color: var(--bg-item-active) !important;
+      clip-path: inset(
+        0 calc(100% - (var(--item-width) * (var(--current-item) + 1))) 0
+          calc(var(--item-width) * var(--current-item)) round 10px
+      );
+      pointer-events: none;
+      transition: all 0.3s;
+    }
+
+    .nav .binoculars li {
+      width: var(--item-width);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 6px;
+      color: var(--primary-color);
+      padding: 6px 8px;
+      white-space: nowrap;
+    }
+  }
 
   ul {
     display: flex;
-    gap: 8px;
 
     li,
     a {
@@ -34,10 +84,11 @@
 
     a,
     button {
-      width: 48px;
+      width: 100%;
+      max-width: 48px;
       height: 48px;
       border-radius: 999px;
-      display: flex;
+      display: inline-flex;
       justify-content: center;
       align-items: center;
       transition: all 350ms ease-in-out;
@@ -73,31 +124,28 @@
 
 .navItem {
   position: relative;
+  width: var(--item-width);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-  > span {
-    position: absolute;
-    bottom: calc(100% + 14px);
-    left: 50%;
-    opacity: 0;
-    display: block;
-    z-index: 3;
-    border-radius: 6px;
-    color: var(--primary-color);
-    padding: 6px 8px;
-    border: 1px solid var(--border-bottom);
-    background-color: var(--bg-item);
-    white-space: nowrap;
-    transform: translate(-50%, 5px);
-    transition: all 350ms ease-in-out;
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
-  }
-
-  &:hover {
-    > span {
-      opacity: 1;
-      transform: translate(-50%, 0);
-    }
-  }
+  // > span {
+  //   position: absolute;
+  //   bottom: calc(100% + 14px);
+  //   left: 50%;
+  //   opacity: 0;
+  //   display: block;
+  //   z-index: 3;
+  //   border-radius: 6px;
+  //   color: var(--primary-color);
+  //   padding: 6px 8px;
+  //   border: 1px solid var(--border-bottom);
+  //   background-color: var(--bg-item);
+  //   white-space: nowrap;
+  //   transform: translate(-50%, 5px);
+  //   transition: all 350ms ease-in-out;
+  //   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+  // }
 }
 
 .active {
