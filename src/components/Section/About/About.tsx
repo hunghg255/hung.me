@@ -10,7 +10,7 @@ export default function About() {
     <section className='About container' id='sectionAbout'>
       <div className={styles.aboutHeading} data-aos='fade-up'>
         <h2 className={styles.aboutTitle}>
-          <Sparkles>About me </Sparkles>
+          <Sparkles>About me</Sparkles>
         </h2>
 
         <h3 className={styles.aboutSubtitle}>

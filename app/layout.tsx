@@ -1,44 +1,10 @@
-/* eslint-disable react/no-unknown-property */
-import dynamic from 'next/dynamic';
-
-import HeaderContainer from 'src/components/HeaderContainer/HeaderContainer';
 import { fontGeist } from 'src/components/UI/font/font';
-// import { cookies } from 'next/headers';
+import ClientComponent from 'app/ClientComponent';
 import '../styles/globals.scss';
-import Noise from 'src/components/Noise/Noise';
-import { ThemeProvider } from 'next-themes';
-
-// const Cursor = dynamic(() => import('src/components/UI/Cursor/Cursor'), {
-//   ssr: false,
-// });
-// const ScrollSmooth = dynamic(() => import('src/components/ScrollSmooth/ScrollSmooth'), {
-//   ssr: false,
-// });
-// const AosComponent = dynamic(() => import('src/components/AosComponent/AosComponent'), {
-//   ssr: false,
-// });
-const Plum = dynamic(() => import('src/components/Plum/Plum'), {
-  ssr: false,
-});
-// const Progressbar = dynamic(() => import('src/components/Progessbar/Progessbar'), {
-//   ssr: false,
-// });
-const LogArt = dynamic(() => import('src/components/LogArt/LogArt'), {
-  ssr: false,
-});
-const ButtonScrollTop = dynamic(() => import('src/components/ButtonScrollTop'), {
-  ssr: false,
-});
-const BottomNavigation = dynamic(() => import('src/components/BottomNavigation/BottomNavigation'), {
-  ssr: false,
-});
 
 export const runtime = 'edge';
 
 export default function RootLayout({ children }: any) {
-  // const cookieStore = cookies();
-  // const dataTheme = cookieStore.get('data-theme');
-
   return (
     <html className={fontGeist.variable} suppressHydrationWarning>
       <head>
@@ -98,20 +64,9 @@ export default function RootLayout({ children }: any) {
         <script src='https://cursor-party.hunghg255.partykit.dev/cursors.js' defer></script>
       </head>
       <body>
-        <Noise />
-
-        <HeaderContainer />
-
-        <ThemeProvider>
+        <ClientComponent>
           <main>{children}</main>
-        </ThemeProvider>
-        <BottomNavigation />
-
-        {/* <Cursor /> */}
-        <Plum />
-        {/* <Progressbar /> */}
-        <LogArt />
-        {/* <ButtonScrollTop /> */}
+        </ClientComponent>
       </body>
     </html>
   );
