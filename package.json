@@ -14,6 +14,7 @@
     "build:registry": "node ./scripts/build-registry.js && prettier --write ./__registry__/index.tsx"
   },
   "dependencies": {
+    "@emotion/is-prop-valid": "^1.3.1",
     "@studio-freight/lenis": "^0.2.28",
     "aos": "^2.3.4",
     "babel-plugin-react-compiler": "0.0.0-experimental-63b359f-20241029",
@@ -84,5 +85,5 @@
   "git-hooks": {
     "commit-msg": "npm run verify-commit"
   },
-  "packageManager": "pnpm@9.12.3"
+  "packageManager": "pnpm@10.0.0-alpha.0+sha512.856941ef22665d2f3e41c04e8d86ed757ef057fb2bc35011698bfa988ef5817cc1cdd28bb883e7f23f0568c75de5544d4750211d4276b9ba6d55369eb207a549"
 }
