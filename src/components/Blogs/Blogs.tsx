@@ -1,13 +1,12 @@
 'use client';
 
 import dayjs from 'dayjs';
-import Image from 'next/image';
 import Link from 'next/link';
 
 import BlogTag from './BlogTag';
 import styles from './index.module.scss';
-import { getBlogWebTotal } from 'src/utils/web-total';
 import { BlurImage } from 'src/components/UI/BlurImage/BlurImage';
+import React from 'react';
 
 export const BlogsSkeleton = () => {
   return (
@@ -44,8 +43,8 @@ export const BlogsSkeleton = () => {
   );
 };
 
-const Blogs = async () => {
-  const [blogsWebtotal] = await Promise.all([getBlogWebTotal()]);
+const Blogs = ({ blogsWebtotal }: any) => {
+  if (!blogsWebtotal?.length) return <BlogsSkeleton />;
 
   return (
     <>
@@ -66,7 +65,7 @@ const Blogs = async () => {
             !blog.link._text.includes('blogs') ||
             blog.link._text === 'https://blog.hunghg.me/blogs/blog'
           )
-            return <></>;
+            return <React.Fragment key={`blog-webtotal-${idx}`}></React.Fragment>;
 
           return (
             <div key={`blog-webtotal-${idx}`} className={styles.blogItem}>

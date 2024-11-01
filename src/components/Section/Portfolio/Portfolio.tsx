@@ -1,7 +1,7 @@
+'use client';
+
 /* eslint-disable quotes */
 import React from 'react';
-
-import Image from 'next/image';
 
 import Sparkles from 'src/components/UI/Sparkles/Sparkles';
 

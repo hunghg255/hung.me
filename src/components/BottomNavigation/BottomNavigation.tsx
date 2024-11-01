@@ -64,8 +64,8 @@ const BottomNavigation = () => {
           <li>Home</li>
           <li>Projects</li>
           <li>Blogs</li>
+          <li>Work</li>
           <li>Github</li>
-          <li>X</li>
           <li>Theme</li>
         </ul>
         <ul className='nav-inner'>
@@ -87,6 +87,12 @@ const BottomNavigation = () => {
           </li>
 
           <li className={styles.navItem}>
+            <ActiveLink href='/work/1' aria-label='Work' activeClassName={styles.active}>
+              <Icon icon='icon-task' />
+            </ActiveLink>
+          </li>
+
+          <li className={styles.navItem}>
             <a
               href='https://github.com/hunghg255'
               target='_blank'
@@ -94,16 +100,6 @@ const BottomNavigation = () => {
               aria-label='Github'
             >
               <Icon icon='icon-github' />
-            </a>
-          </li>
-          <li className={styles.navItem}>
-            <a
-              href='https://twitter.com/hunghg255'
-              target='_blank'
-              rel='noreferrer'
-              aria-label='Twitter'
-            >
-              <Icon icon='icon-x' />
             </a>
           </li>
 

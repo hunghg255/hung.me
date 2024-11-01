@@ -1,14 +1,17 @@
 const path = require('path');
+const { withContentlayer } = require('next-contentlayer2');
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: false,
-  output: 'standalone',
   sassOptions: {
     includePaths: [path.join(__dirname, 'styles')],
   },
-  experimental: {
-    reactCompiler: true,
+  // experimental: {
+  //   reactCompiler: true,
+  // },
+  eslint: {
+    ignoreDuringBuilds: true,
   },
   images: {
     remotePatterns: [
@@ -40,4 +43,4 @@ const nextConfig = {
   },
 };
 
-module.exports = nextConfig;
+module.exports = withContentlayer(nextConfig);

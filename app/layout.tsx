@@ -1,8 +1,8 @@
-import { fontGeist } from 'src/components/UI/font/font';
-import ClientComponent from 'app/ClientComponent';
+import '../styles/tailwind.css';
 import '../styles/globals.scss';
 
-export const runtime = 'edge';
+import { fontGeist } from 'src/components/UI/font/font';
+import ClientComponent from 'app/ClientComponent';
 
 export default function RootLayout({ children }: any) {
   return (
