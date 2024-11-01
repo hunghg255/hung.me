@@ -35,7 +35,7 @@ export default function Work5() {
     <IphoneSimulator className='overflow-hidden bg-neutral-400'>
       <div className='absolute inset-0'>
         <header
-          className='sticky top-0 z-30 grid grid-cols-3 items-center bg-white/80 pb-2 pt-14 font-medium backdrop-blur-lg'
+          className='sticky top-0 z-30 grid grid-cols-3 items-center bg-white/80 pb-2 pt-[5.5rem] font-medium backdrop-blur-lg'
           style={{ borderTopLeftRadius: 42, borderTopRightRadius: 42 }}
         >
           <Button className='flex w-12 items-center gap-1 pl-2 text-blue-500'>
@@ -57,7 +57,7 @@ export default function Work5() {
           </Button>
 
           <div className='flex grow flex-col items-center'>
-            <h2>Hung Hoang</h2>
+            <h2 className='text-black'>Hung Hoang</h2>
             <small className='-mt-1 inline-block text-xs font-light text-[#727472]'>
               699 subscribers
             </small>

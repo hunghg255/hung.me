@@ -25,7 +25,7 @@ export default function Work7() {
       <IphoneSimulator className='bg-[#f4f3fa]'>
         <MotionConfig transition={{ duration, type: 'spring', bounce: 0 }}>
           <header className='sticky top-0 -mt-[48px] flex items-center justify-center border-b border-[#D4D2D4] bg-[#FAF9FB] pb-2 pt-14 font-medium'>
-            <motion.h2 layoutId='settings-text' className='z-20'>
+            <motion.h2 layoutId='settings-text' className='z-20 text-black'>
               Settings
             </motion.h2>
           </header>
@@ -44,7 +44,9 @@ export default function Work7() {
                         <Bell className='w-4' />
                       </div>
                     </div>
-                    <span className='grow capitalize'>{button.replaceAll('-', ' ')}</span>
+                    <span className='grow capitalize text-black'>
+                      {button.replaceAll('-', ' ')}
+                    </span>
                     <ChevronRight className='w-4 text-[#C4C2C4]' />
                   </button>
                   {index !== buttons.length - 1 && (
