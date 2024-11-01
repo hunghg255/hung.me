@@ -152,9 +152,7 @@ function EachImage({ image, id }: { image: string; id: string }) {
               >
                 <div className='flex items-center gap-2'>
                   <Image
-                    src={
-                      'https://pbs.twimg.com/profile_images/1796933077891231745/SQCEp_jD_400x400.jpg'
-                    }
+                    src={'/my-image.jpeg'}
                     width={40}
                     height={40}
                     alt=''
