@@ -115,10 +115,10 @@ export default function Work14() {
         </AnimatePresence>
         <AnimatePresence>
           {isOpen && (
-            <div className='absolute left-0 top-[54px] z-[61] flex w-full justify-center'>
+            <div className='absolute left-0 top-[54px] z-[61] flex w-full justify-center '>
               <motion.div
                 layoutId='wrapper'
-                className='relative h-full w-[97%] overflow-hidden bg-[#1B1D20]'
+                className='relative h-full w-[97%] overflow-hidden bg-[#1B1D20] p-[10px]'
                 style={{ borderRadius: 20 }}
               >
                 <header className='flex h-12 items-center gap-1 px-2'>

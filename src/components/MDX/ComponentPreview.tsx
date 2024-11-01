@@ -22,7 +22,7 @@ export default function ComponentPreview({ name, className }: Props) {
     <div
       id='preview-container'
       className={cn(
-        'border-wrapper relative mx-auto flex min-h-96 max-w-3xl flex-col items-center justify-center overflow-hidden rounded-md bg-natural-150 px-8 py-8 shadow-custom-card bg-[#000]',
+        'border-wrapper relative mx-auto flex min-h-[30rem] max-w-3xl flex-col items-center justify-center overflow-hidden rounded-md px-8 py-8 shadow-custom-card bg-[#000]',
         className,
       )}
     >

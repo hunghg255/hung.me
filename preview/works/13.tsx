@@ -1,39 +1,129 @@
-import React, { useRef, useState } from 'react';
-import { useMotionValue, motion, useTransform, animate, useMotionValueEvent } from 'framer-motion';
+import { motion } from 'framer-motion';
 
-function decay(value: number, max: number) {
-  let entry = value / max;
-  let sigmoid = 2 / (1 + Math.exp(-entry)) - 1;
-  let exit = sigmoid * max;
+import React, { useEffect, useMemo, useState } from 'react';
 
-  return exit;
+// Interface for position properties
+interface Position {
+  top: number;
+  left: number;
+  width: number;
 }
 
-export default function Works13() {
-  const [value, setValue] = useState([0]);
-  const [position, setPosition] = useState<'top' | 'middle' | 'bottom'>('middle');
+/**
+ * Component for displaying a tab with clip path animation
+ */
+function ClipPathTab() {
+  // Memoized array of links
+  const links = useMemo(() => ['Link1', 'Link2', 'Link3', 'Link4'], []);
+  // State for position
+  const [position, setPosition] = useState<Position | undefined>();
+  const [hoverPosition, setHoverPosition] = useState<
+    (Position & { height: number; opacity: number }) | undefined
+  >();
 
-  const clientY = useMotionValue(0);
-  const y = useMotionValue(1);
-
-  const ref = useRef<HTMLDivElement>(null);
-
-  useMotionValueEvent(clientY, 'change', (latestValue) => {
-    if (!ref.current) return;
-
-    let overflow = latestValue - ref.current.getBoundingClientRect().top;
-
-    if (overflow < 0) {
-      y.jump(decay(overflow, 50));
-      setPosition('bottom');
-    } else if (overflow > 200) {
-      y.jump(decay(overflow - 200, 50));
-      setPosition('top');
-    } else {
-      y.jump(1);
-      setPosition('middle');
+  // Effect to set initial position based on the first link
+  useEffect(() => {
+    const list = document.getElementById(links[0]);
+    if (list) {
+      setPosition({
+        top: list.offsetTop,
+        left: list.offsetLeft,
+        width: list.offsetWidth,
+      });
     }
-  });
+  }, [links]);
 
-  return <div className='flex h-96 flex-col items-center justify-center gap-12'>Hello</div>;
+  // Handle click event to update position
+  const handleClick = (e: React.MouseEvent<HTMLLIElement, MouseEvent>) => {
+    const list = e.currentTarget;
+    setPosition({
+      top: list.offsetTop,
+      left: list.offsetLeft,
+      width: list.offsetWidth,
+    });
+  };
+  const handleMouseOver = (e: React.MouseEvent<HTMLLIElement, MouseEvent>) => {
+    const list = e.currentTarget;
+    setHoverPosition({
+      top: list.offsetTop,
+      left: list.offsetLeft,
+      width: list.offsetWidth,
+      height: list.offsetHeight,
+      opacity: 1,
+    });
+  };
+
+  // Render the component
+  return (
+    <div className='relative'>
+      {/* List of links */}
+      <ul
+        onMouseLeave={() => setHoverPosition((prev) => prev && { ...prev, opacity: 0 })}
+        className='relative z-10 flex gap-2 rounded-[6px]  p-2 bg-zinc-900'
+      >
+        {links.map((link, i) => (
+          <li
+            key={i}
+            id={link}
+            onClick={handleClick}
+            onMouseEnter={handleMouseOver}
+            className='relative z-10 cursor-pointer p-2'
+          >
+            {link}
+          </li>
+        ))}
+        <Cursor hoverPosition={hoverPosition} />
+      </ul>
+
+      {/* Overlapping links with clip path animation */}
+      <ClipNav links={links} position={position} />
+    </div>
+  );
+}
+
+const ClipNav = ({ links, position }: { links: string[]; position: Position | undefined }) => {
+  return (
+    <motion.ul
+      initial={{ clipPath: 'inset(100%)' }}
+      animate={{
+        clipPath: position
+          ? `inset(${position.top}px calc(100% - ${position.left + position.width}px) ${
+              position.top
+            }px ${position.left}px round 8px)`
+          : 'inset(100%)',
+      }}
+      transition={{ type: 'spring', bounce: 0, duration: 0.35 }}
+      className='absolute inset-0 z-30 flex size-full gap-2 rounded-[6px] p-2  bg-zinc-200 text-black'
+    >
+      {links.map((link, i) => (
+        <li key={i} className='p-2'>
+          {link}
+        </li>
+      ))}
+    </motion.ul>
+  );
+};
+
+const Cursor = ({
+  hoverPosition,
+}: {
+  hoverPosition:
+    | (Position & {
+        height: number;
+        opacity: number;
+      })
+    | undefined;
+}) => {
+  return (
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={hoverPosition as any}
+      transition={{ duration: 0.35, type: 'spring', bounce: 0 }}
+      className='absolute inset-0 z-0 h-0 w-0 rounded-[6px] bg-neutral-700 '
+    />
+  );
+};
+
+export default function Works13() {
+  return <ClipPathTab />;
 }

@@ -40,9 +40,21 @@ export const Index: Record<string, any> = {
     name: 'works-17',
     component: dynamic(() => import('@/preview/works/17.tsx'), { ssr: false }),
   },
+  'works-18': {
+    name: 'works-18',
+    component: dynamic(() => import('@/preview/works/18.tsx'), { ssr: false }),
+  },
+  'works-19': {
+    name: 'works-19',
+    component: dynamic(() => import('@/preview/works/19.tsx'), { ssr: false }),
+  },
   'works-2': {
     name: 'works-2',
     component: dynamic(() => import('@/preview/works/2.tsx'), { ssr: false }),
+  },
+  'works-20': {
+    name: 'works-20',
+    component: dynamic(() => import('@/preview/works/20.tsx'), { ssr: false }),
   },
   'works-3': {
     name: 'works-3',

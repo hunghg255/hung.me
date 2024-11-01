@@ -161,3 +161,10 @@ section {
     background-position: right -40px top 0;
   }
 }
+
+.no-scrollbar {
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
