@@ -25,7 +25,7 @@ export default function Work9() {
 
   return (
     <IphoneSimulator className='overflow-hidden bg-black text-white'>
-      <MotionConfig transition={{ duration: 0.5, type: 'spring', bounce: 0 }}>
+      <MotionConfig transition={{ duration: 0.5, type: 'spring', bounce: 0.2 }}>
         <motion.div layout style={{ scale }} className='px-4'>
           <h2 className='mb-3 mt-3'>Lorem Ipsum</h2>
           <div className='h-12 w-full rounded-lg bg-[#2c2c2c]'></div>

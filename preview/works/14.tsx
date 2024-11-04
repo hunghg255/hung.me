@@ -101,7 +101,7 @@ export default function Work14() {
 
   return (
     <IphoneSimulator classWrapper='absolute top-12' className='bg-[#1C1D22] text-white'>
-      <MotionConfig transition={{ duration: 0.5, type: 'spring', bounce: 0 }}>
+      <MotionConfig transition={{ duration: 0.5, type: 'spring', bounce: 0.2 }}>
         <AnimatePresence initial={false}>
           {isOpen && (
             <motion.div

@@ -12,7 +12,7 @@ const TextEnter = ({
   delay?: number;
 }) => {
   return (
-    <MotionConfig transition={{ type: 'spring', bounce: 0, duration: 1.8 }}>
+    <MotionConfig transition={{ type: 'spring', bounce: 0.2, duration: 1.8 }}>
       <motion.h1
         initial='hidden'
         animate='visible'

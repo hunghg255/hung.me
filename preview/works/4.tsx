@@ -36,7 +36,7 @@ const images = [
 export default function Work4() {
   return (
     <div className='flex flex-wrap items-start gap-4 px-4'>
-      <MotionConfig transition={{ duration: 0.8, type: 'spring', bounce: 0 }}>
+      <MotionConfig transition={{ duration: 0.8, type: 'spring', bounce: 0.2 }}>
         {images.map((image) => (
           <EachImage key={image.id} image={image.img} id={image.img} />
         ))}
@@ -77,8 +77,6 @@ function EachImage({ image, id }: { image: string; id: string }) {
         }}
         onMouseEnter={(event) => {
           const parentWrapper = document.querySelector('#preview-container') as HTMLDivElement;
-
-          console.log(parentWrapper);
 
           if (parentWrapper) {
             const parentBounds = parentWrapper.getBoundingClientRect();

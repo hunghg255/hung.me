@@ -213,7 +213,7 @@ export default function Demo8() {
                         transition={{
                           type: 'spring',
                           duration: 0.3,
-                          bounce: 0,
+                          bounce: 0.2,
                         }}
                         initial={{ opacity: 0, y: -25 }}
                         animate={{ opacity: 1, y: 0 }}

@@ -7,7 +7,7 @@ export default function Works16() {
 
   return (
     <IphoneSimulator className='bg-natural-900 text-white [&_[data-top]]:bg-transparent'>
-      <MotionConfig transition={{ duration: 0.5, type: 'spring', bounce: 0 }}>
+      <MotionConfig transition={{ duration: 0.5, type: 'spring', bounce: 0.2 }}>
         <motion.div
           drag='y'
           dragConstraints={{ top: 0, bottom: 0 }}

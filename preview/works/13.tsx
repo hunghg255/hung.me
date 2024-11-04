@@ -92,7 +92,7 @@ const ClipNav = ({ links, position }: { links: string[]; position: Position | un
             }px ${position.left}px round 8px)`
           : 'inset(100%)',
       }}
-      transition={{ type: 'spring', bounce: 0, duration: 0.35 }}
+      transition={{ type: 'spring', bounce: 0.2, duration: 0.35 }}
       className='absolute inset-0 z-30 flex size-full gap-2 rounded-[6px] p-2  bg-zinc-200 text-black'
     >
       {links.map((link, i) => (
@@ -118,7 +118,7 @@ const Cursor = ({
     <motion.div
       initial={{ opacity: 0 }}
       animate={hoverPosition as any}
-      transition={{ duration: 0.35, type: 'spring', bounce: 0 }}
+      transition={{ duration: 0.35, type: 'spring', bounce: 0.2 }}
       className='absolute inset-0 z-0 h-0 w-0 rounded-[6px] bg-neutral-700 '
     />
   );

@@ -15,7 +15,7 @@ export default function Work1() {
 
   return (
     <IphoneSimulator className='overflow-hidden bg-white'>
-      <MotionConfig transition={{ duration: 0.5, type: 'spring', bounce: 0 }}>
+      <MotionConfig transition={{ duration: 0.8, type: 'spring', bounce: 0.2 }}>
         <div className='px-4 pt-4 text-black'>
           <h2 className='text-2xl font-semibold tracking-tight'>Action-Packed</h2>
 
