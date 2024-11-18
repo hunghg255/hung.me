@@ -58,7 +58,7 @@ export default function RootLayout({ children }: any) {
 
         <meta
           name='google-site-verification'
-          content='fQuFJdHbSiH8czBosKz0oVZDXIDJRCEHcYIrzOoMNn4'
+          content='rqkQvaV705ZKW_sDtCtBkos8BtnWhSEwXZXS6YlhSEI'
         />
 
         <script src='https://cursor-party.hunghg255.partykit.dev/cursors.js' defer></script>
