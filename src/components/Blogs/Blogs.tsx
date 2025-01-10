@@ -74,8 +74,12 @@ const Blogs = ({ blogsWebtotal }: any) => {
                   <BlurImage
                     src={blog?.enclosure?._attributes?.url || '/images/projects/default.png'}
                     alt=''
-                    fill
-                    className='object-contain'
+                    width={311}
+                    height={220}
+                    className='w-full h-full'
+                    style={{
+                      objectFit: 'contain',
+                    }}
                   />
                 </div>
                 <div className={styles.content}>

@@ -178,7 +178,7 @@ export default function Portfolio() {
               <li key={idx.toString()} className={styles.projectItem} data-aos='zoom-in'>
                 <div className='Project__item__wrapper'>
                   <div className={styles.projectItemImage}>
-                    <BlurImage
+
                       src={item.image}
                       alt={item.name}
                       width={357}
